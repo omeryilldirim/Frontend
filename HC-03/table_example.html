@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table Example</title>
+</head>
+<body>
+    <table border="1">
+        <thead>
+            <tr>
+                <th rowspan="2">Day</th>
+                <th colspan="2">Schedule</th>
+                <th rowspan="2">Topic</th>
+            </tr>
+
+            <tr>
+                <th>Begin</th>
+                <th>End</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>Tuesday</td>
+                <td>7:00 am</td>
+                <td>11:00 am</td>
+                <td rowspan="2">
+                    Computer Fundamental
+                    <ul>
+                        <li>Hardware</li>
+                        <li>Os</li>
+                        <li>Storage</li>
+                        <li>Data</li>
+                    </ul>
+                </td>
+            </tr>
+
+            <tr>
+                <td rowspan="3">Thursday</td>
+                <td>7:00 am</td>
+                <td>7:50 am</td>
+            </tr>
+
+            <tr>
+                <td>8:00 am</td>
+                <td>8:50 am</td>
+                <td rowspan="2">HTML CSS</td>
+            </tr>
+
+            <tr>
+                <td>8:00 am</td>
+                <td>8:50 am</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
