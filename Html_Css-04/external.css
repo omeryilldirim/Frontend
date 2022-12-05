@@ -1,0 +1,31 @@
+*{
+    background-color: whitesmoke;
+}
+h1{
+    color: red;
+    
+}
+h1:hover{
+    opacity: 0.5;
+    cursor:pointer
+}
+li{
+    list-style-type: none;
+    color: cadetblue;
+    margin: auto;
+    padding: auto;
+    font-size: 30px;
+}
+li:hover{
+    background-color: darkgoldenrod;
+    color: brown;
+    font-weight: 800;
+    font-size: 50px;
+    cursor: pointer;
+}
+ul{
+    display: flex;
+}
+.list{
+    border: 1px solid cornflowerblue;
+}

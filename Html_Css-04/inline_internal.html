@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internal-Inline</title>
+    <style>
+        img {
+            width: 50%;
+            border: 2px solid black;
+            border-radius: 50%;
+            border-style: dotted;
+        }
+        .img-div{
+            text-align: center;
+        }
+        #par {
+            color: purple;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: justify;
+            font-weight: 900;
+            font-size: 30px;
+        }
+
+    </style>
+</head>
+<body>
+    <!--
+    * Inline Css, HTML elementlerine style keyword u ile eklenir.
+    * style kelimesinin içi aslında CSS alanıdır.
+    * Sadece eklenen element için stillendirme gerçekleştirir.
+    * Bu sebeple çok pratik bir yöntem değildir.
+    * HTML kodlarını kalabalıklaştırdığı için kodun görünümünü kalabalıklaştırır.
+    -->
+
+    <h1 style="color: red; text-align: center;" >Using CSS</h1>
+    
+    <p style="background-color: lightgreen">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus nostrum voluptas accusamus facere quaerat maiores, non perferendis temporibus in autem. Illo perspiciatis ea at ut mollitia, totam asperiores quod veritatis!</p>
+
+    <div>
+        <img  class="img-div" src="https://picsum.photos/id/684/600/400" alt="">
+
+        <img class="img-div" src="https://picsum.photos/id/685/600/400" alt="">
+    </div>
+
+    <p id="par">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic quos consectetur voluptatum reprehenderit accusantium modi iure temporibus harum. Hic eaque optio labore iusto odit, alias temporibus quaerat nostrum sit atque!
+    </p>
+</body>
+</html>
