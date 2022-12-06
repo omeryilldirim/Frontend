@@ -10,3 +10,29 @@
     margin-bottom: 10px;
     padding: 20px;
 }
+.nav{
+    text-align: center;
+}
+/* 
+! Inline elementler içerik kadar yer kaplarlar, bu sebepten dolayı margin ve padding top ve bottom değerlerini almazlar. bu özellikleri kullanmka için display property ile inline-block haline getirilebilir.
+*/
+.nav li{
+    display: inline-block;
+    width: 100px;
+    margin: 30px;
+    text-align: center;
+    padding: 20px;
+    background-color: burlywood;
+    border-radius: 20px;
+}
+.nav li:hover{
+    background-color: orange;
+    color: whitesmoke;
+    font-weight: 900;
+    font-size:larger;
+    cursor: pointer;
+}
+h2:hover{
+    opacity: 0.5;
+    cursor: pointer;
+}
