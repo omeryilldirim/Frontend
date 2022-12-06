@@ -1,0 +1,58 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  /* background-image: url(https://cdn.pixabay.com/photo/2017/01/27/17/45/chess-2013758_1280.jpg); */
+  text-align: center;
+  background: #403a3e; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #be5869,
+    #403a3e
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #be5869,
+    #403a3e
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.header {
+  background-color: red;
+  height: 100px;
+  width: 100%;
+  text-align: center;
+  margin-top: 0px;
+}
+.header a {
+  color: #080000;
+  text-decoration: none;
+  font-size: 24px;
+  vertical-align: middle;
+}
+.header-a {
+  padding: 50px;
+  font-size: larger;
+}
+.header-a:hover {
+  color: whitesmoke;
+  font-weight: 800;
+}
+#f1-logo {
+  width: auto;
+  height: 100px;
+  margin: 0px;
+  text-align: left;
+  padding: 0px;
+}
+img {
+  width: 20%;
+  vertical-align: middle;
+}
+div {
+  margin: 20px;
+}
+body .header {
+  text-align: left;
+  margin-left: 0px;
+}
