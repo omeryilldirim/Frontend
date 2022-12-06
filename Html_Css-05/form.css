@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h1{
+    margin: 60px;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    background-image: url(https://cdn.pixabay.com/photo/2022/11/24/02/28/clouds-7613361_1280.png);
+    text-align: center;
+}
+label{
+    display: inline-block;
+    width: 150px;
+    text-align:left;
+    margin-bottom: 30px;
+}
+form{
+    text-align: center;
+    background-color: rgb(110, 158, 194);
+    padding: 40px;
+    width: 30%;
+    margin: auto;
+    border-radius: 10px;
+    font-size: 14pt;
+}
+input{
+    height: 28px;
+    border-radius: 5px;
+    border-style: none;
+}
+.submit{
+    background-color: mediumorchid;
+    padding: 10px 30px;
+    text-align: center;
+    height: fit-content;
+    
+    
+}
