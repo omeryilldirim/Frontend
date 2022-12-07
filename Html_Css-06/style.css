@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Zen Dots', cursive;
+}
+form{
+    background-color: antiquewhite;
+    width: fit-content;
+    margin: auto;
+    padding: 50px;
+}
+label{
+    display: inline-block;
+    width: 140px;
+}
+.lang-div, .gen-div {
+    display: inline-block;
+}
+.lang-div label{
+    width: auto;
+}
+.gen-div label{
+    width: auto;
+}
