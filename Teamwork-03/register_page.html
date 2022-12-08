@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REGISTER PAGE</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <H1>REGISTER PAGE</H1>
+
+    <form action="">
+        <div class="inputs">
+            <label for="first-name">First Name :</label>
+            <input class="box" type="text" name="first-name" id="first-name" placeholder="Enter your first name" required>
+        </div>
+        <div class="inputs">
+            <label for="last-name">Last Name :</label>
+            <input class="box" type="text" name="last-name" id="last-name" placeholder="Enter your last name" required>
+        </div>
+        <div class="inputs">
+            <label for="email">Email :</label>
+            <input class="box" type="email" name="email" id="email">
+        </div>
+        <div class="inputs">
+            <label for="password">Password</label>
+            <input class="box" type="password" name="password" id="password">
+        </div>
+        <div class="inputs">
+        <label for="dob">Day of Birth :</label>
+        <input class="box" type="date" name="dob" id="dob" min="2020-01-01" value="2020-01-01">
+        </div>
+        <div class="inputs">
+            <label for="phone">Phone :</label>
+            <input class="box" type="tel" name="phone" id="phone">
+        </div>
+        <div class="address">
+            <label for="address">Address :</label>
+            <textarea class="box" name="address" id="address" cols="20" rows="5"></textarea>
+        </div>
+        <div class="inputs">
+            <label for="country">Country :</label>
+            <select class="box" name="country" id="country">
+                <option value="">Select country</option>
+                <option value="turkey">Turkey</option>
+                <option value="germany">Germany</option>
+                <option value="usa">USA</option>
+                <option value="uk">UK</option>
+            </select>
+        </div>
+        <div class="inputs">
+            <label for="gender">Gender :</label>
+            <div class="gen-div">
+                <input type="radio"  name="female" id="female">
+                <label for="">Female</label>
+                <input type="radio" name="male" id="male">
+                <label for="">Male</label>
+            </div>
+        </div>
+        <div class="inputs">
+            <label for="languages">Languages :</label>
+            
+            <div class="lang-div">
+                <input type="checkbox" name="türkçe" id="türkçe" checked>
+                <label for="türkçe">Türkçe</label>
+                <input type="checkbox" name="english" id="english">
+                <label for="english">English</label>
+                <input type="checkbox" name="français" id="français">
+                <label for="français">Français</label>
+            </div>
+        </div>
+        <div class="bottom-div">
+            <input type="submit" value="Save">
+            <input type="reset" value="Clear">
+        </div>
+    </form>
+</body>
+</html>

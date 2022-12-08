@@ -1,0 +1,64 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: url(https://cdn.pixabay.com/photo/2015/06/19/21/24/avenue-815297_1280.jpg) ;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+h1{
+    text-align: center;
+    margin:20px 0px;
+    color: white;
+}
+form{
+    padding: 20px;
+    background-image: linear-gradient(to right, blue, green);
+    width: fit-content;
+    margin: auto;
+    border-radius: 10px;
+}
+.inputs{
+    margin-bottom: 20px;
+}
+.address *{
+    margin-bottom: 20px;
+    vertical-align: middle;
+}
+label{
+    display: inline-block;
+    width: 100px;
+
+}
+.bottom-div{
+    text-align: center;
+
+}
+.bottom-div input{
+    padding: 10px 20px;
+    margin: 0px 10px;
+    background-color: bisque;
+    border-radius: 5px;
+    border: none;
+}
+.bottom-div input:hover{
+    background-color:chocolate ;
+    font-weight: 700;
+    cursor: pointer;
+}
+.gen-div, .lang-div{
+    display: inline-block;
+}
+.gen-div label, 
+.lang-div label{
+    width: auto;
+    padding-right:20px;
+}
+.box{
+    width: 250px;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
