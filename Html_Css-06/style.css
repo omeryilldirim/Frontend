@@ -5,12 +5,22 @@
 }
 body{
     font-family: 'Zen Dots', cursive;
+    background-image: url(https://cdn.pixabay.com/photo/2013/11/28/10/36/road-220058_1280.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    height: 100vh;
+}
+h1{
+    padding: 20px;
+    text-align: center;
 }
 form{
-    background-color: antiquewhite;
+    background-image: linear-gradient(to right, blue, green);
     width: fit-content;
-    margin: auto;
+    margin: 20px auto;
     padding: 50px;
+    border-radius: 10px;
 }
 label{
     display: inline-block;
@@ -19,9 +29,39 @@ label{
 .lang-div, .gen-div {
     display: inline-block;
 }
-.lang-div label{
+.lang-div label, .gen-div label{
     width: auto;
+    margin-right: 20px;
 }
-.gen-div label{
-    width: auto;
+
+.inputs{
+    border-radius: 5px;
+    width: 300px;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+}
+.radio-check{
+    margin-bottom: 20px;
+    /* margin-left: 20px; */
+}
+.btn-container{
+    text-align: center;
+}
+.btn-container input{
+    padding: 10px;
+    margin: 20px;
+    width: 100px;
+    border-radius: 10px;
+    border: none;
+    background-color:lightseagreen;
+}
+.btn-container input:hover{
+    background-color: azure;
+    color: brown;
+    font-weight: 700;
+    cursor:pointer
+}
+.textarea-div *{
+    vertical-align: middle;
 }

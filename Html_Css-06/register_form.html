@@ -19,7 +19,7 @@
     <form action="">
       <div>
         <label for="first-name">First Name</label>
-        <input
+        <input class="inputs"
           type="text"
           name="first-name"
           id="first-name"
@@ -29,7 +29,7 @@
       </div>
       <div>
         <label for="last-name">Last Name</label>
-        <input
+        <input class="inputs"
           type="text"
           name="last-name"
           id="last-name"
@@ -39,7 +39,7 @@
       </div>
       <div>
         <label for="email">Email</label>
-        <input
+        <input class="inputs"
           type="email"
           name="email"
           id="email"
@@ -50,7 +50,7 @@
 
       <div>
         <label for="password">Password</label>
-        <input
+        <input class="inputs"
           type="password"
           name="password"
           id="password"
@@ -61,7 +61,7 @@
 
       <div>
         <label for="dob">Day of Birth</label>
-        <input
+        <input class="inputs"
           type="date"
           name="dob"
           id="dob"
@@ -73,7 +73,7 @@
       </div>
       <div>
         <label for="phone">Phone</label>
-        <input
+        <input class="inputs"
           type="tel"
           name="phone"
           id="phone"
@@ -81,13 +81,13 @@
           required
         />
       </div>
-      <div>
+      <div class="textarea-div">
         <label for="address">Address</label>
-        <textarea name="address" id="address" cols="30" rows="10"></textarea>
+        <textarea class="inputs" name="address" id="address" cols="30" rows="10"></textarea>
       </div>
       <div>
         <label for="country">Country</label>
-        <select name="country" id="country">
+        <select class="inputs" name="country" id="country">
           <option value="">Select country</option>
           <option value="Turkey">Turkey</option>
           <option value="Germany">Germany</option>
@@ -98,26 +98,26 @@
       <div>
         <label for="gender">Gender</label>
         <div class="gen-div">
-            <input type="radio" name="gender" id="male" />
+            <input class="radio-check" type="radio" name="gender" id="male" />
             <label for="male">Male</label>
-            <input type="radio" name="gender" id="female" />
+            <input class="radio-check" type="radio" name="gender" id="female" />
             <label for="female">Female</label>
         </div> 
       </div>
       <div>
         <label for="languages">Languages</label>
         <div class="lang-div">
-            <input type="checkbox" name="lang" id="türkçe" checked />
+            <input class="radio-check" type="checkbox" name="lang" id="türkçe" checked />
             <label for="türkçe">Türkçe</label>
     
-            <input type="checkbox" name="lang" id="english" />
+            <input class="radio-check" type="checkbox" name="lang" id="english" />
             <label for="english">English</label>
     
-            <input type="checkbox" name="lang" id="français" />
+            <input class="radio-check" type="checkbox" name="lang" id="français" />
             <label for="français">Français</label>
         </div> 
       </div>
-      <div>
+      <div class="btn-container">
         <input type="submit" value="Save" />
         <input type="reset" value="Clear" />
       </div>
