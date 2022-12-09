@@ -19,6 +19,7 @@ form{
     width: fit-content;
     margin: auto;
     border-radius: 10px;
+    box-shadow: pink 0px 0px 10px 5px;
 }
 .inputs{
     margin-bottom: 20px;
