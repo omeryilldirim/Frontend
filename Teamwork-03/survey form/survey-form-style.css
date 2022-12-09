@@ -1,0 +1,34 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.header{
+    font-size: 30px;
+    margin: 20px 5px;
+}
+.description{
+    margin-bottom: 10px;
+}
+.info{
+    margin-bottom: 20px;
+}
+.info *{
+    display: block;
+    padding: 5px 0px;
+}
+main{
+    margin-left: 10px;
+}
+.role, .improve, .feature, .recommend{
+    margin-bottom: 20px;
+}
+.info input{
+    margin-bottom: 10px;
+}
+.submit{
+    border: none;
+}
+.suggest{
+    margin-bottom: 20px;
+}
