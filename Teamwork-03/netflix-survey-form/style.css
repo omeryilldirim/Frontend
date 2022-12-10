@@ -18,7 +18,6 @@ h1, p{
 form{
     background-color: rgba(0, 0, 0, 0.617);
     margin: 30px auto;
-    
     padding: 20px;
     width: 500px;
     height: 897px;
@@ -29,6 +28,10 @@ form{
     display: block;
     width: 400px;
     padding:10px 0px;
+}
+.box>.no-padding{
+    padding: 0;
+    margin-top: 20px;
 }
 .box>input{
     width: 450px;
