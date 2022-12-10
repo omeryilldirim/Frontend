@@ -9,28 +9,28 @@ body {
   background: -webkit-linear-gradient(
     to right,
     #be5869,
-    #403a3e); /* Chrome 10-25, Safari 5.1-6 */
+    #403a3e
+  ); /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(
     to right,
     #a3263b,
-    #332e32); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    #332e32
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
-nav a{
+nav a {
   display: inline-block;
   padding: 0px;
   box-sizing: content-box;
 }
-nav ul li{
+nav ul li {
   list-style-type: none;
   display: inline-block;
   text-align: left;
   vertical-align: middle;
-
 }
 nav ul {
   padding: 0px;
   display: inline-block;
-  
 }
 .header {
   background-color: red;
@@ -41,11 +41,11 @@ nav ul {
 }
 .header-a {
   color: black;
-  font-size:larger;
+  font-size: larger;
   text-decoration: none;
-  padding:1rem 4rem ;
+  padding: 1rem 4rem;
 }
-.header-a:hover{
+.header-a:hover {
   color: red;
   background-color: white;
   font-weight: 900;
@@ -63,10 +63,10 @@ img {
   margin: 0px;
   text-align: left;
 }
-#li-img{
+#li-img {
   height: 80px;
   box-sizing: content-box;
 }
-.images{
+.images {
   box-shadow: 0 0 20px rgba(255, 255, 255, 0.809);
 }
