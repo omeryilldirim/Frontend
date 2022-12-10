@@ -14,7 +14,35 @@ header{
     font-size: 35px;
 }
 nav{
-    background-color: hsla(295, 100%, 50%, 0.403);
+    background-color: hsla(273, 100%, 50%, 0.479);
     padding: 20px;
     font-size: 20px;
+    color: aliceblue;
+}
+nav a{
+    color: aliceblue;
+    text-decoration:none;
+}
+/* nav a:link{
+    color: green;
+}
+nav a:visited{
+    color: yellow;
+} */
+nav a:hover{
+    text-decoration: underline; 
+}
+nav a:active{       /*! linkin basılı kaldığı süre boyunca */
+    color: red;
+}
+section{
+    margin: 50px 0px;
+}
+footer{
+    background: #000;
+    color: white;
+    padding: 20px;
+}
+h2{
+    margin-bottom: 15px;
 }
