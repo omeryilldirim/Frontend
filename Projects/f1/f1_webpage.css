@@ -12,8 +12,8 @@ body {
     #403a3e); /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(
     to right,
-    #be5869,
-    #403a3e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    #a3263b,
+    #332e32); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 nav a{
   display: inline-block;
@@ -53,7 +53,7 @@ nav ul {
 }
 img {
   width: 20%;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   vertical-align: middle;
 }
 #f1-logo {
@@ -66,4 +66,7 @@ img {
 #li-img{
   height: 80px;
   box-sizing: content-box;
+}
+.images{
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.809);
 }
