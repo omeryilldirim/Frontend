@@ -1,0 +1,107 @@
+html {
+  /*? Default font-size 16px */
+  /* font-size: 20px;  */
+  /** default fontsize=20px*/
+}
+
+h1 {
+  /*? Degistirilmedigi surece h1'in buyuklugu default font-size'ın 2 katidir. 16x2 = 32px*/
+  color: red;
+}
+p.first {
+  /*? p'nin size default font-size a eşittir.; */
+  font-size: 30px;
+}
+
+
+/********************** UNITS ************************/
+
+
+/** Absolute ölçü birimleri px, mm, cm, m, inch */
+p.abs{
+  font-size: 10px;
+  font-size: 1cm;
+}
+p.percent{
+  font-size: 200%; /*?  16px * 2 = 32px  */
+}
+
+/*! EM ölçü biriminde bir html elemanının font size'i parent elementin font size'ına göre belirlenir.*/ 
+
+.div1{
+  font-size: 1em; /* 1em default fontsize a eşittir. */
+}
+.div2{
+  font-size: 2em; 
+  /* parent elementin 2 katı olur dolayısıyla 2*16px=32px */
+}
+.div3{
+  font-size: 3em;
+}
+
+/*! REM ölçü biriminde bir html elemanının font size'i root elementin font size'ına göre belirlenir.*/ 
+
+.div4{
+  font-size: 1rem; /*? 16px * 1 = 16px */
+}
+.div5{
+  font-size: 2rem; /*? 16px * 2 = 32px */
+}
+.div6{
+  font-size: 3rem; /*? 16px * 3 = 48px */
+}
+
+
+/********************** TEXT STYLE ************************/
+
+
+p.text-style{
+  font-style: italic;
+  text-align: justify;
+  /* font-weight: 800;
+  font-weight: bold; */
+  font-weight: bolder;
+  font-variant: small-caps;
+}
+p.text-style .elit{
+  color: red;
+  text-decoration: overline;
+  text-decoration: underline;
+  text-decoration: line-through;
+  text-decoration: none;
+}
+/********* text transformation ***********/
+
+div.transformation p{
+  font-size: 1.2rem;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+  text-transform: capitalize;
+  text-transform: lowercase;
+  text-transform: uppercase;
+  text-transform: none;
+}
+
+div.transformation p.indent{
+  text-indent: 20px;
+}
+
+.spacing{
+  line-height: 1.5;
+  word-spacing: 10px;
+  letter-spacing: 3px;
+  direction: rtl;
+}
+
+.shadow{
+  padding: 1rem;
+  margin-bottom: 5rem;
+  background-color: antiquewhite;
+  box-shadow: 0px 5px 30px 20px rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+}
+.shadow h2{
+  text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+  /* "," ekleyip text shadow eklemeye devam edilebilir.*/
+}
+

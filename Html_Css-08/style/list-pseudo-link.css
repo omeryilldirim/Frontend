@@ -1,0 +1,77 @@
+* {
+  margin: 0;
+  /* padding: 0; */
+  box-sizing: border-box;
+}
+
+/***************** LISTS ****************/
+
+.languages {
+  list-style-type: lower-roman;
+  list-style-position: inside; /* default is outside */
+  list-style-image: linear-gradient(to left bottom, red, blue);
+  list-style-image: url(../images/house-solid.svg);
+}
+
+/******** FONTAWESOME *********/
+
+.awesome {
+  color: red;
+}
+
+/***************** PSEUDO CLASSES****************/
+
+ul.pseudo li {
+  list-style-type: none;
+  background-color: aliceblue;
+  border: 1px solid gray;
+  width: 10rem;
+  padding: 5px;
+}
+ul.pseudo li:first-child {
+  background-color: antiquewhite;
+}
+
+ul.pseudo li:last-child {
+  background-color: orange;
+}
+
+ul.pseudo li:nth-child(odd) {
+  color: red;
+}
+
+ul.pseudo li:hover {
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+ul.pseudo li:active {
+  font-weight: 900;
+}
+
+/***************** PSEUDO ELEMENTS****************/
+/*? pseudo elementler html de varolmayan bir element eklememizi ve stillendirmemizi sağlayan elementler gibi düşünülebilir.
+/*? ::first-line, ::first-letter, ::before, ::after, */
+
+.pseudo li::before {
+  content: " 💋 ";
+}
+.pseudo li::after {
+    content: " 👀 ";
+}
+.pseudo li:nth-child(3)::before {
+    content: " 🧠 ";
+}
+.pseudo li:last-child::after {
+    font-family: "Font Awesome 6 Free";
+    font-weight: 600;
+    content: " \f81d";
+}
+
+.pseudo-elements::first-line {
+    font-weight: bolder;
+}
+
+.pseudo-elements::first-letter {
+    font-size: 200%;
+}
