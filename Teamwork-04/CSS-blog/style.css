@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  
+}
+div.container {
+    border: 0.2rem solid blue;
+    padding: 3rem;
+    margin: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h1{
+    margin-bottom: 0.5rem;
+}
+
+img {
+    max-width: 100%;    
+}
+
+div.img {
+    flex-basis: 100%;
+}
+
+div.text {
+    font-size: 1rem;
+    padding: 1rem 3rem;
+  }
