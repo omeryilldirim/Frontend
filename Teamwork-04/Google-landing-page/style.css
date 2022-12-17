@@ -1,0 +1,156 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navbar{
+    margin: 20px;
+}
+.navbar a{
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+    font-size: 20px;
+    vertical-align: middle;
+}
+
+.navbar .nav-left{
+    display: inline-block;
+}
+
+.navbar .nav-right{
+    display: inline-block;
+    float: right;
+    
+}
+
+#sign-in-btn{
+    background-color: dodgerblue;
+    color: white;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: 500;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#sign-in-btn:hover{
+    box-shadow: 0px 1px 1px dodgerblue;
+}
+
+.google-logo{
+    text-align: center;
+    margin-top: 200px;
+    margin-bottom: 20px;
+}
+
+.google-logo img{
+    width: 400px;
+}
+
+#mic-img{
+    width: 20px;
+    position: relative;
+    top: 11px;
+    right: 90px;
+}
+#mic-img:hover{
+    cursor: pointer;
+}
+
+
+#glass-img{
+    width: 40px;
+    position: relative;
+    top: 16px;
+    right: 590px;
+}
+
+.searchbar{
+    text-align: center;
+    margin-left: 50px;
+    margin-top: ;
+}
+#search{
+    width: 600px;
+    height: 60px;
+    border-radius: 35px;
+    border: 2px solid rgb(218, 214, 214);
+    padding:0px 60px;
+    font-size: 16px;
+}
+#search:hover{
+    box-shadow: 2px 2px 4px rgb(204, 204, 204);
+}
+
+.buttons{
+    text-align: center;
+    padding: 40px;
+}
+
+.buttons button{
+    padding: 12px 18px;
+    margin: auto 10px;
+    border: none;
+    border-radius: 5px;
+    color: gray;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.buttons button:hover{
+    box-shadow: 0px 0px 4px rgb(136, 136, 136);
+    color: black;
+}
+
+.buttons p{
+    margin: 20px auto;
+    font-size: 20px;
+}
+
+.location{
+    background-color: #f2f2f2;
+    margin-top: 160px;
+    border-bottom: 1px solid #e4e4e4;
+}
+
+.location p {
+    padding: 20px;
+    font-size: 20px;
+    color: gray;
+}
+
+.footer-nav{
+    padding: 20px;
+    font-size: 20px;
+    color: gray;
+    background-color: #f2f2f2;
+}
+
+.footer-nav a{
+    text-decoration: none;
+    color: gray;
+    padding-right: 20px;
+}
+
+.right-footer{
+    display: inline-block;
+    float: right;
+}
+
+.left-footer{
+    display: inline-block;
+}
+
+.nav-left a:hover, .nav-right .nav-a:hover{
+    text-decoration: underline;
+}
+
+#menu-icon{
+    opacity: 0.6;
+    width: 40px;
+}
+#menu-icon:hover{
+    opacity: 1;
+}
