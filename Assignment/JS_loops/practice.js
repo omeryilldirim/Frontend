@@ -97,25 +97,24 @@
 //? create a do...while loop to ask the user to input grade until user input q or Q. when the user input q or Q stop the loop and sum up all the number inputed so far.
 
 var sum = 0;
-var number = prompt("enter a number to sum up or press q/Q to quit");
+var number = 0;
 
 do {
-  sum += number;
-  number = prompt("enter a number to sum up or press q/Q to quit");
-} while (number !== "q");
+  sum += +number;
+  console.log(sum);
+  number = Number(prompt("enter a number to sum up or press q/Q to quit"));
+} while (String(number) !== "q" || String(number) !== "Q");
 
 console.log(`Sum is: ${sum}`);
 
+// # ODEV1: Console'dan girilen sayilarin ortalamasini bulan programi yaziniz. Program ilk olarak kullanicidan kac tane sayi gireceginin almali bu bilgi isiginda girilen sayilarin ortalamasini hesaplayarak yazdirmalidir.
 
+// # ODEV2: Console'dan girilen taban ve pozitif us degerlerine gore uslu sayi sonucunu hesaplayan kodu for veya while dongusu ile yaziniz.
 
-# ODEV1: Console'dan girilen sayilarin ortalamasini bulan programi yaziniz. Program ilk olarak kullanicidan kac tane sayi gireceginin almali bu bilgi isiginda girilen sayilarin ortalamasini hesaplayarak yazdirmalidir.
+// # ODEV3 (ZOR): Console'dan girilen bir sayinin basamak sayisini hesaplayarak console'a bastiran kodu donguler yardimi ile yaziniz.
 
-# ODEV2: Console'dan girilen taban ve pozitif us degerlerine gore uslu sayi sonucunu hesaplayan kodu for veya while dongusu ile yaziniz.
+// ## ORNEK:
 
-# ODEV3 (ZOR): Console'dan girilen bir sayinin basamak sayisini hesaplayarak console'a bastiran kodu donguler yardimi ile yaziniz.
+// ### 43567 => Basamak sayisi: 5
 
-## ORNEK:
-
-### 43567 => Basamak sayisi: 5
-
-### 123 => Basamak sayisi: 3
+// ### 123 => Basamak sayisi: 3
