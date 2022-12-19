@@ -1,3 +1,38 @@
+*{
+    margin: 0;
+}
 .img-float{
-    width: 50%;
+    width: 30%;
+    float: left;
+    margin-left: 0.5rem;
+}
+
+.par1{
+    border: 1px solid red;
+}
+
+.clearfix{
+    clear: both;
+}
+
+.box{
+    float: left;
+    font-size: 2rem;
+}
+.box1{
+    background-color: aqua;
+    width: 40%;
+    
+}
+.box2{
+    background-color: magenta;
+    width: 30%;
+}
+.box3{
+    background-color:burlywood;
+    width: 20%;
+}
+
+.par2{
+    clear: both;
 }
