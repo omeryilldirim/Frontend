@@ -1,4 +1,4 @@
-// //? sum up the numbers from 1 to n /
+// //? add up the numbers from 1 to n /
 
 // const n = Number(prompt("Enter a number"));
 // let sum = 0;
@@ -9,7 +9,7 @@
 
 // console.log("Sum is :", sum);
 
-// //? produce 10 random numbers between 0-100 /
+// //? generate 10 random numbers between 0-100 /
 
 // for (i = 1; i < 11; i++) {
 //   const randomNum = Math.trunc(Math.random() * 100);
@@ -111,7 +111,7 @@
 
 // console.log(`Average is: ${sum / counter}`);
 
-// //? create random number between 0-100 and user has 5 chances to guess. decrement chance counter by every guess and tell the user to raise or lower the number to guess right. if the user cant guess right print SORRY, if guessed right print CONGRATS.
+// //? create random number between 0-100 and user has 5 chances to guess. decrement chance counter by every guess and tell the user to raise or lower the number to guess right. if the user cant guess right; print SORRY, if guessed right print CONGRATS.
 
 // const number = Math.trunc(Math.random() * 100);
 // let chance = 5;
@@ -155,9 +155,14 @@
 
 // const baseNum = Number(prompt("Enter base number"));
 // const exponentialNum = Number(prompt("Enter exponential number"));
+// let result = 1;
 
-// alert(`The result is : ${baseNum ** exponentialNum}`);
-// console.log(`The result is : ${baseNum ** exponentialNum}`);
+// if (exponentialNum != 0) {
+//   for (i = 0; i < exponentialNum; i++) {
+//     result = result * baseNum;
+//   }
+// }
+// alert(`The result is : ${result}`);
 
 // //? # ODEV3 (ZOR): Console'dan girilen bir sayinin basamak sayisini hesaplayarak console'a bastiran kodu donguler yardimi ile yaziniz.
 
