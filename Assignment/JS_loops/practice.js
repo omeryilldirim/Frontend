@@ -178,19 +178,38 @@
 //   alert(`${count} digits number`);
 // }
 
-// Can you find the needle in the haystack?
+// //? Can you find the needle in the haystack?
+// //? Write a function findNeedle() that takes an array full of junk but containing one "needle"
+// //? After your function finds the needle it should return a message (as a string) that says:
+// //? "found the needle at position " plus the index it found the needle, so:
+// //? findNeedle(['hay', 'junk', 'hay', 'hay', 'moreJunk', 'needle', 'randomJunk'])
+// //? should return "found the needle at position 5" (in COBOL "found the needle at position 6")
 
-// Write a function findNeedle() that takes an array full of junk but containing one "needle"
+// alert("Needle Finder in the Haystack!!!");
 
-// After your function finds the needle it should return a message (as a string) that says:
+// const wordNum = prompt("Enter the number of words you will input");
+// const list = [];
 
-// "found the needle at position " plus the index it found the needle, so:
+// for (i = 1; i <= wordNum; i++) {
+//   const word = prompt(`Enter the word for position ${i}`);
+//   list.push(word);
+// }
 
-// findNeedle(['hay', 'junk', 'hay', 'hay', 'moreJunk', 'needle', 'randomJunk'])
-// should return "found the needle at position 5" (in COBOL "found the needle at position 6")
+// function findNeedle(list) {
+//   for (i = 0; i < list.length; i++) {
+//     if (list[i] == "needle") {
+//       alert(`Found the needle at position ${i + 1}`);
+//       break;
+//     }
+//   }
+//   if (list[i] != "needle") {
+//     alert("'needle' is not in the haystack!");
+//   }
+// }
 
-// text = "Turkey";
+// findNeedle(list);
 
-// Let's write a program that prints every character twice
+//? Let's write a program that prints every character twice
+//? text = "Turkey"; output: TTuurrkkeeyy
 
-//  output: TTuurrkkeeyy
+const text = prompt;
