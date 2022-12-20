@@ -2,7 +2,7 @@
 // *            DONGULER(LOOPS)- WHILE
 // * ============================================
 
-console.log("*** WHILE ***")
+console.log("*** WHILE ***");
 
 // let count = 1
 // while (count <= 10) {
@@ -33,16 +33,15 @@ console.log("*** WHILE ***")
 
 //! ODEV3 (COZUM): Console'dan girilen bir sayinin basamak sayisini hesaplayarak console'a bastiran kodu donguler yardimiyle yaziniz.
 
-let counter = 0
-let number = Number(prompt("your number:"))
+let counter = 0;
+let number = Number(prompt("your number:"));
 
 while (number != 0) {
-  number = Math.trunc(number / 10)
-  console.log(number)
-  counter++
+  number = Math.trunc(number / 10);
+  counter++;
 }
 
-console.log(`Digit count is ${counter}`)
+console.log(`Digit count is ${counter}`);
 
 // * ============================================
 // *         DONGULER(LOOPS)- DO-WHILE
@@ -54,16 +53,15 @@ console.log(`Digit count is ${counter}`)
 //? istenip istenmedigini soracak cevap 'e' veya 'E' ise yeniden not
 //? isteyecek ve islemleri tekrar edecektir.
 
-
-
-
-
+let again = "";
 
 do {
-  let avg = 0
-  const midterm = Number(prompt("Enter your midterm grade"))
-  const final = Number(prompt("Enter your final grade"))
-  avg = (midterm * 0.4) + (final * 0.6)
+  let avg = 0;
+  const midterm = Number(prompt("Enter your midterm grade"));
+  const final = Number(prompt("Enter your final grade"));
+  avg = midterm * 0.4 + final * 0.6;
   console.log(`Your score is : ${avg}`);
-  var again = prompt("Do you want to continue to calculate? (e/E)")
-} while (again === "e" || again === "E");
+  again = prompt("Do you want to continue to calculate? (e/E)");
+} while (again === "e" || "E");
+
+console.log("see you later!");
