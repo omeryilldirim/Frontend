@@ -212,4 +212,12 @@
 //? Let's write a program that prints every character twice
 //? text = "Turkey"; output: TTuurrkkeeyy
 
-const text = prompt;
+// const text = prompt("Please enter a string");
+// let output = "";
+
+// for (i = 0; i < text.length; i++) {
+//   const letter = text[i];
+//   output += letter + letter;
+// }
+
+// console.log(output);
