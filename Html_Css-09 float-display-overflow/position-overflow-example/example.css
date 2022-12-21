@@ -8,6 +8,7 @@
     font-variant: small-caps;
     color: orange;
     background-color: rgba(10, 57, 45);
+    padding: 0.5rem;
   }
   
   #brand {
@@ -15,6 +16,8 @@
   }
   nav {
     background-color: lightgrey;
+    position: sticky;
+    top:0px;
   }
   ul {
     list-style-type: none;
@@ -23,7 +26,8 @@
     display: inline-block;
     padding-left: 40px;
     vertical-align: middle;
-  
+    padding-top: 5px;
+    padding-bottom: 5px;
     /* float:right; */
   }
   a {
@@ -31,10 +35,47 @@
   }
   .avatar {
     width: 50px;
+    float: left;
   }
-
-  
- 
+  .comments-container{
+    background-color: black;
+    color: white;
+    padding: 1rem;
+    position: relative;
+  }
+  .comment-left{
+    width: 60%;
+    height: 80vh;
+    /* float: left; */
+  }
+  .comment-right{
+    width: 35%;
+    background-color: cadetblue;
+    position: absolute;
+    top: 90px;
+    right: 40px;
+    padding:1rem;
+    border-radius: 1rem;
+    margin-bottom: 100px;
+  }
+  .comment-header{
+    position: relative;
+    left: 2rem;
+  }
+  .comments{
+    margin: 2rem;
+    border-radius: 20px;
+    padding: 2rem;
+  }
+  .comment{
+    padding-left: 4rem;
+  }
+  .dark{
+    background-color: cadetblue;
+  }
+  .light{
+    border: 2px solid cadetblue;
+  }
   label {
     color: white;
     display: block;
@@ -44,9 +85,11 @@
   textarea {
     width: 100%;
     resize: none;
+
   }
   input {
     width: 100%;
+
   }
   button {
     background-color: orange;
@@ -74,4 +117,3 @@
     position: absolute;
     z-index: 10;
   }
-  
