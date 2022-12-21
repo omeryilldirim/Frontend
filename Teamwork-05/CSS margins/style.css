@@ -1,0 +1,41 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: antiquewhite;
+    text-align: center;
+}
+.container{
+    background-color:cadetblue;
+    position: relative;
+    width: 80%;
+    height: 70vh;
+    margin:15vh auto;
+    vertical-align: middle;
+    border: 5px solid black;
+    border-radius: 10px;
+    
+}
+h1{
+
+    font-size: 3rem;
+    margin: 2%;
+    margin-top: 10%;
+}
+p{
+
+    margin: 5%;
+    font-size: 2rem;
+    font-weight: 900;
+}
+img{
+    width: 15%;
+    position: absolute;
+    top: -15%;
+    left: 42%;
+    border-radius: 50%;
+    border: 5px solid black;
+
+}
