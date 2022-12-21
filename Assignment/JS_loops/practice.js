@@ -221,3 +221,21 @@
 // }
 
 // console.log(output);
+
+//? Exercise3
+//? The main idea is to count all the occurring characters in a string. If you have a string like aba, then the result should be {'a': 2, 'b': 1}.
+//? What if the string is empty? Then the result should be empty object literal, {}.
+
+alert(`Welcome to the Letter Counter`)
+const text = prompt(`Please enter a string`)
+const result = {}
+
+for (i=0; i< text.length; i++) {
+    const letter = [text[i]];
+    if (result[letter]=== undefined){
+        result[letter] = 0;
+    }
+    result[letter] += 1;
+}
+
+console.log(result);
