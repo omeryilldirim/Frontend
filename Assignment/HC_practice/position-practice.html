@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Position</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background-color: bisque;
+        height: 2000px;
+      }
+      .welcome * {
+        display: inline-block;
+        color: white;
+        font-size: 1.2rem;
+        padding: 0.3rem;
+        height: 3rem;
+      }
+      .practise * {
+        display: inline-block;
+        color: black;
+        font-size: 1.2rem;
+        padding: 0.3rem;
+        height: 5rem;
+      }
+      .welcome {
+        background-color: dimgray;
+      }
+      .practise {
+        background-color: darkgrey;
+      }
+      .right {
+        float: right;
+      }
+      nav {
+        width: 100%;
+        margin: 200px 20px;
+        position: sticky;
+        top: 20px;
+      }
+      .cleanfix {
+        clear: both;
+      }
+      .position{
+        background-color: brown;
+        width: 50%;
+        height: 20%;
+        position: relative;
+        left: 25%;
+      }
+      img{
+        width: 40%;
+        /* position: relative;
+        left: 30%;
+        top: 40%; */
+      }
+      a{
+        position: absolute;
+        top: 50px;
+        right: 50px;
+        text-decoration: none;
+        font-size: x-large;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="welcome">
+        <p>Welcome</p>
+        <div class="right">
+          <ul>
+            <li>Login</li>
+            <li>Cart</li>
+          </ul>
+        </div>
+      </div>
+      <div class="cleanfix"></div>
+      <div class="practise">
+        <p>Practise</p>
+        <div class="right">
+          <ul>
+            <li>Home</li>
+            <li>Products</li>
+            <li>About</li>
+            <li>Contact</li>
+          </ul>
+        </div>
+      </div>
+      <div class="cleanfix"></div>
+    </nav>
+    <div class="position">
+      <img src="https://picsum.photos/id/598/600/400" alt="">
+      <a href="">TEST</a>
+    </div>
+  </body>
+</html>
