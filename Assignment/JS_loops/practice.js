@@ -125,7 +125,7 @@
 //     alert("Congrats! You guessed right!");
 //   } else {
 //     chance--;
-//     alert(`You have ${chance} chance left.`);
+//     alert(`You did not guess right! You have ${chance} chance left.`);
 //     if (chance == 0) {
 //       alert(
 //         `SORRY! You did not guess the number right! The Number is ${number} !!`
