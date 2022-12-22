@@ -234,7 +234,6 @@ for (i = 0; i < text.length; i++) {
   const letter = [text[i]];
   if (result[letter] === undefined) {
     result[letter] = 0;
-    console.log(result);
   }
   result[letter] += 1;
 }
