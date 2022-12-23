@@ -86,8 +86,26 @@
 // OOOOOO
 // OOOOOOO
 
+// let result = "";
+
+// for (i = 1; i < 8; i++) {
+//   result += "0".repeat(i);
+//   result += "\n";
+// }
+// console.log(result);
+
 //? soru-9 Aşağıdaki çıktıyı konsola yazdırınız ?
 //    O
 //   OOO
 //  OOOOO
 // OOOOOOO
+
+// let result = "";
+
+// for (j = 3, i = 1; j >= 0; j--, i += 2) {
+//   result += " ".repeat(j);
+//   result += "0".repeat(i);
+//   result += "\n";
+// }
+
+// console.log(result);
