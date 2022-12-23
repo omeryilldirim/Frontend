@@ -8,34 +8,35 @@ body{
     text-align: center;
 }
 .container{
-    background-color:cadetblue;
+    background-color:#DC6C5E;
     position: relative;
     width: 80%;
     height: 70vh;
     margin:15vh auto;
     vertical-align: middle;
     border: 5px solid black;
-    border-radius: 10px;
-    
+    border-radius: 10px;   
 }
-h1{
-
-    font-size: 3rem;
+span{
+    color: yellow;
+}
+h3{
+    font-size: 2rem;
     margin: 2%;
     margin-top: 10%;
 }
 p{
-
-    margin: 5%;
-    font-size: 2rem;
+    color: rgb(65, 62, 62);
+    margin: 5% 10%;
+    font-size: 3rem;
     font-weight: 900;
+    vertical-align: middle;
 }
 img{
     width: 15%;
     position: absolute;
-    top: -15%;
+    top: -17%;
     left: 42%;
     border-radius: 50%;
     border: 5px solid black;
-
 }
