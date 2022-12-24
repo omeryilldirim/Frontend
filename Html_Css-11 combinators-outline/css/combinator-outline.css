@@ -1,0 +1,51 @@
+*{
+    margin:0.5rem;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/** Descendent Selector */
+
+.box p{
+    color: red;
+}
+
+/** Child Selector */
+
+.box > p{
+    color: blue;
+}
+.box > h1{
+    color: purple;
+}
+
+/** General Sibling Selector */
+/*? kapanan div ile aynı parent olan p leri seçer. */
+
+.box ~ p{
+    color: green;
+}
+
+/**  Selector */
+
+.box + p{
+    color: fuchsia;
+}
+
+/********************* */
+
+p + h1{
+    margin: 1rem;
+    font-size: 1rem;
+    margin:3rem;
+    width: 8rem;
+    height: 8rem;
+    border: 1px solid red;
+    border-radius: 50%;
+    text-align: center;
+    padding-top: 3.3rem;
+}
+p + h1:hover{
+    outline: 3px dashed purple;
+    outline-offset: 5px;
+}
