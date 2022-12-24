@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+html{
+    /* height: 100%; */
+}
+body{
+    /* height: 100%; belli bir değer olmadığı için çalışmaz */
+    height: 100vh;
+}
+.div1{
+    background-color: green;
+    width: 50%;
+    max-width: 1000px;
+    height: 50%;
+    /* body nin default yüksekliği olmadığı için height çalışmaz. */
+}
+.div2{
+    background-color: tomato;
+    width: 50%;
+}
+.div3{
+    background-color: magenta;
+    width: 50vw;
+    /* VW tarayıcıya bağlıdır parenta bağlı değildir. % tarayıcıya bağlıdır */
+}
