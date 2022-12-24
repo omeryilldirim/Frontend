@@ -3,3 +3,117 @@
     padding: 0;
     box-sizing: border-box;
 }
+body{
+    /* font-family: 'DynaPuff', cursive; */
+    /* font-family: 'Open Sans', sans-serif; */
+}
+/*!--------- HEADER ----------*/
+header{
+    background-image: linear-gradient(0deg, #D9AFD9 0%, #97D9E1 100%);
+    padding: 1rem;
+}
+.header__right a {
+    color: #920101;
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+}
+.header__right a:hover{
+    /* text-decoration: underline; */
+    border-bottom: 2px solid #920101;
+}
+.header__right{
+    float: right;
+    padding-top: 1.7rem;
+    padding-right: 1rem;
+}
+.header__logo{
+    width: 60px;
+}
+
+/*!--------- NAV STICKY----------*/
+
+nav.sticky{
+    position: sticky;
+    top: 0px;
+    padding: 2rem;
+    z-index: 1;
+    background-image: linear-gradient(45deg, #fbda61 0%, #ff5acd 100%);
+    text-align: center;
+}
+nav.sticky a{
+    color: black;
+    font-size: 1.5rem;
+    font-family: 'DynaPuff', cursive;
+    text-decoration: none;
+    margin-right: 2.5rem;
+    letter-spacing: 1px;
+}
+nav.sticky a:hover{
+    color: white;
+}
+/*!--------- NAV BANNER----------*/
+nav.banner{
+    position: relative;
+}
+.banner-img{
+    width: 100%;
+    max-height: calc(100vh - 190px);
+}
+nav.banner .hero{
+    position: absolute;
+    top: 35%;
+    left: 15%;
+}
+nav.banner .hero h2{
+    color: white;
+    margin-bottom: 1rem;
+    font-size: 4rem;
+    text-shadow: 0px 2px 4px black;
+}
+nav.banner .hero h3{
+    color: red;
+    font-size: 2rem ;
+    margin-bottom: 1rem;
+    text-shadow: 0px 2px 4px white;
+}
+nav.banner button {
+    padding: 0.7rem;
+    border: none;
+    border-radius: 10px;
+    background-color: #d9afd9;
+    font-weight: 700;
+  }
+nav.banner button:hover {
+    opacity: 0.5;
+    cursor: pointer;
+  }
+
+/*!--------- MAIN ----------*/
+
+main{
+    padding: 2rem;
+    text-align: justify;
+}
+
+/*!--------- SECTION ----------*/
+
+.slack-icon{
+    position:fixed;
+    bottom: 3rem;
+    right: 3rem;
+    font-size: 3rem;
+    color: red;
+    background-color:darksalmon ;
+    width: 5rem;
+    height: 5rem;
+    text-align: center;
+    border-radius: 50%;
+    padding-top: 0.8rem;
+}
+.slack-icon:hover{
+    cursor: pointer;
+    outline: 3px solid red;
+    outline-offset: 3px;
+    color: black;
+}
