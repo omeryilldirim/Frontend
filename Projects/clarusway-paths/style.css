@@ -21,6 +21,7 @@ img{
 img:hover{
     width: 25vw;
     cursor: pointer;
+    margin-right: 0.5rem;
 }
 .cleanfix{
     clear: both;
