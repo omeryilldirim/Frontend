@@ -13,25 +13,30 @@ html {
   color: var(--gray);
 }
 .image1_container {
-  background-image: url(./img/bg.jpg);
+  background-image: url(./img/bg.jpeg);
   min-height: 100%;
 }
 .image2_container {
-  background-image: url(./img/bg2.jpg);
+  background-image: url(./img/bg2.jpeg);
   min-height: 100%;
 }
 .image3_container {
-  background-image: url(./img/bg3.jpg);
+  background-image: url(./img/bg3.jpeg);
   min-height: 100%;
 }
 .image4_container {
-  background-image: url(./img/bg4.jpg);
+  background-image: url(./img/bg5.jpeg);
+  min-height: 100%;
+}
+.image5_container {
+  background-image: url(./img/bg4.webp);
   min-height: 100%;
 }
 .image1_container,
 .image2_container,
 .image3_container,
-.image4_container {
+.image4_container,
+.image5_container {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -42,43 +47,40 @@ html {
     align-items: center;
     justify-content: center;
 }
-.heading_container-logo{
+/* .heading_container-logo{
     width: 30%;
     margin: 1rem;
-}
+} */
 .heading_container{
     text-align: center;
     font-size: 3rem ;
     letter-spacing: 0.5rem;
-    color:white;
+    color:rgb(255, 255, 255);
+    font-weight: 700;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
 .heading_container-big{
-    background-color: black;
+    background-color: rgba(255, 235, 205, 0.328);
     padding: 2rem;
     border-top-left-radius: 2rem;
     border-bottom-right-radius: 2rem;
-    outline: 0.5rem inset purple;
+    outline: 0.5rem inset rgba(241, 48, 9, 0.79);
     outline-offset: 1rem;
     line-height: 5rem;
 }
 .heading_container-small{
-    background-color: black;
+  background-color: rgba(255, 235, 205, 0.635);
     padding: 0.7rem;
     border-top-left-radius: 0.7rem;
     border-bottom-right-radius: 0.7rem;
-    outline: 0.4rem inset purple;
+    outline: 0.4rem inset rgba(241, 48, 9, 0.79);
     outline-offset: 0.2rem;
     line-height: 5rem;
 }
 .section{
     text-align: center;
     padding: 3rem 5rem;
+    background-color: antiquewhite;
+    color: darkslategrey;
 }
-.section-light{
-    background-color: rgb(241, 241, 241);
-    color: var(--gray);
-}
-.section-dark{
-    background-color: #282e34;
-    color: #ddd;
-}
+
