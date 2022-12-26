@@ -69,28 +69,3 @@ if (n <= 0) {
 } else {
   console.log(`FIBONACCI(${n}) = ${fibo(n)}`);
 }
-
-// let n1 = 1;
-// let n2 = 1;
-// let count = 2;
-// let n3;
-// let result = "";
-
-// if (n == 1) {
-//   result += n1;
-// } else if (n == 2) {
-//   result += n1;
-//   result += " " + n2;
-// } else if (n > 2) {
-//   result += n1;
-//   result += " " + n2;
-//   for (let i = 2; i < n; i++) {
-//     n3 = n1 + n2;
-//     result += " " + n3;
-//     n1 = n2;
-//     n2 = n3;
-//     count++;
-//   }
-// }
-
-// console.log(result);
