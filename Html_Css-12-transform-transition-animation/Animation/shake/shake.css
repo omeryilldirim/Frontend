@@ -4,11 +4,11 @@ div {
 
 div i {
   font-size: 10rem;
-  color: brown;
+  color: gold;
 }
 .fa-bell:hover {
   animation-name: shake;
-  animation-duration: 0.3s;
+  animation-duration: 0.5s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
 }
