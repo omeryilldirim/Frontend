@@ -1,6 +1,68 @@
-.yazi{
-    text-align: center;
-    font-size: 2rem;
-    margin:2rem auto;
-    width: 50vw;
+.text {
+  text-align: center;
+  font-size: 2rem;
+  margin: 2rem auto;
+  width: 50vw;
+}
+
+/* ***************** TRANSFORM ROTATE ******************* */
+
+/* 90 ve 270 derecede yazı ekrana dik kaldığı için görünmez. */
+.text1 {
+    background-color: chocolate;
+    transform: rotateX(180deg);
+}
+.text1:hover{
+    transform: rotateX(0deg);
+} 
+.text2{
+    background-color: aquamarine;
+    transform: rotateY(180deg);
+}
+.text3{
+    background-color: greenyellow;
+    transform: rotate(5deg);
+    transform-origin: left;
+    margin-bottom: 100px;
+}
+
+/* ***************** TRANSFORM SCALE ******************* */
+
+.text4{
+    background-color: indianred;
+    transform: scaleX(1.5);
+    transform-origin: right;
+}
+.text5{
+    background-color: cornflowerblue;
+    transform: scaleY(2);
+}
+.text6{
+    background-color: darkcyan;
+
+}
+.text6:hover{
+    transform: scale(1.5, 2);
+
+}
+
+/* ***************** TRANSFORM TRANSLATE ******************* */
+
+.box{
+    background-color: brown;
+    width: 100px;
+    font-weight: 800;
+    height: 50px;
+}
+.box1{
+    transform: translateX(50px);
+}
+.box2{
+    transform: translateY(50px);
+}
+.box3{
+    transform: translate(100px, 100px);
+}
+img{
+    transform: rotateY(0deg);
 }
