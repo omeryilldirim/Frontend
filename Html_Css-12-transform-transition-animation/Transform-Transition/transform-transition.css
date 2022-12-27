@@ -53,16 +53,50 @@
     width: 100px;
     font-weight: 800;
     height: 50px;
+
+    /* transition-property: width;
+    transition-delay: 2s;
+    transition-duration: 2s;
+    transition-timing-function: ease; */
+
+    /* transition: background-color 3s, width 4s, height 3s; */   
+    transition: all 3s ease-in-out 1s;
 }
 .box1{
-    transform: translateX(50px);
+    /* transform: translateX(50px); */
+}
+.box1:hover{
+    /* transform: translateX(100px); */
+    background-color: cadetblue;
+    width: 200px;
+    height: 100px;
 }
 .box2{
-    transform: translateY(50px);
+    transform: translateY(150px);
 }
 .box3{
-    transform: translate(100px, 100px);
+    transform: translate(100px, 50px);
 }
+
 img{
     transform: rotateY(0deg);
+}
+
+.btn-div{
+    text-align: center;
+}
+
+.btn{
+    background-color:aqua;
+    border: 2px solid gray;
+    padding: 20px;
+    font-size: 1.3rem;
+    border-radius: 5px;
+    transition: background-color 3s ease-in-out;
+}
+.btn:hover{
+    background-color: chocolate;
+    border-radius: 25px;
+    width: 200px;
+    color:bisque;
 }
