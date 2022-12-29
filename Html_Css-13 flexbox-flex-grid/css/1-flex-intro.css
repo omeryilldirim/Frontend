@@ -36,7 +36,7 @@ ul {
   /*! Dikey Hizalama => align-items
   /**  flex-start, flex-end,center, stretch,baseline */
   align-items: center;
-  
+
   /*! Çok satırlı verilerin dikeyde hizalanması için kullanılır. wrap açık olmalı ve container height öğelerden daha uzun olmalı. */
   align-content: center;
 }
@@ -46,4 +46,60 @@ ul li {
   width: 6rem;
   padding: 0.5rem;
   color: white;
+}
+
+/* ************** FLEX ITEMS (flex-grow flex-basis  **************** */
+
+.container {
+  background-color: cadetblue;
+  padding: 1rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  text-align: center;
+  font-size: 1.5rem;
+}
+.container * {
+  background-color: thistle;
+}
+
+.container header {
+  flex-basis: 100%;
+
+  /*? Alternatif olarak */
+  /*! flex uc deger alabilir => flex-grow,  flex-shrink, flex-basis */
+  flex: 1 1 100%; /*?  flex-grow: 1,  flex-shrink:1 ve flex-basis: 100%; */
+  /*? Yani buyume katsayisi 1 kat, kuculme katsayi 1 kat*/
+  /*? flex-basis 100% oldugu icin tum satiri kapsar */
+
+  flex: 1 100%;
+  /** Flex 2 degerli de yazilabilir. Bu durumda:
+ /** İlk deger flex-grow 2.si ise flex-basis degeri olur.*/
+}
+.container .left {
+  flex-grow: 2;
+
+  /*! Birimsiz tek deger varsa bu flex-grow degeri olur.
+  /*! Bu durumda flex-basis 0' a esittir */
+  /*? flex-grow: 2,   flex-basis:0 */
+  flex: 2; /** left digerlerine gore 2 kat daha fazla buyuyebilir.*/
+}
+.container main {
+  flex-grow: 3;
+
+  /*? flex-grow: 3,   flex-basis:0 */
+  flex: 3; /** main digerlerine gore 3 kat daha fazla buyuyebilir.*/
+}
+.container .right {
+  flex-grow: 2;
+
+  /*? flex-grow: 1,   flex-basis:0 */
+  /*? border-right-color: ; 1 kat buyur */
+}
+.container footer {
+  flex-basis: 100%;
+
+  /*? Birimli tek bir deger varsa bu flex-basis olcusudur (width/height) */
+  flex: 100%;
 }
