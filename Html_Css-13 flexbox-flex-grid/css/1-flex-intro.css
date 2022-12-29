@@ -1,3 +1,49 @@
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  padding: 2rem;
+}
+ul {
+  list-style-type: none;
+  background-color: antiquewhite;
+  /* padding: 1rem; */
+  height: 12rem;
+
+  display: flex;
+
+  /*? Yazilari hizalamak icin */
+  text-align: center;
+
+  /*? gap, flex icerisindeki elemanlarin dikey ve yatay bosluklarini belirlemek icin kullanilabilir.
+  //*? ilk yazilan yatay (satilar arasi) bosluk, 2. yazilan ise dikey (sutunlar arasi) bosluktur */
+  gap: 1rem 2rem;
+
+  /*! Elemanların dizilis yonu : column, row, row-reverse, column-reverse*/
+  /* flex-direction: row;
+  
+  /*? sikistirma veya alt satira gecebilme:flex-wrap: wrap, nowrap, wrap-reverse*/
+  /* flex-wrap: wrap; */
+
+  flex-flow: row wrap;
+
+  /*! Yatay Hizalama: justify-content
+  /** flex-start, flex-end,center, space-around,space-evenly, space-between*/
+  justify-content: center;
+
+  /*! Dikey Hizalama => align-items
+  /**  flex-start, flex-end,center, stretch,baseline */
+  align-items: center;
+  
+  /*! Çok satırlı verilerin dikeyde hizalanması için kullanılır. wrap açık olmalı ve container height öğelerden daha uzun olmalı. */
+  align-content: center;
+}
+
+ul li {
+  background-color: tomato;
+  width: 6rem;
+  padding: 0.5rem;
+  color: white;
 }
