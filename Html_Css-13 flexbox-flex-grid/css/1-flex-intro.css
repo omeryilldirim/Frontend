@@ -103,3 +103,38 @@ ul li {
   /*? Birimli tek bir deger varsa bu flex-basis olcusudur (width/height) */
   flex: 100%;
 }
+
+/* ************** ALTERNATIVE WAY  **************** */
+
+.container1 {
+  background-color:peru;
+  padding: 1rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  text-align: center;
+  font-size: 1.5rem;
+}
+.container1 * {
+  background-color:yellowgreen;
+}
+
+.container1 header {
+  width: 100%;
+}
+.container1 .left {
+  width: 25%;
+  width: calc(25% - calc(2rem/3));
+}
+.container1 main {
+  width: 50%;
+  width: calc(50% - calc(2rem/3));
+}
+.container1 .right {
+  width: 25%;
+  width: calc(25% - calc(2rem/3));
+}
+.container1 footer {
+  width: 100%;
+}
