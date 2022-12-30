@@ -1,0 +1,109 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color:#35424A;
+    color: white;
+    font-family:Arial, Helvetica, sans-serif
+}
+
+/* HEADER */
+
+a{
+    text-decoration: none;
+    color: white;
+}
+.company{
+    color:#A95089;
+}
+header{
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    padding: 1.5rem 0.8rem;
+    border-bottom:1px solid #A95089;
+}
+.header__title{
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+.header__nav{
+    font-size: 0.8rem;
+}
+.header__nav a{
+    margin-left: 1.7rem;
+}
+
+/* SECTION SHOWCASE */
+
+.showcase{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 40vh;
+    background-image: url(./img/showcase.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 100%;
+}
+.showcase__title{
+    font-size: 2.3rem;
+    font-weight: 600;
+    margin-bottom: 3vh;
+}
+
+/* SECTION SUBSCRIBE */
+
+.subscribe{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0.5rem;
+    height: 10vh;
+}
+.subscribe__description{
+    font-weight: 600;
+    padding-left: 0.5rem;
+}
+input#email{
+    height: 3.6vh;
+    border: none;
+    padding: 0 0.5rem;
+    width: 15vw;
+}
+#subscribe__submit--btn{
+    height: 3.6vh;
+    padding:0rem 0.7rem;
+    color: white;
+    background-color: #E7491D;
+    border: none;
+    font-size: 0.8rem;
+}
+
+/* ARTICLE TOPICS */
+
+article.topics{
+    background-color: #fff;
+    color: black;
+    font-size: 0.7rem;
+    display: flex;
+    justify-content: space-evenly;
+}
+.topics__img{
+    width: 5vw;
+    margin-bottom: 1rem;
+}
+.topics div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem 0.5rem 2rem;
+}
+.topics div p{
+    text-align: center;
+    margin-top: 1rem;
+}
