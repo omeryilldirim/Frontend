@@ -4,9 +4,9 @@
   box-sizing: border-box;
 }
 body {
-  color: white;
   font-family: Arial, Helvetica, sans-serif;
   position: relative;
+  /* height:2000px; */
 }
 
 /* HEADER */
@@ -43,6 +43,7 @@ header {
 /* SECTION SHOWCASE */
 
 .showcase {
+  color: white;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -72,6 +73,7 @@ header {
   top: 10vh;
 }
 .subscribe__description {
+  color: white;
   font-weight: 600;
   padding-left: 0.5rem;
 }
@@ -95,7 +97,7 @@ input#email {
 article.topics {
   background-color: #fff;
   color: black;
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   display: flex;
   justify-content: space-evenly;
 }
@@ -117,10 +119,89 @@ article.topics {
 
 /* SECTION ABOUT US */
 
+section.about{
+  display: flex;
+  align-items: flex-start;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  height: 68vh;
+  background-color:rgb(123, 159, 225);
+}
+section.about *{
+  margin: 1rem;
+}
+section.about p{
+  font-size: 0.8rem;
+}
+.section__about--description h4{
+  margin-top: 0;
+}
+.about--par2{
+  background-color: #35424a;
+  color: white;
+  padding: 0.8rem;
+}
+aside.section__about--info{
+  background-color:#35424a;
+  color: white;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+aside.section__about--info h4{
+  
+}
+
+/* SECTION ABOUT US */
+section.services{
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  height: 78vh;
+  margin-top: 2rem;
+}
+.service__design,
+.service__maintenance,
+.service__hosting{
+  background-color: #E6E6E6;
+  margin-bottom: 0.5rem;
+  /* height: 18vh; */
+  /* padding: 4rem; */
+}
+.service__types *{
+  padding: 0.5rem;
+}
+.service__quote{
+  background-color:#35424a;
+}
+.quote__form *{
+  color: white;
+  border: none;
+  display: block;
+  font-size: 0.9rem;
+}
+.quote__form{
+  padding: 1.5rem 3rem 1rem 1rem;
+}
+.quote__title{
+  margin-top:0.5rem;
+  margin-bottom: 1rem;
+}
+.quote__form input,
+.quote__form textarea{
+  color: black;
+  width: 20vw;
+  margin-bottom: 0.4rem;
+  padding: 0.2rem;
+}
+form button{
+  background-color:#e7491d;
+  padding: 0.5rem 1rem;
+}
 /* FOOTER */
 
 footer {
   background-color: #35424a;
+  color: white;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
