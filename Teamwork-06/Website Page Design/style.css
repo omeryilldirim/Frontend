@@ -173,7 +173,6 @@ section.services{
   margin-bottom: 0.5rem;
   padding: 1.4rem 0.5rem;
 }
-
 .service__quote{
   background-color:#35424a;
 }
@@ -221,4 +220,23 @@ footer {
 }
 .footer__logo {
   width: 12vw;
+  animation-name: logo;
+  animation-duration: 15s;
+  animation-timing-function: linear;
+  animation-delay: 1s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes logo {
+
+  25%{
+    transform:translateX(-40vw) scale(1.5);
+  }
+  50%{
+    transform: scale(1);
+  }
+  75%{
+    transform: translateX(40vw) scale(1.5);
+  }
+
 }
