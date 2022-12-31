@@ -18,13 +18,13 @@
 // //? "Clarusway" => "Clarusway"
 // //? "days. big make things Little" => "Little things make big days."
 
-// const reverseWords = str => {
-//     const splitted = str.split(' ')
-//     let newStr = ""
-//     for (let i = (splitted.length)-1; i >= 0 ; i--)
-//         newStr += splitted[i] + " "
-//     return newStr
-// }
+const reverseWords = str => {
+    const splitted = str.split(' ')
+    let newStr = ""
+    for (let i = (splitted.length)-1; i >= 0 ; i--)
+        newStr += splitted[i] + " "
+    return newStr
+}
 
-// console.log(reverseWords("Clarusway"));
-// console.log(reverseWords("days. big make things Little"));
+console.log(reverseWords("Clarusway"));
+console.log(reverseWords("days. big make things Little"));
