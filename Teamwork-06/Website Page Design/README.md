@@ -14,7 +14,7 @@ website-page-design (folder)
 
 ## Expected Outcome
 
-![Project Snapshot](/img/website%20design.gif.)
+![Project Snapshot](./img/website%20design.gif.)
 
 ### At the end of the project, following topics are to be covered;
 
