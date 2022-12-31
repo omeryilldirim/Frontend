@@ -38,7 +38,13 @@ header {
 }
 .header__nav a {
   margin-left: 1.7rem;
+  transition-duration: 0.5s;
 }
+.header__nav a:hover{
+  color: #a95089;
+  font-size: 1rem;
+  font-weight: 600;
+} 
 
 /* SECTION SHOWCASE */
 
@@ -122,8 +128,8 @@ article.topics {
 section.about{
   display: flex;
   align-items: flex-start;
-  margin-top: 2rem;
-  padding-top: 1rem;
+  margin-top: 3rem;
+  padding-top: 1.5rem;
   height: 68vh;
   background-color:rgb(123, 159, 225);
 }
@@ -147,29 +153,27 @@ aside.section__about--info{
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
-aside.section__about--info h4{
-  
-}
 
-/* SECTION ABOUT US */
+/* SECTION SERVICES */
+
 section.services{
   display: flex;
   justify-content: space-around;
   align-items: flex-start;
-  height: 78vh;
+  height: 79vh;
   margin-top: 2rem;
+}
+.service__types *{
+  padding: 0.5rem;
 }
 .service__design,
 .service__maintenance,
 .service__hosting{
   background-color: #E6E6E6;
   margin-bottom: 0.5rem;
-  /* height: 18vh; */
-  /* padding: 4rem; */
+  padding: 1.4rem 0.5rem;
 }
-.service__types *{
-  padding: 0.5rem;
-}
+
 .service__quote{
   background-color:#35424a;
 }
@@ -191,12 +195,13 @@ section.services{
   color: black;
   width: 20vw;
   margin-bottom: 0.4rem;
-  padding: 0.2rem;
+  padding: 0.4rem;
 }
 form button{
   background-color:#e7491d;
   padding: 0.5rem 1rem;
 }
+
 /* FOOTER */
 
 footer {
