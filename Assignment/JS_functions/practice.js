@@ -246,13 +246,39 @@
 //? "Clarusway" => "Clarusway"
 //? "days. big make things Little" => "Little things make big days."
 
-const reverseWords = str => {
-    const splitted = str.split(' ')
-    let newStr = ""
-    for (let i = (splitted.length)-1; i >= 0 ; i--)
-        newStr += splitted[i] + " "
-    return newStr
-}
+// const reverseWords = str => {
+//     const splitted = str.split(' ')
+//     let newStr = ""
+//     for (let i = (splitted.length)-1; i >= 0 ; i--)
+//         newStr += splitted[i] + " "
+//     return newStr
+// }
 
-console.log(reverseWords("Clarusway"));
-console.log(reverseWords("days. big make things Little"));
+// console.log(reverseWords("Clarusway"));
+// console.log(reverseWords("days. big make things Little"));
+
+//! code challenge
+//? You will be given an array a and a value x. 
+//? All you need to do is check whether the provided array contains the value.
+//? Array can contain numbers or strings. X can be either.
+//? Return true if the array contains the value, false if not.
+//? Examples-->
+//? check([66, 101], 66) // output -->  true
+//? check([101, 45, 75, 105, 99, 107], 107) // output -->  true
+//? check(['t', 'e', 's', 't'], 'e') // output -->  true
+//? check(['what', 'a', 'great', 'kata'], 'kat') // output -->  false
+
+// const check = (array, value) => {
+//     if (array.includes(value)){
+//         return true
+//     } else{
+//         return false
+//     }
+// }
+
+// const check = (array, value) => array.includes(value)
+
+// console.log(check([66, 101], 66));
+// console.log(check([101, 45, 75, 105, 99, 107], 107));
+// console.log(check(['t', 'e', 's', 't'], 'e'));
+// console.log(check(['what', 'a', 'great', 'kata'], 'kat'));
