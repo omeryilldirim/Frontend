@@ -56,7 +56,7 @@ console.log(numbers3) //? [5]
 //? kadar devam eder.
 //? Syntax => diziAdi[indis]
 
-const names1 = ["emir", "oğuzhan", "levent", "tarik","sabata","mehtap"]
+const names1 = ["emir", "oğuzhan", "levent", "tarik","sabata","mehtap","rose"]
 console.log(names1[1]);
 const tarik = names1[3]
 console.log(tarik);
@@ -66,7 +66,14 @@ console.log(tarik);
 const lastEl = names1[(names1.length)-1]
 console.log(lastEl);
 
+//? alternatif olarak at() metodu
+console.log(names1.at(-1));
+
 //!  Diziye veri yazma
+
+names1[2] = "Levent"
+console.log(names1);
+
 
 //?================================================
 //?  DIZIYI DEGISTIREN (MUTATOR) METOTLAR
