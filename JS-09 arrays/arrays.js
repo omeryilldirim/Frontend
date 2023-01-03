@@ -225,6 +225,8 @@ const findPalindrome = number =>  {
       if (checkPalindrome(up)) {
         return up;
       }
+      up++
+      down--
     }
   }
 }
