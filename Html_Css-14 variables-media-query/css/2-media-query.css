@@ -98,7 +98,7 @@ main .card:nth-child(even){
 
 @media screen and (min-width:1200px) and (max-width:1400px){
     body{
-        background-color: var(--purple)
+        background-color: var(--grey-10)
     };
 }
 
@@ -126,7 +126,7 @@ main .card:nth-child(even){
         flex-direction: column;
     }
     body{
-        background-color: var(--green);
+        background-color: var(--blue-light-5);
     } 
 
 }
