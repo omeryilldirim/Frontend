@@ -37,10 +37,21 @@ console.log(data);
 //? toString fonksiyonu sadece dizinin elemanlarinin aralarina
 //? (virgul) koyarak birlestirir ve string yapar.
 
-
+console.log(numbers.toString());
 
 //* slice(start, end) -- end exclusive
 //*-----------------------------------------------------------
 
+const cars =["BMW", "Mercedes", "Fiat", "Anadol"]
+console.log(cars.slice(2,4));
+console.log(cars.slice(1));
+
 //* concat()
 //*-----------------------------------------------------------
+
+const message = ["The weather", "is", "very", "nice"]
+const now = [new Date().toLocaleString()]
+console.log(now); // '1/4/2023, 8:36:56 PM'
+
+const concattedMessage = message.concat(now, "JS arrays", [[1,3,4]])
+console.log(concattedMessage);
