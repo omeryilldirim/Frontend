@@ -1,0 +1,29 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+
+}
+.container{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* grid-template-rows: repeat(4, calc(25vh - 1.5rem / 4)); */
+    grid-template-rows: repeat(4, 1fr);
+    gap: 0.5rem;
+
+}
+.content{
+    background-color: beige;
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.content6{
+    justify-self: center;
+    padding: 1rem;
+}
+.content11{
+    align-self: center;
+    height: 4rem;
+}
