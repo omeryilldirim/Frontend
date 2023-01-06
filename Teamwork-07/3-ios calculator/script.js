@@ -2,9 +2,9 @@ const display = document.getElementById("result");
 let operator = "";
 let operand1 = 0;
 let operand2 = 0;
-const hourEl = document.querySelector('.hour');
-const minuteEl = document.querySelector('.minute');
-const valueEl = document.querySelector('.value');
+const hourEl = document.querySelector(".hour");
+const minuteEl = document.querySelector(".minute");
+const valueEl = document.querySelector(".value");
 
 function add(a, b) {
   return a + b;
@@ -69,23 +69,25 @@ keys.forEach((key) => {
       if (display.textContent === "") {
         display.textContent = keyValue;
       } else {
-        display.textContent += keyValue;
+        if (display.textContent.length <= 9) {
+          display.textContent += keyValue;
+        }
       }
     }
   });
 });
 
 const updateTime = () => {
-    const currentTime = new Date();
-  
-    let currentHour = currentTime.getHours();
-    const currentMinute = currentTime.getMinutes();
-  
-    // if (currentHour > 12) {
-    //   currentHour -= 12;
-    // }
-    hourEl.textContent = currentHour.toString();
-    minuteEl.textContent = currentMinute.toString().padStart(2, '0');
-  }
-  setInterval(updateTime, 1000);
-  updateTime();
+  const currentTime = new Date();
+
+  let currentHour = currentTime.getHours();
+  const currentMinute = currentTime.getMinutes();
+
+  // if (currentHour > 12) {
+  //   currentHour -= 12;
+  // }
+  hourEl.textContent = currentHour.toString();
+  minuteEl.textContent = currentMinute.toString().padStart(2, "0");
+};
+setInterval(updateTime, 1000);
+updateTime();
