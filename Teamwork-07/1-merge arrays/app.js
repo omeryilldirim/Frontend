@@ -9,7 +9,7 @@
 // B = [11, 13, 17];
 // expectedOutput = [11, 13, 17];
 
-const A = []; 
+const A = [12, 14, 16]; 
 const B = [11, 13, 17];
 
 const expectedOutput = A.concat(B).sort((a,b)=>a-b)
