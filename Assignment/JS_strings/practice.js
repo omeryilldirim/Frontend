@@ -59,9 +59,9 @@ console.log(biggestNum(123456789));
 // Input: "javascript" Output: "jvscrpt"
 console.log("************* Q4 *************");
 
-const vowels = ["a", "e", "i", "o", "u"]
 
 const filterVowels = string => {
+    const vowels = ["a", "e", "i", "o", "u"]
     const arr = string.split("")
     return arr.filter(letter => !vowels.includes(letter)).join("")
 }
@@ -77,7 +77,17 @@ console.log(filterVowels("javascript"));
 // Output: 1, 2, 9
 console.log("************* Q5 *************");
 
+const input = [1, 2, 3, 2, 1, 4, 5, 6, 7, 8, 9, 9, 10]
 
+const checkRepeat = (array) => {
+    const output = []
+    array.forEach((number, index) => {
+        array.indexOf(number, index+1)!== -1 && output.push(number)
+    });
+    return output.join()
+}
+
+console.log(checkRepeat(input));
 
 
 //* ************* Q6 *************
@@ -86,3 +96,15 @@ console.log("************* Q5 *************");
 // Input: [1, 2, 3, 4, 5, 6, 7, 8, 9]
 // Output: 285
 console.log("************* Q6 *************");
+
+const input2 = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+const base = array => array.reduce((accumulator, number) => {return accumulator + number*number}, 0)
+
+// const base = array => {
+//     let sum = 0
+//     array.map(number => sum += number*number)
+//     return sum
+// }
+
+console.log(base(input2));
