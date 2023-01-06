@@ -1,4 +1,69 @@
 *{
-    margin: 0;
+    
     box-sizing: border-box;
+}
+body{
+    background-color: bisque;
+}
+.container{
+    height: 200vh;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(3, 26vw) 17.5vw;
+    grid-template-rows: 25vh 25vh 25vh 100vh 25vh;
+    grid-template-areas: 
+    "header header header header"
+    "box1 box2 box3 aside"
+    "box1 box2 box3 aside"
+    "main main main aside"
+    "footer footer footer footer";
+}
+header{
+    grid-area: header;
+    background-color: dodgerblue;
+    color: white;
+    padding: 1rem;
+    font-weight: 700;
+}
+.box1{
+    grid-area: box1;
+    background-color: dodgerblue;
+    color: white;
+    padding: 1rem;
+    font-weight: 700;
+}
+.box2{
+    grid-area: box2;
+    background-color: dodgerblue;
+    color: white;
+    padding: 1rem;
+    font-weight: 700;
+}
+.box3{
+    grid-area: box3;
+    background-color: dodgerblue;
+    color: white;
+    padding: 1rem;
+    font-weight: 700;
+}
+aside{
+    grid-area: aside;
+    background-color: dodgerblue;
+    color: white;
+    padding: 1rem;
+    font-weight: 700;
+}
+main{
+    grid-area: main;
+    background-color: dodgerblue;
+    color: white;
+    padding: 1rem;
+    font-weight: 700;
+}
+footer{
+    grid-area: footer;
+    background-color: dodgerblue;
+    color: white;
+    padding: 1rem;
+    font-weight: 700;
 }
