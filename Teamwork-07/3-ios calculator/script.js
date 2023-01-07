@@ -55,6 +55,11 @@ keys.forEach((key) => {
     } else if (keyValue === "=") {
       operand2 = parseFloat(display.textContent);
       display.textContent = operate(operator, operand1, operand2);
+      display.textContent.length > 9 &&
+        (document.getElementById("result").style.fontSize = "6vh");
+      // if(display.textContent.length > 10){
+      //   document.getElementById("result").style.fontSize= "5vh"
+      // }
       operator = "";
       operand1 = 0;
       operand2 = 0;
@@ -67,9 +72,16 @@ keys.forEach((key) => {
       display.textContent = "";
     } else {
       if (display.textContent === "") {
+        document.getElementById("result").style.fontSize = "10vh";
         display.textContent = keyValue;
       } else {
         if (display.textContent.length <= 9) {
+          display.textContent += keyValue;
+        } else if (display.textContent.length > 17) {
+          document.getElementById("result").style.fontSize = "4vh";
+          display.textContent += keyValue;
+        } else if (display.textContent.length > 9) {
+          document.getElementById("result").style.fontSize = "6vh";
           display.textContent += keyValue;
         }
       }
