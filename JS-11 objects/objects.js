@@ -156,6 +156,16 @@ const people = {
 //! ASSIGMENT
 //? person2'nin adini ve maasini yazdiriniz.
 
+console.log(people.person2.name, people.person2.salary);
+
 //? people objesindeki tum salary 'leri yazdirin (Dongu kullanilmali)
 
+let arrPeople = Object.entries(people)
+for (const i in arrPeople) {
+  console.log(`${arrPeople[i][0]} salary : ${arrPeople[i][1].salary}`);
+}
+
 //? job'i developer olanlarin dob degerlerini yazdiriniz.
+
+const developers = arrPeople.filter((person) => person[1].job === "developer")
+developers.forEach((person) => console.log(`${person[0]} dob is : ${person[1].dob}`))
