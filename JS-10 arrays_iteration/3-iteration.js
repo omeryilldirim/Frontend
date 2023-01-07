@@ -101,6 +101,9 @@ const totalSalary = salaries
 //   .forEach((x) => console.log(x)) //! salaries.reduce(...).forEach is not a function
 console.log("TOTAL:", totalSalary)
 
+const sumOfRaisedSalaries = salaries.filter((s) => s < 9000).map((s) => s * 1.1).reduce((t,s) => t + s, 0)
+console.log(sumOfRaisedSalaries);
+
 //* =======================================
 //*               OTHERS
 //* =======================================
