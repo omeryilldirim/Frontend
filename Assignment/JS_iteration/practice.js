@@ -108,3 +108,18 @@ const base = array => array.reduce((accumulator, number) => {return accumulator 
 // }
 
 console.log(base(input2));
+
+
+//* ************* Hackerrank *************
+
+const nums = [2,3,6,6,5,5,9,8,7,8,8,95,67,5,4,563,46346,6856,8]
+
+function getSecondLargest(nums) {
+    nums.sort((a,b)=>a-b)
+    console.log(nums);
+    const noRepeatedArr = nums.filter((num, i, arr) => num != arr[i+1])
+    console.log(noRepeatedArr);
+    return noRepeatedArr[(noRepeatedArr.length)-2]
+}
+
+console.log(getSecondLargest(nums));
