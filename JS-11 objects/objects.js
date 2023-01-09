@@ -169,3 +169,5 @@ for (const i in arrPeople) {
 
 const developers = arrPeople.filter((person) => person[1].job === "developer")
 developers.forEach((person) => console.log(`${person[0]} dob is : ${person[1].dob}`))
+
+//
