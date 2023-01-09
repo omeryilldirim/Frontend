@@ -153,7 +153,7 @@ const people = {
   },
 }
 
-//! ASSIGMENT
+//! ASSIGNMENT
 //? person2'nin adini ve maasini yazdiriniz.
 
 console.log(people.person2.name, people.person2.salary);
