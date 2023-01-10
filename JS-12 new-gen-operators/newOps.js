@@ -36,6 +36,7 @@ console.log(motor, car)
 
 car.engine = 2.2
 console.log(car)
+console.log(motor);
 
 //* EXAMPLE: NESTED
 const cars = {
