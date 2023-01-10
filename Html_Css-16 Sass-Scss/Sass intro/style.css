@@ -63,44 +63,95 @@ header a {
   max-width: 400px;
 }
 
-.cards {
+.cards, .articles {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 0.5rem;
   padding: 0.5rem;
 }
-.cards .card1 {
+.cards .card1, .articles .card1 {
   background-color: yellow;
   color: red;
-  height: 15rem;
+  height: 20rem;
   width: 25%;
   border: 2px solid brown;
   border-radius: 10px;
 }
-.cards .card2 {
+.cards .card2, .articles .card2 {
   background-color: brown;
   color: antiquewhite;
-  height: 15rem;
+  height: 20rem;
   width: 25%;
   border: 2px solid brown;
   border-radius: 10px;
 }
-.cards .card3 {
+.cards .card3, .articles .card3 {
   background-color: orange;
   color: color;
-  height: 15rem;
+  height: 20rem;
   width: 25%;
   border: 2px solid brown;
   border-radius: 10px;
 }
-.cards .card4 {
+.cards .card4, .articles .card4 {
   background-color: aqua;
   color: black;
-  height: 15rem;
+  height: 20rem;
   width: 25%;
   border: 2px solid brown;
   border-radius: 10px;
+}
+
+.articles .article1, .articles .article2 {
+  background-color: grey;
+  color: white;
+  height: 20rem;
+  width: 25%;
+  border: 2px solid brown;
+  border-radius: 10px;
+  width: 50%;
+}
+.articles .article2 {
+  background-color: hotpink;
+}
+
+footer p {
+  background-color: grey;
+}
+footer .social-icons {
+  display: flex;
+  height: 10rem;
+}
+footer .social-icons .social1 {
+  width: 20%;
+  background-color: #1a1aff;
+  font-size: 1rem;
+  color: #990000;
+}
+footer .social-icons .social2 {
+  width: 20%;
+  background-color: #3333ff;
+  font-size: 2rem;
+  color: #55004E;
+}
+footer .social-icons .social3 {
+  width: 20%;
+  background-color: #4d4dff;
+  font-size: 3rem;
+  color: #0FA8A1;
+}
+footer .social-icons .social4 {
+  width: 20%;
+  background-color: #6666ff;
+  font-size: 4rem;
+  color: #121456;
+}
+footer .social-icons .social5 {
+  width: 20%;
+  background-color: #8080ff;
+  font-size: 5rem;
+  color: #64C217;
 }
 
 /*# sourceMappingURL=style.css.map */
