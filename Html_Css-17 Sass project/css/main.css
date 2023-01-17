@@ -5,11 +5,11 @@
   box-sizing: border-box;
 }
 
-.link-style a, footer.horizontal a {
+.link-style a, footer.vertical .social-icons a, footer.horizontal a {
   padding: 0.4rem;
   transition: all 1s;
 }
-.link-style a:hover, footer.horizontal a:hover {
+.link-style a:hover, footer.vertical .social-icons a:hover, footer.horizontal a:hover {
   color: #ff652f;
 }
 
@@ -19,6 +19,25 @@ footer.horizontal {
   justify-content: space-between;
   align-items: flex-end;
   padding: 1rem;
+}
+
+footer.vertical {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 1rem;
+}
+footer.vertical .social-icons {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  bottom: 1rem;
+}
+footer.vertical .copyright {
+  position: fixed;
+  bottom: 1rem;
+  right: 2rem;
+  writing-mode: vertical-lr;
 }
 
 .nav {
@@ -97,6 +116,45 @@ footer.horizontal {
   width: 70vw;
   margin: 2rem auto;
 }
+.about .about__job {
+  margin: 1rem;
+  background-color: #414141;
+  padding: 1rem;
+  border-bottom: 5px solid #ff652f;
+  line-height: 1rem;
+}
+.about .about__job h2, .about .about__job h3 {
+  margin: 0.5rem 0;
+}
+.about .about__job h6 {
+  margin: 0.3rem 0;
+}
+
+.project-bgImg-container {
+  height: 40vh;
+  width: 100%;
+  background: linear-gradient(to right, rgba(39, 39, 39, 0.9), rgba(39, 39, 39, 0.1)), url("../img/model-1.jpg");
+  background-position: center center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.project-bgImg-container .projects__bio-image {
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.projects__items {
+  width: 100%;
+}
+.projects__item {
+  width: 100%;
+}
+.projects__item img {
+  width: 100%;
+}
+
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   line-height: 3rem;
