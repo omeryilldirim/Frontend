@@ -13,7 +13,12 @@
         font-size: 1rem;
         font-weight: 500;
         font-family: $font-family;
-        transition: all 1s;
+        // transition: all 1s;
+        @include transition(1s);
+
+        &:hover{
+            color: blue;
+        }
 
         &--active{
             color: $secondary-color;
