@@ -40,3 +40,14 @@ footer.vertical{
         writing-mode: vertical-lr;
     }
 }
+
+footer.middle{
+    height: 10vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 1rem;
+    gap:1rem;
+    @extend .link-style;
+}
