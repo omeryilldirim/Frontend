@@ -21,8 +21,18 @@
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   transition: all 1s;
 }
+.nav__link:hover {
+  color: blue;
+}
 .nav__link--active {
   color: #ff652f;
+}
+
+.home-bgImg-container {
+  background-image: url(../img/model-1.jpg);
+  height: 100vh;
+  background-position: center center;
+  background-size: cover;
 }
 
 /*# sourceMappingURL=main.css.map */
