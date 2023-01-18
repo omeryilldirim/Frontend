@@ -99,6 +99,6 @@ todoUl.addEventListener("click", (e) => {
     //add updated array to localStorage
     localStorage.setItem("todoList", JSON.stringify(todoList));
   } else {
-    alert("other element clicked");
+    // alert("other element clicked");
   }
 });
