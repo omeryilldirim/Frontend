@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    background-color: bisque;
+}
+
+.title{
+    color:rgb(34, 104, 80);
+    font-size:2rem;
+    text-align: center;
+    padding: 1.5rem;
+}
+
+.work-input{
+    text-align: center;
+    padding: 2rem;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+.work-input input{
+    font-size: 1rem;
+    padding: 0.7rem 1rem;
+    width: 40vw;
+    border: none;
+    border-radius: 20px;
+
+}
+
+.work-list{
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 1rem;
+}
+.to-do{
+    background-color: rgba(0, 139, 139, 0.342);
+    width: 35%;
+}
+.done{
+    background-color: rgba(189, 183, 107, 0.417);
+    width: 35%;
+}
