@@ -7,7 +7,7 @@ let userSelect;
 let pcRandom;
 const pcArr = ["rock", "paper", "scissors"];
 
-//* score variables
+//* Score variables
 
 const scoreYou = document.getElementById("you");
 const scorePc = document.getElementById("pc");
@@ -38,12 +38,17 @@ select.addEventListener("click", (e) => {
   }
 });
 
+
+//* select a random value for pc and shows on DOM
+
 function pc() {
   pcRandom = pcArr[Math.floor(Math.random() * 3)];
   // console.log(pcRandom);
   pcChoice.innerHTML = `<img src="./assets/${pcRandom}.png"></img>`;
   result();
 }
+
+//* check the result and stop the game when reaches out to 10 
 
 function result() {
   switch (userSelect) {
@@ -72,12 +77,16 @@ function result() {
       break;
   }
 
+  //* draw situation
+
   if (userSelect == pcRandom) {
     resultDiv.classList.add("active");
     resultDiv.innerHTML = "It's a draw";
     containerEl.style.boxShadow = "3px 3px 10px 1px #FFC538";
     resultDiv.style.backgroundColor = "#FFC538";
   }
+  
+  //* if user win, change the message
 
   if(scoreYou.innerText == 10){
     final.innerHTML = `💃 You Win🕺`
@@ -107,9 +116,13 @@ function win() {
   scoreYou.innerText++;
 }
 
+//* open the modal
+
 function modal(){
     modalEl.classList.add("show")
 }
+
+//* close the modal and reload the page
 
 modalBtn.addEventListener("click", ()=>{
     // modal.classList.remove("show")
@@ -117,23 +130,27 @@ modalBtn.addEventListener("click", ()=>{
     window.location.reload()
 })
 
-// local storage den high score u çek
+//* get highscore from localstorage
+
 let storagedScore = localStorage.getItem("highScore")
 console.log(storagedScore)
 
-let topScore; //ekrana yazdıracağım değer.
+let topScore; //* declaring topscore variable to be printed out
 
 
-//local storage boş ise 0-0 yazdırmak için
+//* assigning topscore
+
 if(storagedScore){
     topScore = `10 - ${storagedScore}`
 }else{
     topScore = "0 - 0"
 }
 
-// top score u dom a yazdır.
+//* print topscore on DOM
+
 domTopScore.innerText = topScore;
 
+//* check recent topscore and compare 
 
 function topScoreCheck(){
     storagedScore || localStorage.setItem("highScore", +scorePc.innerText )
