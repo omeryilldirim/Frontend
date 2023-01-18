@@ -1,3 +1,7 @@
+//*****************************************************
+//*   PROJECT PAGE
+//*****************************************************
+
 .project-bgImg-container{
     @include bgImg(40vh, $main-bgImg-path);
     display: flex;
@@ -20,7 +24,7 @@
         gap: 1rem 0;
     }
     &__item{
-        width: 50%;
+        width: 100%;
         cursor: pointer;
         border-bottom: 5px solid $secondary-color;
         position: relative;
@@ -37,11 +41,12 @@
             position: absolute;
             left: 0;
             opacity: 0;
+            @include transition(0.5s)
         }
 
         &:hover::after{
             opacity: 0.5;
-            @include transition(0.5s)
+            
         }
     }
 }
