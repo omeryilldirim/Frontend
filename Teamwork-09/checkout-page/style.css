@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header{
+    text-align: center;
+}
+.cart{
+    width: 50%;
+    margin: auto;
+    background-color: rgb(219, 219, 219);
+}
+img{
+    width: 10vw;
+    border-radius: 1rem;
+}
+.flex{
+    display: flex;
+}
+.block{
+    display: block;
+}
