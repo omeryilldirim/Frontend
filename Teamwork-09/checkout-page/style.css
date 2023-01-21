@@ -26,11 +26,13 @@ h1{
 main{
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 4rem;
 }
 /********* USER INFORMATION */
 .information{
     width: 35%;
+    min-width: 500px;
 }
 .information *{
     margin-bottom: 0.5rem;
@@ -54,6 +56,12 @@ main{
     display: flex;
     gap: 1rem;
 }
+#postcode{
+    width: 18rem;
+}
+#country{
+    width: 10rem;
+}
 .checkbox{
     display: flex;
     justify-content: flex-start;
@@ -67,6 +75,9 @@ main{
 .btn-continue{
     display: flex;
     justify-content: flex-end;
+}
+.btn-continue button:hover{
+    box-shadow: 0 0 3px black;
 }
 .btn-continue button{
     padding:0.8rem 1rem;
@@ -82,10 +93,14 @@ main{
     padding: 1rem;
     border-radius: 1rem;
     background-color: rgb(219, 219, 219);
+    min-width: 400px;
 }
 img{
     width: 10vw;
     border-radius: 1rem;
+}
+i:hover{
+    color: rgb(239, 126, 45);
 }
 .cart .item1,.item2,.item3{
     display: flex;
@@ -119,6 +134,9 @@ img{
     border: none;
     padding: 0.2rem 0;
     border-radius: 5px;
+}
+.btn-remove:hover{
+    box-shadow: 0 0 3px black;
 }
 .payment div{
     display: flex;
