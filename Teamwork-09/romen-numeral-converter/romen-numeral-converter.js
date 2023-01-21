@@ -6,6 +6,7 @@
 // 2008 is written as MMVIII:
 // 2000=MM 8=VIII
 
+
 function add (n,symbol) {
     let text = ""
     for (let i = 1; i <= n; i++){
@@ -16,19 +17,21 @@ function add (n,symbol) {
 
 const convertNumeral = (num) =>{
     // get units digit
-    let first = num % 10
-    num = num-first
+    let first = num % 10 // 8
+    num = num-first // 2850
     //convert to romen numeral
     if (first === 9){
         first = "IX"
     } else if(first === 4){
         first = "IV"
     } else {
-        first / 5 >= 1 ? first = "V" + add((first%5), "I") : first = add((first%5), "I")
+        first / 5 >= 1 ? 
+        first = "V" + add((first%5), "I")
+        : first = add(first, "I")
     }
     
     // get tens digit
-    let second = num % 100
+    let second = num % 100 //50
     num = num-second
     //convert to romen numeral
     if (second === 90){
@@ -40,7 +43,7 @@ const convertNumeral = (num) =>{
     }
 
     // get hundreds digit
-    let third = num % 1000
+    let third = num % 1000 // 800
     num = num-third
     //convert to romen numeral
     if (third === 900){
@@ -65,3 +68,5 @@ console.log(convertNumeral(2008));
 console.log(convertNumeral(990));
 console.log(convertNumeral(385));
 console.log(convertNumeral(44));
+
+
