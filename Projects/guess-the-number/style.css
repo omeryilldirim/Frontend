@@ -1,0 +1,4 @@
+body{
+    background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(0,84,166,1) 0%, rgba(132,189,201,1) 90% );
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
