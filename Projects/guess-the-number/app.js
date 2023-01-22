@@ -11,8 +11,6 @@ btnCheck.addEventListener("click", checkNumber)
 
 function checkNumber(){
     
-    
-    
     const userNum = userInput.value
 
     if (userNum < 0 || userNum > 100) {
@@ -26,6 +24,10 @@ function checkNumber(){
     }
 
     updateStorage()
+
+    if (numberAttempt.innerText == 0){
+        gameOver()
+    }
 }
 
 function updateStorage() {
@@ -33,4 +35,8 @@ function updateStorage() {
     userStorage.attempt -= 1
     localStorage.setItem("user", JSON.stringify(userStorage))
     numberAttempt.innerText = userStorage.attempt
+}
+
+function gameOver() {
+    
 }
