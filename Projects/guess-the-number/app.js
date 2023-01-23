@@ -1,33 +1,47 @@
 const userInput = document.getElementById("user-input")
 const btnCheck = document.getElementById("btn-check")
 const numberAttempt= document.getElementById("numberAttempt")
+const modalEl = document.querySelector(".secret-container")
+const secretNumber = Math.floor(Math.random()*100)
+
+window.addEventListener("load", ()=>{
+    userInput.focus()
+})
 
 localStorage.setItem("user", JSON.stringify({attempt:5}))
 
-let secretNumber = Math.round(Math.random()*100)
-console.log(secretNumber);
-
 btnCheck.addEventListener("click", checkNumber)
 
-function checkNumber(){
-    
+document.getElementById("modal-ok").addEventListener("click", ()=>{
+    modalEl.style.display = "none"
+    window.location.reload()
+})
+
+function checkNumber(e){
+    e.preventDefault()
     const userNum = userInput.value
 
-    if (userNum < 0 || userNum > 100) {
-        alert("Please enter a number in range : 0 - 100")
+    if (userNum <= 0 || userNum > 100) {
+        alert("Please enter a number in range : 1 - 100")
     } else if (userNum == secretNumber){
-        alert("Wooow...You nailed it ! 👏🥳")
+        document.getElementById("final-par").innerHTML = `Wow..You guessed it!👏🥳 <br> The number is ${secretNumber}`
+        btnCheck.removeEventListener("click", checkNumber)
+        document.querySelector(".secret-container").classList.add("show")
     } else if (userNum > secretNumber){
-        alert("You need to guess a lower number  ⬇️⬇️⬇️")
+        updateStorage()
+        checkAttempt()
+        document.querySelector(".message").innerText = `Guess a lower number than ${userNum} ⬇️⬇️⬇️`
     } else if (userNum < secretNumber){
-        alert("You need to guess a higher number  ⬆️⬆️⬆️")
+        updateStorage()
+        checkAttempt()
+        document.querySelector(".message").innerText = `Guess a higher number than ${userNum} ⬆️⬆️⬆️`
     }
 
-    updateStorage()
+    document.querySelector("form").reset();
+}
 
-    if (numberAttempt.innerText == 0){
-        gameOver()
-    }
+function checkAttempt(){
+    numberAttempt.innerText == 0 && gameOver()
 }
 
 function updateStorage() {
@@ -38,5 +52,7 @@ function updateStorage() {
 }
 
 function gameOver() {
-    
+    document.getElementById("final").innerText = `The number is ${secretNumber}`
+    btnCheck.removeEventListener("click", checkNumber)
+    document.querySelector(".secret-container").classList.add("show")
 }

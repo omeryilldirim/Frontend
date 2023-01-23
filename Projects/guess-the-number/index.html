@@ -9,19 +9,30 @@
   </head>
   <body>
     <header>
-        <h1 class="h2 text-center p-3 m-5">Guess The Number! (1-100)</h1>
+        <h1 class="h2 text-light text-center p-3 mt-5">Guess The Number !</h1>
+        <p class="h4 text-light text-center mb-5">(1-100)</p>
     </header>
     <main>
-        <section class="text-center">
-            <img src="https://picsum.photos/id/177/600/400" alt="" width="20%">
+        <section class="m-5 text-center">
+            <img src="image.jpeg" alt="guess-the-number-picture" width="200rem">
         </section>
-        <div class="text-center mt-5">
-            <p class="h4">Write the number</p>
-            <div class="mb-5 mt-2">
-                <input class="py-1 text-center" type="number" name="" id="user-input">
-                <button id="btn-check" class="bg-warning px-2 py-1 border border-0 rounded-3" type="submit">Check</button>
+
+        <div class="text-light text-center mt-5">
+            <div class="mb-5">
+                <p class="message text-light"></p>
+                <form action="#">
+                  <input class="py-1 text-center me-2" type="number" name="" id="user-input" placeholder="Enter your guess">
+                  <button id="btn-check" class="bg-warning px-2 py-1 border border-0 rounded-3" type="submit">Check</button>
+                </form>
             </div>
             <p>Number of attempts : <span class="text-warning" id="numberAttempt">5</span></p>
+        </div>
+
+        <div class="secret-container">
+          <div class="secret text-light">
+            <p id="final-par">Game Over 🙁 <br> <span id="final"></span></p>
+            <button id="modal-ok">Play Again</button>
+          </div>
         </div>
     </main>
 
