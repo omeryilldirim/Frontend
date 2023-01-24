@@ -37,11 +37,14 @@ color: var(--red);
 .carousel-caption{
     bottom: 5rem;
 }
+.carousel-indicators{
+    gap: 0.7rem !important;
+}
 .carousel-indicators button{
     background-color: var(--red) !important;
     padding: 0.1rem !important;
     width: 3rem !important;
-    margin-right: 0.75rem !important;
+    /* margin-right: 0.75rem !important; */
 }
 
 /*! ------------ 3- ABOUT SECTION ----------- */
