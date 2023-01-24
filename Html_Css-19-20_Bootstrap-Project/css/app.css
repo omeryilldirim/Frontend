@@ -1,4 +1,21 @@
+:root{
+    --red : #DC3545
+}
 /*! -------------- 1- NAVBAR ---------------- */
+.navbar{
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+.nav-link{
+    transition: color 0.7s;
+}
+.nav-link:hover{
+color: var(--red);
+}
+.nav-link.active:hover{
+    color: var(--red)!important;
+}
 
 /*! ------------- 2- CAROUSEL --------------- */
 
