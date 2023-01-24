@@ -18,6 +18,13 @@ color: var(--red);
 }
 
 /*! ------------- 2- CAROUSEL --------------- */
+.carousel-item{
+    max-height: calc(100vh - 90px);
+}
+.carousel-caption .btn{
+    width: 7rem;
+    margin-bottom: 1rem;
+}
 
 /*! ------------ 3- ABOUT SECTION ----------- */
 
