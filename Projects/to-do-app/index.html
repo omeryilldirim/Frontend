@@ -5,29 +5,41 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>To-Do</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Coiny&family=DynaPuff:wght@400;500;600;700&family=Fredericka+the+Great&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>To-Do List</title>
 </head>
 <body>
-    <div class="title">
-        <h1>To Do App</h1>
-        
-    </div>
+    <main class="container">
+        <header class="title">
+            <p id="date">26.01.2023</p>
+            <h1>To-Do List</h1>
+            <h3>Happy <span id="happyDay"></span> 😌 ☕</h3>
+        </header>
+        <section class="input-sec">
+            <form class="todo-add" action="">
+                <input type="text" name="" id="todo-input" placeholder="  ✍  Write your task..." autofocus>
+                <button type="submit" id="todo-button">+</button>
+            </form>
+        </section>
+        <section class="todos">
+            <div class="todo-div">
+                <ul class="todo">
 
-    <div class="work-input">
-        <form action="">
-            <input type="text" name="" id="input" placeholder="add new to-do">
-            <button type="submit" class="btn">ADD</button>
-        </form>
-    </div>
-    
-    <div class="work-list">
-        <div class="to-do">
-            <ul></ul>
-        </div>
-        <div class="done">
-            <ul></ul>
-        </div>
-    </div>
+                </ul>
+            </div>
+            <div class="done-div">
+                <ul class="done">
+
+                </ul>
+            </div>
+        </section>
+        <footer>
+            <p>&copy; Copyright 2023 mryldrm</p>
+        </footer>
+    </main>
 
     <script src="app.js"></script>
 </body>

@@ -1,3 +1,6 @@
+:root{
+    --myfont : 'Fredericka the Great', cursive;
+}
 *{
     margin: 0;
     padding: 0;
@@ -6,17 +9,31 @@
 
 body{
     height: 100vh;
-    background-color: bisque;
+    font-family: var(--myfont);
+    background-image:url(./image1.jpg);
+    background-position: center;
+    background-size:cover;
+    background-repeat: no-repeat;
 }
 
 .title{
     color:rgb(34, 104, 80);
-    font-size:2rem;
+    font-size:1.5rem;
     text-align: center;
-    padding: 1.5rem;
+    padding-top: 1.5rem;
+    position: relative;
+}
+#date{
+    position: absolute;
+    top: 0.5rem;
+    left: 0.5rem;
+    color: aliceblue;
+}
+.title *{
+    margin-bottom: 1rem;
 }
 
-.work-input{
+.todo-add{
     text-align: center;
     padding: 2rem;
     height: 10vh;
@@ -25,37 +42,52 @@ body{
     align-items: center;
     margin-bottom: 1rem;
 }
-.work-input input{
+.todo-add input{
     font-size: 1rem;
     padding: 0.7rem 1rem;
-    width: 40vw;
+    width: 20rem;
     border: none;
-    border-radius: 20px;
+    border-radius: 10px;
+    background-color: transparent;
 }
-.work-input button{
-    font-size: 1.2rem;
+.todo-add input:focus{
+    outline:1px dashed gray;
+}
+.todo-add button{
+    font-size: 4.5rem;
+    font-family: var(--myfont);
+    font-weight: 900;
+    padding: 0;
+    border: none;
+    background-color:transparent;
+    color: rgb(34, 104, 80);
     margin-left: 1rem;
-    border: none;
-    background-color:cadetblue;
-    color: antiquewhite;
-    padding: 0.5rem 1rem;
-    border-radius: 20px;
+    border-radius: 10px;
 }
-
-.work-list{
+.todo-add button:hover{
+    cursor: pointer;
+    color: cadetblue;
+}
+.todos{
     height: 70vh;
     display: flex;
     justify-content: center;
     align-items: stretch;
     gap: 1rem;
 }
-.to-do{
+.todo-div{
     background-color: rgba(0, 139, 139, 0.342);
     width: 35%;
     padding: 1rem;
 }
-.done{
+.done-div{
     background-color: rgba(189, 183, 107, 0.417);
     width: 35%;
     padding: 1rem;
+}
+footer p{
+    color: antiquewhite;
+    position: fixed;
+    bottom: 5px;
+    right: 5px;
 }
