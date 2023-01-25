@@ -3,12 +3,18 @@ const todoInput = document.getElementById("todo-input");
 const addBtn = document.getElementById("todo-button");
 const todoUl = document.querySelector(".todo");
 const doneUl = document.querySelector(".done")
+const audio = new Audio("./assets/pencil.mp3");
+const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 
 let todoList = JSON.parse(localStorage.getItem("todoList")) || [];
-console.log(todoList);
 
 window.addEventListener("load", () => {
   getTodoListFromLocalStorage();
+  // get date and day then load to UI
+  const dayInt = new Date().getDay()
+  const date = (new Date().getDate())+"."+(new Date().getMonth()+1)+"."+(new Date().getFullYear())
+  document.getElementById("date").innerText = date
+  document.getElementById("happyDay").innerText = `${days[dayInt]}`
 });
 
 // get todolist from localstorage and load to UI
@@ -33,6 +39,7 @@ addBtn.addEventListener("click", (e) => {
   };
   //create todo and load to UI
   createToDo(newTodo);
+  audio.play()
   //push new todo to todolist
   todoList.push(newTodo);
   console.log(todoList);

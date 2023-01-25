@@ -1,21 +1,20 @@
 :root{
     --myfont : 'Fredericka the Great', cursive;
+    --mycolor:rgb(34, 104, 80);
 }
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
 body{
     height: 100vh;
     font-family: var(--myfont);
-    background-image:url(./image1.jpg);
+    background-image:url(./assets/image1.jpg);
     background-position: center;
     background-size:cover;
     background-repeat: no-repeat;
 }
-
 .title{
     color:rgb(34, 104, 80);
     font-size:1.5rem;
@@ -28,6 +27,10 @@ body{
     top: 0.5rem;
     left: 0.5rem;
     color: aliceblue;
+}
+h3{
+    color:saddlebrown
+    ;
 }
 .title *{
     margin-bottom: 1rem;
@@ -73,16 +76,51 @@ body{
     display: flex;
     justify-content: center;
     align-items: stretch;
+    flex-wrap: wrap;
     gap: 1rem;
 }
+h4{
+    text-decoration: underline;
+    text-align: center;
+    color:saddlebrown;
+}
+.todos ul {
+    list-style: none;
+}
+ul li{
+    font-weight: bold;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    transition: all 0.5s;
+}
+ul li:hover {
+    transform: translate(3px, 2px);
+}
+li{
+    animation: addItem 1s ease-in-out 1;
+}
+li i {
+    padding: 1rem;
+    color: var(--mycolor);
+    transform: scale(1.3);
+    cursor: pointer;
+}
+li i:hover {
+    color: maroon;
+}
+li p {
+    width: 100%;
+    padding: 0.4rem;
+}
 .todo-div{
-    background-color: rgba(0, 139, 139, 0.342);
-    width: 35%;
+    /* background-color: rgba(0, 139, 139, 0.342); */
+    /* width: 35%; */
     padding: 1rem;
 }
 .done-div{
-    background-color: rgba(189, 183, 107, 0.417);
-    width: 35%;
+    /* background-color: rgba(189, 183, 107, 0.417); */
+    /* width: 35%; */
     padding: 1rem;
 }
 footer p{
@@ -91,3 +129,14 @@ footer p{
     bottom: 5px;
     right: 5px;
 }
+
+  
+@keyframes addItem {
+    0% {
+      transform: rotateX(90deg);
+    }
+  
+    100% {
+      transform: rotateX(0deg);
+    }
+  }
