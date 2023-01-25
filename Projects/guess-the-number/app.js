@@ -2,7 +2,7 @@ const userInput = document.getElementById("user-input")
 const btnCheck = document.getElementById("btn-check")
 const numberAttempt= document.getElementById("numberAttempt")
 const modalEl = document.querySelector(".secret-container")
-const secretNumber = Math.floor(Math.random()*100)
+const secretNumber = Math.ceil(Math.random()*100)
 
 window.addEventListener("load", ()=>{
     userInput.focus()
