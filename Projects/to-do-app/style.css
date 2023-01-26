@@ -74,7 +74,7 @@ h3{
     color: cadetblue;
 }
 .todos{
-    height: 70vh;
+    /* height: 70vh; */
     display: flex;
     justify-content: center;
     align-items: stretch;
@@ -122,7 +122,9 @@ li p {
 .done-div p {
     text-decoration: line-through;
 }
-.todo-div,
+.todo-div{
+    padding: 1rem;
+}
 .done-div{
     padding: 1rem;
 }
@@ -133,6 +135,14 @@ footer p{
     right: 5px;
 }
 
+@media screen and (max-width: 671px) {
+    .todo-div{
+        min-height: 70vh;
+    }
+    #date{
+        font-size: 1rem;
+    }
+  }
   
 @keyframes addItem {
     0% {
