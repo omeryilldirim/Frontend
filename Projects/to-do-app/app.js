@@ -56,8 +56,9 @@ const createToDo = (newTodo) => {
   //create todo list element
   const li = document.createElement("li");
   li.setAttribute("id", id);
+  li.setAttribute("completed", completed)
 
-  //add class with completed status
+  //check completed status
   // completed && li.classList.add("checked")
 
   //create check icon
@@ -75,16 +76,17 @@ const createToDo = (newTodo) => {
   removeIcon.setAttribute("class", "fas fa-trash");
   li.append(removeIcon);
 
-  //append li to ul
-  todoUl.append(li);
+  //check completed status and append li to ul
+  completed ? doneUl.append(li) : todoUl.append(li);
 };
 
 todoUl.addEventListener("click", (e) => {
   const idAttr = e.target.closest("li").getAttribute("id");
+  
   if (e.target.classList.contains("fa-check")) {
     //update UI
-    e.target.parentElement.classList.toggle("checked");
-    //update array (forEach or map)
+    doneUl.append(e.target.closest("li"))
+    //update array
     todoList.map((todo)=>{
         if(todo.id == idAttr){
             todo.completed = !todo.completed
@@ -92,6 +94,7 @@ todoUl.addEventListener("click", (e) => {
     })
     //add updated array to localStorage
     localStorage.setItem("todoList", JSON.stringify(todoList));
+    
   } else if (e.target.classList.contains("fa-trash")) {
     //remove from UI
     e.target.parentElement.remove();
@@ -100,7 +103,30 @@ todoUl.addEventListener("click", (e) => {
     todoList = todoList.filter((todo) => todo.id != idAttr);
     //add updated array to localStorage
     localStorage.setItem("todoList", JSON.stringify(todoList));
-  } else {
-    // alert("other element clicked");
+  }
+});
+
+doneUl.addEventListener("click", (e) => {
+  const idAttr = e.target.closest("li").getAttribute("id");
+  if (e.target.classList.contains("fa-check")) {
+    //update UI
+    todoUl.append(e.target.closest("li"))
+    //update array
+    todoList.map((todo)=>{
+        if(todo.id == idAttr){
+            todo.completed = !todo.completed
+        }
+    })
+    //add updated array to localStorage
+    localStorage.setItem("todoList", JSON.stringify(todoList));
+    
+  } else if (e.target.classList.contains("fa-trash")) {
+    //remove from UI
+    e.target.parentElement.remove();
+    //remove from array
+    //filter with remaining todos and update array
+    todoList = todoList.filter((todo) => todo.id != idAttr);
+    //add updated array to localStorage
+    localStorage.setItem("todoList", JSON.stringify(todoList));
   }
 });

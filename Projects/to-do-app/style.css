@@ -77,7 +77,7 @@ h3{
     justify-content: center;
     align-items: stretch;
     flex-wrap: wrap;
-    gap: 1rem;
+    gap: 2rem;
 }
 h4{
     text-decoration: underline;
