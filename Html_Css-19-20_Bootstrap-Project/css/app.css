@@ -50,7 +50,13 @@ color: var(--red);
 /*! ------------ 3- ABOUT SECTION ----------- */
 
 /*! ------------- 4- INSTRUCTORS -------------*/
-
+.card:hover{
+    transform: scale(1.05);
+    transition: all 1s ease-in-out;
+}
+.card{
+    padding: 0;
+}
 /*! ----------- 4- STUDENTS SECTION ----------*/
 
 /*! ----------- 5- COURSES SECTION ----------- */
