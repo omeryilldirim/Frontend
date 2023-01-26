@@ -29,3 +29,18 @@
 //! Bu durumlar then() ve catch() metotlari ile yakalanabilir.
 //? then() ve catch() metotlari promise dondururler.
 //? Zincirleme olarak kullanilabilirler.
+
+console.log("Promise")
+
+const myPromise = new Promise((resolve, reject) => {
+  const success = Math.floor(Math.random() * 2) //? 0,1,2,3
+  const data = { a: 2, b: 3 }
+  if (success) {
+    console.log("Data fetched")
+    resolve(data)
+  } else {
+    reject(new Error("Something went wrong"))
+  }
+})
+
+myPromise.then((res) => console.log(res)).catch((err) => console.log(err))
