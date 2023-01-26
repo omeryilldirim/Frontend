@@ -2,18 +2,18 @@
     --red : #DC3545
 }
 /*! -------------- 1- NAVBAR ---------------- */
-.navbar{
+.navbar-nav{
     font-size: 1.1rem;
     text-transform: uppercase;
     font-weight: 500;
 }
-.nav-link{
+.navbar .nav-link{
     transition: color 0.7s;
 }
-.nav-link:hover{
+.navbar .nav-link:hover{
 color: var(--red);
 }
-.nav-link.active:hover{
+.navbar .nav-link.active:hover{
     color: var(--red)!important;
 }
 
@@ -68,7 +68,44 @@ section#instructors .card:hover{
 /*! ----------- 4- STUDENTS SECTION ----------*/
 
 /*! ----------- 5- COURSES SECTION ----------- */
-
+section#courses .nav-link.active{
+    background-color: var(--red);
+}
+section#courses .nav-link{
+    color: white;
+    
+}
+section#courses .nav-pills button{
+    font-size: 0.8rem;
+}
 /*! ----------- 6- CONTACT SECTION ------------ */
 
 /*! --------------- 7- FOOTER ----------------- */
+footer i {
+    font-size: 2rem;
+    color: white;
+    margin-right: 0.8rem;
+    transition: color 1s;
+  }
+  
+  footer i:hover {
+    color: var(--red);
+  }
+  
+  /** -------------- UP-BUTTON ------------------ */
+  .btn-up {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    color: white;
+    background-color: var(--red);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    text-decoration: none;
+  }
+  
