@@ -24,6 +24,31 @@ const getTodoListFromLocalStorage = () => {
   });
 };
 
+const createToDo = (newTodo) => {
+  //todo item creation
+  const { id, completed, text } = newTodo;
+
+  //create todo list element
+  const li = document.createElement("li");
+  li.setAttribute("id", id);
+  li.setAttribute("completed", completed)
+  //create check icon
+  const icon = document.createElement("i");
+  icon.setAttribute("class", "fas fa-check");
+  li.append(icon);
+  //create item text
+  const p = document.createElement("p");
+  p.innerText = text;
+  li.appendChild(p);
+  //create removeIcon
+  const removeIcon = document.createElement("i");
+  removeIcon.setAttribute("class", "fas fa-trash");
+  li.append(removeIcon);
+  //check completed status and append li to ul
+  completed ? doneUl.append(li) : todoUl.append(li);
+};
+
+// addBtn click event
 addBtn.addEventListener("click", (e) => {
   e.preventDefault();
   // if input is empty, alert()
@@ -31,7 +56,7 @@ addBtn.addEventListener("click", (e) => {
     alert("Please enter a text");
     return;
   }
-  // declare user input as object var
+  // declare user input as object
   const newTodo = {
     id: new Date().getTime(),
     completed: false,
@@ -42,44 +67,14 @@ addBtn.addEventListener("click", (e) => {
   audio.play()
   //push new todo to todolist
   todoList.push(newTodo);
-  console.log(todoList);
   //localStorage todoList update
   localStorage.setItem("todoList", JSON.stringify(todoList));
 
   e.target.closest("form").reset();
 });
 
-const createToDo = (newTodo) => {
-  //todo item creation
-  const { id, completed, text } = newTodo;
 
-  //create todo list element
-  const li = document.createElement("li");
-  li.setAttribute("id", id);
-  li.setAttribute("completed", completed)
-
-  //check completed status
-  // completed && li.classList.add("checked")
-
-  //create check icon
-  const icon = document.createElement("i");
-  icon.setAttribute("class", "fas fa-check");
-  li.append(icon);
-
-  //create item text
-  const p = document.createElement("p");
-  p.innerText = text;
-  li.appendChild(p);
-
-  //create remove icon
-  const removeIcon = document.createElement("i");
-  removeIcon.setAttribute("class", "fas fa-trash");
-  li.append(removeIcon);
-
-  //check completed status and append li to ul
-  completed ? doneUl.append(li) : todoUl.append(li);
-};
-
+//to-do elements event
 todoUl.addEventListener("click", (e) => {
   const idAttr = e.target.closest("li").getAttribute("id");
   
@@ -94,7 +89,6 @@ todoUl.addEventListener("click", (e) => {
     })
     //add updated array to localStorage
     localStorage.setItem("todoList", JSON.stringify(todoList));
-    
   } else if (e.target.classList.contains("fa-trash")) {
     //remove from UI
     e.target.parentElement.remove();
@@ -106,6 +100,7 @@ todoUl.addEventListener("click", (e) => {
   }
 });
 
+//done elemenst event
 doneUl.addEventListener("click", (e) => {
   const idAttr = e.target.closest("li").getAttribute("id");
   if (e.target.classList.contains("fa-check")) {
@@ -118,8 +113,7 @@ doneUl.addEventListener("click", (e) => {
         }
     })
     //add updated array to localStorage
-    localStorage.setItem("todoList", JSON.stringify(todoList));
-    
+    localStorage.setItem("todoList", JSON.stringify(todoList));   
   } else if (e.target.classList.contains("fa-trash")) {
     //remove from UI
     e.target.parentElement.remove();
