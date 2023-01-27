@@ -16,6 +16,9 @@
 //? Dosya Okuma/Yazma islemleri gibi zaman tuketen kodlarda Asyn Programlama
 //? kullanilmasi cok onemlidir.
 
+//! html de scriptte async veya defer kullandığımızda script yüklerken diğer ögeleri de yüklemeye devam ediyor yani script i async olarak çalıştırıyor. non-blocking
+//!  <script defer or async rel="" href="" />
+
 //* Senkron
 //* ------------------------------------------------
 // const wait = (waitingTime) => {
@@ -62,7 +65,7 @@
 //!-----------------------------------------------------
 //* Eger birbirine bagimli asenkron kodlarin yazilmasi gerekirse,nested callback
 //* yapisinin kullanilmasi gerekebilir. Fakat bu iyi bir programlama yaklasimi degildir.
-// !callback hell olarak adlandirilan bu yapinin anlasilmasi ve surdurulebilirligi oldukca zordur.
+//! Callback hell olarak adlandirilan bu yapinin anlasilmasi ve surdurulebilirligi oldukca zordur.
 
 setTimeout(() => {
   console.log("john:Hi")
