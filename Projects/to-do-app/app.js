@@ -4,17 +4,17 @@ const addBtn = document.getElementById("todo-button");
 const todoUl = document.querySelector(".todo");
 const doneUl = document.querySelector(".done")
 const audio = new Audio("./assets/pencil.mp3");
-const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+// const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 
 let todoList = JSON.parse(localStorage.getItem("todoList")) || [];
 
 window.addEventListener("load", () => {
   getTodoListFromLocalStorage();
   // get date and day then load to UI
-  const dayInt = new Date().getDay()
-  const date = (new Date().getDate())+"."+(new Date().getMonth()+1)+"."+(new Date().getFullYear())
-  document.getElementById("date").innerText = date
-  document.getElementById("happyDay").innerText = `${days[dayInt]}`
+  // const dayInt = new Date().getDay()
+  // const date = (new Date().getDate())+"."+(new Date().getMonth()+1)+"."+(new Date().getFullYear())
+  // document.getElementById("date").innerText = date
+  // document.getElementById("happyDay").innerText = `${days[dayInt]}`
 });
 
 // get todolist from localstorage and load to UI
