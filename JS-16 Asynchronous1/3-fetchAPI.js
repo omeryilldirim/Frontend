@@ -2,7 +2,7 @@
 //*             3- FETCH API
 //*========================================
 
-//? Dış kaynaklardan veri getirmek icin kullanilan basit bir arabirimdir.
+//? Dis kaynaklardan veri getirmek icin kullanilan basit bir arabirimdir.
 //? Ag istekleri yapmamizi ve cevaplari yontebilmemize olanak saglar.
 //? Javascript ortaminda en cok kullanilan Asenkron islem orneklerinin basinda
 //? gelmektedir.
@@ -12,10 +12,25 @@
 
 console.log("FETCH")
 
-fetch("https://api.github.com/users")
-  .then((res) => res.json())
+fetch("https://api.github.com/user")
+  .then((res) => {
+    console.log(res)
+
+    //! Error Handling
+    // if (res.status>= 200 && res.status <=299)
+    if (!res.ok) {
+      throw new Error(`Something went wrong: ${res.status} `)
+    }
+    return res.json()
+  })
   .then((data) => showGithubUsers(data))
-  .catch((err) => console.log(err))
+  .catch((hata) => {
+    console.log(hata)
+    const userArticle = document.querySelector(".users")
+    userArticle.innerHTML = `
+     <h2 class="text-warning display-6">${hata}</h2>
+    `
+  })
 
 const showGithubUsers = (users) => {
   console.log(users)
