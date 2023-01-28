@@ -17,3 +17,15 @@
 //* Await, promise-temelli herhangi bir fonksiyonun onune getirilerek getirildigi
 //* satirdaki kodun durdurulmasini saglar.
 //* Yapilan istek yerine getirilip sonuc degerlerinin dondurulmesi ile kodun calismasi devam eder.
+
+// .env (environment) -> .gitignore
+
+const getNews =async ()=> {
+    const API_KEY = "ef6060af1c7b47d2904024c39d2ecc23"
+    const URL = `https://newsapi.org/v2/everything?q=nl&apiKey=${API_KEY}`
+    
+    const res = await fetch(URL)
+    return res.json()
+}
+
+console.log(getNews());
