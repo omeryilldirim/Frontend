@@ -1,3 +1,25 @@
 body{
     background-color:steelblue;
+    background-image: url(./image.gif);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+input{
+    border: none;
+    color: white;
+    background-color: transparent;
+    border-bottom: 1px solid white;
+    margin-right: 1rem;
+}
+input::placeholder{
+    color: white;
+}
+input:focus{
+    outline: none;
+}
+div.card{
+    background-color: rgba(250, 235, 215, 0.499) ;
+}
+.hidden{
+    visibility:hidden;
 }

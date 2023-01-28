@@ -11,19 +11,17 @@
 <body>
     <h1 class="text-center text-light my-5">Weather App</h1>
 
-    <section class="search d-flex justify-content-center my-5">
+    <section class="search d-flex flex-column justify-content-center align-items-center my-5">
         <form action="">
-            <input class="border border-0 p-2" type="text" name="city" id="city-input" placeholder="Search for a city">
+            <input class="p-2" autofocus type="text" name="city" id="city-input" placeholder="  Search for a location...">
             <button class="btn btn-danger" type="submit">SUBMIT</button>
         </form>
-        <p class="warning"></p>
+        <p class="warning text-light pt-3">Winter is coming...</p>
     </section>
 
-    <section class="result d-flex justify-content-center g-2">
+    <section class="result d-flex justify-content-center align-items-center gap-3">
 
     </section>
-
-
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
