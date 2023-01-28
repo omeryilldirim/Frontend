@@ -20,12 +20,49 @@
 
 // .env (environment) -> .gitignore
 
-const getNews =async ()=> {
+const getNews = async ()=> {
     const API_KEY = "ef6060af1c7b47d2904024c39d2ecc23"
     const URL = `https://newsapi.org/v2/everything?q=nl&apiKey=${API_KEY}`
     
-    const res = await fetch(URL)
-    return res.json()
+    try {
+        const res = await fetch(URL)
+        if(!res.ok){
+            throw new Error("something wrong")
+        }
+        const data = await res.json()
+        // console.log(data);
+        renderNews(data.articles)
+
+    } catch (error) {
+        renderError(error);
+    }
 }
 
-console.log(getNews());
+const renderError = (err) => {
+    console.log(err)
+    const newsDiv = document.getElementById("news")
+    newsDiv.innerHTML = 
+    `<h2>${err}</h2>
+    <img src="./img/404.png" alt="" />`
+}
+
+const renderNews = (articles)=>{
+    const newsDiv = document.getElementById("news")
+    // console.log(articles);
+    
+    articles.forEach(item =>{
+        const {title, urlToImage, description, url} = item
+        newsDiv.innerHTML += 
+        `<div  class="col col-md-6 col-lg-4 col-xl-3">
+        <div class="card">
+        <img src="${urlToImage}" class="card-img-top" alt="">
+        <div class="card-body">
+        <h5 class="card-title">${title}</h5>
+        <p class="card-text">${description}</p>
+        <a href="${url}" target="_blank" class="btn btn-warning">Details</a>
+        </div>
+        </div>
+        </div>`
+    })
+}
+getNews()
