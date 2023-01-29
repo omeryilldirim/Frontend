@@ -1,8 +1,10 @@
 body{
+    height: 100vh;
     background-color:steelblue;
     background-image: url(./image.gif);
     background-size: cover;
-    background-repeat: no-repeat;
+    /* background-repeat: no-repeat; */
+    background-position: center;
 }
 input{
     border: none;
@@ -18,7 +20,9 @@ input:focus{
     outline: none;
 }
 div.card{
-    background-color: rgba(250, 235, 215, 0.499) ;
+    background-color: rgba(250, 235, 215, 0.309);
+    border: none;
+    width: 15rem;
 }
 .hidden{
     visibility:hidden;
