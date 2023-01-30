@@ -9,9 +9,19 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1 class="text-center text-light py-5">Weather App</h1>
+    <p id="date" class="text-light float-end pt-1 pe-1 mt-0">
+        <script>
+            const date = document.getElementById("date")
+            setInterval(() => {
+                date.innerText = 
+                `${new Date().getDate()}.${new Date().getMonth()+1}.${new Date().getFullYear()} - ${new Date().getHours() < 10 ? "0"+ new Date().getHours():new Date().getHours()}:${new Date().getMinutes() < 10 ? "0"+new Date().getMinutes():new Date().getMinutes()}:${new Date().getSeconds()< 10 ? "0"+new Date().getSeconds():new Date().getSeconds()}`
+            }, 1000);
+        </script>
+    </p>
+    <div class="clearfix"></div>
+    <h1 class="text-center text-light pt-0 pb-3">Weather App</h1>
 
-    <section class="search d-flex flex-column justify-content-center align-items-center my-5">
+    <section class="search d-flex flex-column justify-content-center align-items-center my-2">
         <form action="">
             <input class="p-2" autofocus type="text" name="city" id="city-input" placeholder="  Search for a location...">
             <button class="btn btn-danger" type="submit">SUBMIT</button>
