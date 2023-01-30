@@ -12,7 +12,7 @@ window.addEventListener("load", () => {
 
 //clear all queries
 btnClear.addEventListener("click", ()=>{
-    document.querySelector("section.result").remove()
+    document.querySelector("section.result").innerHTML = ""
     weatherDataList = []
     localStorage.setItem("weatherDataList", JSON.stringify(weatherDataList))
 })
@@ -54,17 +54,15 @@ const getWeatherData = async (city) =>{
             throw new Error(`Input is not matched any data`);
         }
         const data = await response.json()
-        const name = data.name
-        const country = data.sys.country
-        const temp = data.main.temp
-        const description = data.weather[0].description
-        const iconCode = data.weather[0].icon
+        const{name, sys:{country}, main:{temp}, weather } = data
+        const description = weather[0].description
+        const iconCode = weather[0].icon
 
         // load results to UI
         const resultSection = document.querySelector(".result")
         resultSection.innerHTML += `
         <div class="card p-2 d-flex flex-column justify-content-evenly align-items-center g-1">
-            <h5 class="card-title">${name}, ${country}</h5>
+            <h5 class="card-title">${name}, <sup class="h6 text-light bg-primary bg-gradient rounded-1 px-1">${country}</sup></h5>
             <p class="card-title display-1">${Math.trunc(temp)}<sup class="display-5">°C</sup></p>
             <img src="http://openweathermap.org/img/wn/${iconCode}@2x.png" alt="weather-image">
             <p class="card-text">${description}</p>
