@@ -1,18 +1,30 @@
 const API_KEY = "8b5a25d706ef2f1751049de4a24571d5"
-const weatherDataList = []
 const btnSubmit = document.querySelector(".btn")
 const warningPar = document.querySelector("p.warning")
+const btnClear = document.getElementById("clear-all")
+
+let weatherDataList = JSON.parse(localStorage.getItem("weatherDataList")) || [];
+
+// window load event : get weatherdatalist from storage
+window.addEventListener("load", () => {
+    getWeatherDataListFromLocalStorage();
+});
+
+//clear all queries
+btnClear.addEventListener("click", ()=>{
+    document.querySelector("section.result").remove()
+    weatherDataList = []
+    localStorage.setItem("weatherDataList", JSON.stringify(weatherDataList))
+})
 
 //submit button event
 btnSubmit.addEventListener("click", (e)=>{
-    e.preventDefault()
-    // remove warning from dom
-    warningPar.style.visibility = "hidden" 
+    e.preventDefault() 
     // check the input value if empty
     const searchInput = document.getElementById("city-input").value
     if(searchInput==""){
-        warningPar.style.visibility = "visible" 
         warningPar.innerText = `Please enter a valid city name`
+        setTimeout(setWarningDefaultMessage, 3000)
     } else{
         // get inputted city name
         let city  = searchInput.toLowerCase() 
@@ -23,30 +35,30 @@ btnSubmit.addEventListener("click", (e)=>{
         // check if city is already checked
         weatherDataList.includes(city) ?
         (warningPar.innerText = `You have already checked the weather for ${city} 🙃 please check another city`) &&
-        (warningPar.style.visibility = "visible")
+        setTimeout(setWarningDefaultMessage, 3000)
         : getWeatherData(city)
     }
 })
 
+const getWeatherDataListFromLocalStorage = ()=>{
+    weatherDataList.forEach(city=>{
+        getWeatherData(city)
+    })
+}
+
 const getWeatherData = async (city) =>{
-    // // get city coordinates
-    // const response = await fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${city}&appid=8b5a25d706ef2f1751049de4a24571d5`)
-    // const data = (await response.json())[0]
-    // const {name, lat, lon} = data
-    
-    // get city temperature, country, decription
-    const response2 = await fetch(
-        `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`)
-    
-    console.log(response2);
-    
     try {
-        const data2 = await response2.json()
-        const name = data2.name
-        const country = data2.sys.country
-        const temp = data2.main.temp
-        const description = data2.weather[0].description
-        const iconCode = data2.weather[0].icon
+        const response = await fetch(
+        `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`)
+        if (!response.ok) {
+            throw new Error(`Input is not matched any data`);
+        }
+        const data = await response.json()
+        const name = data.name
+        const country = data.sys.country
+        const temp = data.main.temp
+        const description = data.weather[0].description
+        const iconCode = data.weather[0].icon
 
         // load results to UI
         const resultSection = document.querySelector(".result")
@@ -58,12 +70,16 @@ const getWeatherData = async (city) =>{
             <p class="card-text">${description}</p>
         </div>`
 
-        //load info to sessionStorage
-        weatherDataList.push(city)
-        sessionStorage.setItem("weatherDataList", JSON.stringify(weatherDataList))
+        //load info to localStorage
+        weatherDataList.includes(city) || 
+        weatherDataList.push(city) && localStorage.setItem("weatherDataList", JSON.stringify(weatherDataList))
 
     } catch (error) {
-        console.log(error);
+        warningPar.innerText = error.message
+        setTimeout(setWarningDefaultMessage, 3000)
     }
+}
 
+function setWarningDefaultMessage(){
+    warningPar.innerText = `Winter is coming...🥶🥶`
 }

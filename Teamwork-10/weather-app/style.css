@@ -24,9 +24,12 @@ div.card{
     border: none;
     /* width: 15rem; */
 }
-.hidden{
-    visibility:hidden;
-}
 .clearfix{
     clear: both;
+}
+
+#clear-all{
+    position: fixed;
+    bottom: 1rem;
+    left: 45%;
 }
