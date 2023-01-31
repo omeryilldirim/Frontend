@@ -1,0 +1,30 @@
+body{
+    height: 100vh;
+    background-color:rgb(31, 88, 134);
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* background-position: center; */
+}
+div.country-info{
+    background-color: rgba(255, 255, 255, 0.442);
+    border: none;
+    line-height: 1;
+}
+.clearfix{
+    clear: both;
+}
+.hidden{
+    display: none;
+}
+p{
+    font-family: 'Helvetica', FontAwesome, sans-serif;
+}
+.country-info p {
+    border-top: 1px solid black;
+    padding:0.5rem;
+    margin: 0;
+}
+h4{
+    margin: 0;
+    padding: 0.25rem;
+}
