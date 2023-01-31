@@ -43,10 +43,12 @@ btnCheck.addEventListener("click", (e)=>{
     e.preventDefault()
     const userInput = input.value.toLowerCase()
     input.value = ""
+    console.log(infoDiv.querySelector("p").innerText.split(": ")[1].toLowerCase());
 
-    if(userInput == infoDiv.querySelector("h4").innerText.toLowerCase()){
-        messagePar.innerText = "Congrats! 🥳"
-        infoDiv.classList.contains("hidden") && infoDiv.classList.remove("hidden")
+    if(userInput == infoDiv.querySelector("h4").innerText.toLowerCase() ||
+        userInput == infoDiv.querySelector("p").innerText.split(": ")[1].toLowerCase()){
+            messagePar.innerText = "Congrats! 🥳"
+            infoDiv.classList.contains("hidden") && infoDiv.classList.remove("hidden")
     } else{
         messagePar.innerText = "Try again!"
         setTimeout(()=>{
