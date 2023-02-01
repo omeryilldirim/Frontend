@@ -54,6 +54,7 @@ const getWeatherData = async (city) =>{
         const response = await fetch(
         `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`)
         if (!response.ok) {
+            document.querySelector("form").reset()
             throw new Error(`Input is not matched any data`);
         }
         const data = await response.json()
