@@ -1,8 +1,8 @@
 const API_KEY = "8b5a25d706ef2f1751049de4a24571d5"
-const btnSubmit = document.querySelector(".btn")
+const btnSubmit = document.querySelector(".submit")
 const warningPar = document.querySelector("p.warning")
 const btnClear = document.getElementById("clear-all")
-
+const resultSection = document.querySelector(".result")
 let weatherDataList = JSON.parse(localStorage.getItem("weatherDataList")) || [];
 
 // window load event : get weatherdatalist from storage
@@ -26,23 +26,26 @@ btnSubmit.addEventListener("click", (e)=>{
         warningPar.innerText = `Please enter a valid city name`
         setTimeout(setWarningDefaultMessage, 3000)
     } else{
-        // get inputted city name
-        let city  = searchInput.toLowerCase() 
-        city = city.charAt(0).toUpperCase() + city.substring(1)
-    
-        document.querySelector("form").reset()
-    
-        // check if city is already checked
-        weatherDataList.includes(city) ?
-        (warningPar.innerText = `You have already checked the weather for ${city} 🙃 please check another city`) &&
-        setTimeout(setWarningDefaultMessage, 3000)
-        : getWeatherData(city)
+        getWeatherData(searchInput)
+    }
+})
+
+//remove button event
+resultSection.addEventListener("click", (e)=>{
+    if(e.target.classList.contains("remove")){
+        const name = e.target.parentNode.querySelector("h5").innerText.slice(0, -2)
+        const country = e.target.parentNode.querySelector("sup").innerText
+        e.target.parentNode.remove()
+        weatherDataList = weatherDataList.filter(item=> item.name+item.country != name+country)
+        localStorage.setItem("weatherDataList", JSON.stringify(weatherDataList))
     }
 })
 
 const getWeatherDataListFromLocalStorage = ()=>{
-    weatherDataList.forEach(city=>{
-        getWeatherData(city)
+    const newWeatherDataList = [...weatherDataList]
+    weatherDataList=[]
+    newWeatherDataList.forEach(item=>{
+        getWeatherData(item.name)
     })
 }
 
@@ -57,20 +60,32 @@ const getWeatherData = async (city) =>{
         const{name, sys:{country}, main:{temp}, weather } = data
         const description = weather[0].description
         const iconCode = weather[0].icon
+        const cityObj ={"name":name, "country":country}
+        
+        // check if city is already checked
+        const filteredArr = weatherDataList.filter(item=> item.name == name && item.country == country)
 
-        // load results to UI
-        const resultSection = document.querySelector(".result")
-        resultSection.innerHTML += `
-        <div class="card p-2 d-flex flex-column justify-content-evenly align-items-center g-1">
-            <h5 class="card-title">${name}, <sup class="h6 text-light bg-primary bg-gradient rounded-1 px-1">${country}</sup></h5>
-            <p class="card-title display-1">${Math.trunc(temp)}<sup class="display-5">°C</sup></p>
-            <img src="http://openweathermap.org/img/wn/${iconCode}@2x.png" alt="weather-image">
-            <p class="card-text">${description}</p>
-        </div>`
+        if(filteredArr.length > 0){
+            warningPar.innerText = `You have already checked the weather for ${name} 🙃 please check another city`
+            setTimeout(setWarningDefaultMessage, 3000)
+        } else {
+            // load results to UI
+            const resultSection = document.querySelector(".result")
+            resultSection.innerHTML += `
+            <div class="card p-3 pb-0 d-flex flex-column justify-content-evenly align-items-center g-1">
+                <h5 class="card-title">${name}<sup class="h6 text-light bg-primary bg-gradient rounded-1 px-1">${country}</sup></h5>
+                <p class="card-title display-2">${Math.trunc(temp)}<sup class="display-6">°C</sup></p>
+                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/${iconCode}.svg" alt="weather-image">
+                <p class="card-text">${description}</p>
+                <span class="remove btn bg-danger text-light">X</span>
+            </div>`
+            
+            //load info to localStorage
+            weatherDataList.push(cityObj)
+            localStorage.setItem("weatherDataList", JSON.stringify(weatherDataList))
+        }
 
-        //load info to localStorage
-        weatherDataList.includes(city) || 
-        weatherDataList.push(city) && localStorage.setItem("weatherDataList", JSON.stringify(weatherDataList))
+        document.querySelector("form").reset()
 
     } catch (error) {
         warningPar.innerText = error.message
