@@ -74,7 +74,7 @@ const getWeatherData = async (city) =>{
             resultSection.innerHTML += `
             <div class="card p-3 pb-0 d-flex flex-column justify-content-evenly align-items-center g-1">
                 <h5 class="card-title">${name}<sup class="h6 text-light bg-primary bg-gradient rounded-1 px-1">${country}</sup></h5>
-                <p class="card-title display-2">${Math.trunc(temp)}<sup class="display-6">°C</sup></p>
+                <p class="card-title display-2">${Math.round(temp)}<sup class="display-6">°C</sup></p>
                 <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/${iconCode}.svg" alt="weather-image">
                 <p class="card-text">${description}</p>
                 <span class="remove btn bg-danger text-light">X</span>
