@@ -1,4 +1,3 @@
-const API_KEY = "8b5a25d706ef2f1751049de4a24571d5"
 const btnSubmit = document.querySelector(".submit")
 const warningPar = document.querySelector("p.warning")
 const btnClear = document.getElementById("clear-all")
@@ -51,6 +50,7 @@ const getWeatherDataListFromLocalStorage = ()=>{
 
 const getWeatherData = async (city) =>{
     try {
+        const API_KEY = "8b5a25d706ef2f1751049de4a24571d5"
         const response = await fetch(
         `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`)
         if (!response.ok) {
