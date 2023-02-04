@@ -1,6 +1,9 @@
 const symbols = ["!","@","#","$","%","^","&","*","(",")","_","+","~","|","}","{","[","]",":",";","?",">","<",",",".","/","-","="];
-
-let password =""
+const btnGenerate = document.getElementById("btn-generate")
+const passwordPar = document.getElementById("password")
+const copyIcon = document.querySelector("i")
+const passwordContainer = document.querySelector(".container")
+const warningSpan = document.getElementById("warning")
 
 function getRandomLower() {
     return String.fromCharCode(Math.floor(Math.random() * 26) + 97);
@@ -21,6 +24,7 @@ function getComplete(){
 }
 
 function passwordGenerator() {
+    let password =""
     for (let i = 0; i < 3; i++) {
         password += getRandomNumber()
     }
@@ -38,4 +42,24 @@ function passwordGenerator() {
     return password
 }
 
-console.log(passwordGenerator());
+btnGenerate.addEventListener("click", ()=>{
+    passwordPar.innerText = passwordGenerator()
+    copyIcon.style.visibility ="visible"
+})
+
+passwordContainer.addEventListener("mouseover", ()=>{
+    copyIcon.style.opacity = 0.5
+})
+passwordContainer.addEventListener("mouseout", ()=>{
+    copyIcon.style.opacity = 1
+})
+
+passwordContainer.addEventListener("click", ()=>{
+    if (passwordPar.innerText != "?"){
+        navigator.clipboard.writeText(passwordPar.innerText)
+        warningSpan.style.visibility = "visible"
+        setTimeout(()=>{
+            warningSpan.style.visibility = "hidden"
+        }, 2000)
+    }
+})
