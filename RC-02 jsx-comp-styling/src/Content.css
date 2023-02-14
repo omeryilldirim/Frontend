@@ -1,0 +1,11 @@
+.par {
+  text-align: justify;
+  font-weight: 500;
+  font-size: 1.1rem;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+.content-div {
+  padding: 2rem;
+}
+
