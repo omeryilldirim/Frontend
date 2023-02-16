@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/Course/RC-04%20horoscope/horoscope-solution/static/css/main.cc83b7f1.css",
-    "main.js": "/Course/RC-04%20horoscope/horoscope-solution/static/js/main.d5fd05ab.js",
-    "static/js/787.af661bff.chunk.js": "/Course/RC-04%20horoscope/horoscope-solution/static/js/787.af661bff.chunk.js",
-    "static/media/logo.png": "/Course/RC-04%20horoscope/horoscope-solution/static/media/logo.d6c42622bddf5a8e7575.png",
-    "index.html": "/Course/RC-04%20horoscope/horoscope-solution/index.html",
-    "main.cc83b7f1.css.map": "/Course/RC-04%20horoscope/horoscope-solution/static/css/main.cc83b7f1.css.map",
-    "main.d5fd05ab.js.map": "/Course/RC-04%20horoscope/horoscope-solution/static/js/main.d5fd05ab.js.map",
-    "787.af661bff.chunk.js.map": "/Course/RC-04%20horoscope/horoscope-solution/static/js/787.af661bff.chunk.js.map"
+    "main.css": "/Course/RC-04_horoscope/horoscope-solution/static/css/main.cc83b7f1.css",
+    "main.js": "/Course/RC-04_horoscope/horoscope-solution/static/js/main.e60579ee.js",
+    "static/js/787.af661bff.chunk.js": "/Course/RC-04_horoscope/horoscope-solution/static/js/787.af661bff.chunk.js",
+    "static/media/logo.png": "/Course/RC-04_horoscope/horoscope-solution/static/media/logo.d6c42622bddf5a8e7575.png",
+    "index.html": "/Course/RC-04_horoscope/horoscope-solution/index.html",
+    "main.cc83b7f1.css.map": "/Course/RC-04_horoscope/horoscope-solution/static/css/main.cc83b7f1.css.map",
+    "main.e60579ee.js.map": "/Course/RC-04_horoscope/horoscope-solution/static/js/main.e60579ee.js.map",
+    "787.af661bff.chunk.js.map": "/Course/RC-04_horoscope/horoscope-solution/static/js/787.af661bff.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.cc83b7f1.css",
-    "static/js/main.d5fd05ab.js"
+    "static/js/main.e60579ee.js"
   ]
 }
