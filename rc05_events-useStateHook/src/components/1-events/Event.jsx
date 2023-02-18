@@ -53,7 +53,7 @@ export default Event
 //! State, elementlerin degisiklik durumlarini tutan nesnelerdir.
 //? ReactJs'de state'leri kullanmak icin  2 ayri Component yapisi bulunmaktadir.
 //? 1. Statefull Classes (Class Components).
-//? 2. Hooks (Functional Components).
+//? 2. Hooks (Functional Components).(2019)
 
 //?Biz su ana kadar uygulamalarimizda Fonksiyonel Component'leri kullandik.
 //? Yaygin kullanim Fonksiyonel Component'lerdir.
