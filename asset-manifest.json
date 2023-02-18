@@ -1,16 +1,13 @@
 {
   "files": {
-    "main.css": "/Course/RC-04_horoscope/horoscope-solution/static/css/main.cc83b7f1.css",
-    "main.js": "/Course/RC-04_horoscope/horoscope-solution/static/js/main.e60579ee.js",
-    "static/js/787.af661bff.chunk.js": "/Course/RC-04_horoscope/horoscope-solution/static/js/787.af661bff.chunk.js",
-    "static/media/logo.png": "/Course/RC-04_horoscope/horoscope-solution/static/media/logo.d6c42622bddf5a8e7575.png",
-    "index.html": "/Course/RC-04_horoscope/horoscope-solution/index.html",
-    "main.cc83b7f1.css.map": "/Course/RC-04_horoscope/horoscope-solution/static/css/main.cc83b7f1.css.map",
-    "main.e60579ee.js.map": "/Course/RC-04_horoscope/horoscope-solution/static/js/main.e60579ee.js.map",
-    "787.af661bff.chunk.js.map": "/Course/RC-04_horoscope/horoscope-solution/static/js/787.af661bff.chunk.js.map"
+    "main.css": "/Course/Teamwork-12/tour-places/static/css/main.4ff69795.css",
+    "main.js": "/Course/Teamwork-12/tour-places/static/js/main.76964113.js",
+    "index.html": "/Course/Teamwork-12/tour-places/index.html",
+    "main.4ff69795.css.map": "/Course/Teamwork-12/tour-places/static/css/main.4ff69795.css.map",
+    "main.76964113.js.map": "/Course/Teamwork-12/tour-places/static/js/main.76964113.js.map"
   },
   "entrypoints": [
-    "static/css/main.cc83b7f1.css",
-    "static/js/main.e60579ee.js"
+    "static/css/main.4ff69795.css",
+    "static/js/main.76964113.js"
   ]
 }
