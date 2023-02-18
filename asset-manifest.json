@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Course/Teamwork-12/tour-places/static/css/main.4ff69795.css",
+    "main.js": "/Course/Teamwork-12/tour-places/static/js/main.76964113.js",
+    "index.html": "/Course/Teamwork-12/tour-places/index.html",
+    "main.4ff69795.css.map": "/Course/Teamwork-12/tour-places/static/css/main.4ff69795.css.map",
+    "main.76964113.js.map": "/Course/Teamwork-12/tour-places/static/js/main.76964113.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4ff69795.css",
+    "static/js/main.76964113.js"
+  ]
+}
