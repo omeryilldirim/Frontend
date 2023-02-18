@@ -16,10 +16,13 @@ class Counter extends Component {
     constructor(props) {
       super(props)
         
-      //?state başlangıç değeri verildi
+      //! state başlangıç değeri verildi
       this.state = {
         count : 0
       }
+
+        //  this.increment = function (){
+        //  }
 
       //? increment metodunu Counter classına bağlanması(bind)
       this.increment = this.increment.bind(this)
