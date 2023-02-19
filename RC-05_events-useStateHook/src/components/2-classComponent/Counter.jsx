@@ -9,46 +9,57 @@
 //* constructor'in disinda state, setState() metodu ile degistirilebilir.
 //* ====================================================================
 
-import React, { Component } from 'react'
+import React, { Component } from "react";
 
 class Counter extends Component {
+  constructor(props) {
+    super(props);
 
-    constructor(props) {
-      super(props)
-        
-      //! state başlangıç değeri verildi
-      this.state = {
-        count : 0
-      }
+    //! state başlangıç değeri verildi
+    this.state = {
+      count: 0,
+    };
 
-        //  this.increment = function (){
-        //  }
+    //  this.increment = function (){
+    //  }
 
-      //? increment metodunu Counter classına bağlanması(bind)
-      this.increment = this.increment.bind(this)
+    //? increment metodunu Counter classına bağlanması(bind)
+    this.increment = this.increment.bind(this);
+  }
+  //! Yazmis oldugumuz metotlar default olarak classa baglanmaz.
+  //! Ancak, React built-in fonksiyonlari baglidir.
 
-    }
+  //* Bunun icin metotlarimizi ya constructor icerisinde baglamaliyiz yada otomatik baglamayi saglayan arrow fonksiyonlarini kullanmaliyiz.
 
-    increment(){
-        this.setState({count:this.state.count + 1})
-    }
+  increment() {
+    this.setState({ count: this.state.count + 1 });
+  }
 
-    //? arrow function ile yazdığımızda bağlamaya gerek yok 
-    decrement = () => {
-        this.setState({count:this.state.count - 1})
-    }
+  //? arrow function ile yazdığımızda bağlamaya gerek yok
+  decrement = () => {
+    this.setState({ count: this.state.count - 1 });
+  };
 
-    render() {
-        return (
-        <div className='container text-center mt-4'>
-            <h2 className='text-danger'>Class Components</h2>
-            <h1 className='display-4'>Count:{this.state.count}</h1>
-            <button onClick={this.increment} className="btn btn-success">INC</button>
-            <button onClick={()=> this.setState({count:0})} className="btn btn-danger">CLR</button>
-            <button onClick={this.decrement} className="btn btn-warning">DEC</button>
-        </div>
-        )
+  render() {
+    return (
+      <div className="container text-center mt-4">
+        <h2 className="text-danger">Class Components</h2>
+        <h1 className="display-4">Count:{this.state.count}</h1>
+        <button onClick={this.increment} className="btn btn-success">
+          INC
+        </button>
+        <button
+          onClick={() => this.setState({ count: 0 })}
+          className="btn btn-danger"
+        >
+          CLR
+        </button>
+        <button onClick={this.decrement} className="btn btn-warning">
+          DEC
+        </button>
+      </div>
+    );
   }
 }
 
-export default Counter
+export default Counter;
