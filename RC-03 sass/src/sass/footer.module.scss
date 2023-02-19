@@ -1,0 +1,14 @@
+@import "./variables";
+
+.footer{
+    padding: 2rem;
+    background-color: $lightGreen;
+    // position: fixed;
+    // bottom: 0;
+    // left: 0;
+    width: 100%;
+
+    p{
+        font-weight: 600;
+    }
+}
