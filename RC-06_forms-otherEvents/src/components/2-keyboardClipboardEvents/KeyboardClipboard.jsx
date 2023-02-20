@@ -19,7 +19,9 @@ const KeyboardClipboard = () => {
     e.target.value += e.clipboardData.getData("text").toLocaleUpperCase()
     e.preventDefault()
   }
-  
+  const handleParCopy = (e)=>{
+    e.preventDefault()
+  }
   return (
     <div className="container text-center">
       <h2 className="display-5 text-danger">Keyboard-Clipboard Event</h2>
@@ -28,7 +30,7 @@ const KeyboardClipboard = () => {
 
       <div className="text-start mt-4">
         <h6>Copied Input Data</h6>
-        <p>{inputData.toLowerCase()}</p>
+        <p onCopy={handleParCopy}>{inputData.toLowerCase()}</p>
       </div>
 
       <textarea className="form-control" name="textarea" id="textarea" cols="30" rows="10" onPaste={handleAreaPaste}></textarea>
