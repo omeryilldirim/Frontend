@@ -8,8 +8,8 @@ function App() {
     <div className="container mt-4 text-center">
       {/* <Form /> */}
       {/* <FormWithObject /> */}
-      <KeyboardEvents />
-      {/* <MouseEvent /> */}
+      {/* <KeyboardEvents /> */}
+      <MouseEvent />
     </div>
   )
 }
