@@ -25,7 +25,8 @@ const User = () => {
       <h3>{user?.location?.country}, {user?.nat}</h3>
       <h4>{user?.email}</h4>
       <h5>{user?.phone}</h5>
-      <p>age : {user?.dob?.age}</p>
+      <h5>{new Date(user?.dob?.date).toLocaleDateString("tr")}</h5>
+      <h5>age : {user?.dob?.age}</h5>
 
       <button className="btn btn-warning" onClick={getUser}>Get User</button>
     </div>
