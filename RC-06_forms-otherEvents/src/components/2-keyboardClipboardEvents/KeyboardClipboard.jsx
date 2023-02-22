@@ -16,8 +16,10 @@ const KeyboardClipboard = () => {
   }
   const handleAreaPaste = (e)=>{
     e.target.style.color="red"
+    //kopyalanan veriyi textareaya paste yaptığımızda value değerine bu veriyi atamıyor. verinin textareay valueya yerleşmesi için clipboardData dan bu veriyi çekmek gerekiyor.
     e.target.value += e.clipboardData.getData("text").toLocaleUpperCase()
     e.preventDefault()
+    // textareaya paste yapınca normalde 2 defa paste oluyor çünkü bir browser paste işlevi yapıyor ve ayrıca biz 19.stırda paste işlevi yapıyoruz.bunu önlemek için browserın default işlevi kapatıyoruz. e.preventDefault()
   }
   const handleParCopy = (e)=>{
     e.preventDefault()
