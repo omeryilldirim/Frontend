@@ -19,7 +19,9 @@
 import React from "react"
 
 class LifeCycleMethods extends React.Component {
+  //! 1-) Bir componentin olsuturulmasinda cagrilir
   constructor(props) {
+    console.log("contstructor running");
     super(props)
     this.state = {
       count: 0,
@@ -31,8 +33,27 @@ class LifeCycleMethods extends React.Component {
       count: this.state.count + 1,
     })
   }
+  //! 3-) Bir component DOM agacina eklendiginde calistirilir.
+  //! (İlk render sonrasi).
+  //! Her yasam dongusu icin bir kere calisir.
+  componentDidMount(){
+    console.log("componentDidMount is running");
+  }
+  //! 4-) Bu metot ilk render haric diger tüm render'lardan sonra cagrilir.
+  //!  prevState ve prevProps degerlerini parametre olarak alabilir.
+  componentDidUpdate(){
+    console.log("updated");
+    // for example, after checking stock prices, if it s high or low as expected, you d like to sell some stocks.this is the place for that code.
+  }
+
+  //! 5-) Bir component DOM agacindan kaldiriltiktan hemen sonra cagirlir.
+  componentWillUnmount(){
+    console.log("componentWillUnmount is running");
+  }
 
   render() {
+    //! 2-) Her bir state yada prop degistiginde (render) cagrilir
+    console.log("rendered");
     return (
       <div className="container text-center">
         <h1 className="text-danger">LIFECYCLE METHODS</h1>
