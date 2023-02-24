@@ -2,6 +2,7 @@ import { FaEdit } from "react-icons/fa"
 import { AiFillDelete } from "react-icons/ai"
 import axios from "axios"
 import EditTutorial from "./EditTutorial"
+import { useState } from "react"
 // const tutorials = [
 //   {
 //     id: 1,
@@ -16,6 +17,9 @@ import EditTutorial from "./EditTutorial"
 // ]
 
 const TutorialList = ({ tutorials, getTutorials }) => {
+  const [editTutorialInfo, setEditTutorialInfo] = useState({})
+
+
   const deleteTutorial = async (id) => {
     const BASE_URL = "https://tutorial-api.fullstack.clarusway.com/tutorials"
     try {
@@ -64,13 +68,9 @@ const TutorialList = ({ tutorials, getTutorials }) => {
                     className="me-2 text-warning"
                     data-bs-toggle="modal"
                     data-bs-target="#edit-tutor"
-                    // onClick={() =>
-                    //   editTutorial({
-                    //     id: 502,
-                    //     title: "dokanmayin",
-                    //     description: "REACT",
-                    //   })
-                    // }
+                    onClick={() =>
+                      setEditTutorialInfo({id, title, description})
+                    }
                   />
                   <AiFillDelete
                     size={22}
@@ -85,7 +85,7 @@ const TutorialList = ({ tutorials, getTutorials }) => {
         </tbody>
       </table>
 
-      <EditTutorial />
+      <EditTutorial info={editTutorialInfo} getTutorials={getTutorials} />
     </div>
   )
 }
