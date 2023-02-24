@@ -1,9 +1,38 @@
 img{
     width: 100px;
 }
-.cardsContainer{
-    
+.cardContainer{
+    background-color: rgb(249, 196, 132);
+    border-radius: 10px;
+    width: 180px;
+    height: 140px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.cardContainer div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
 }
 .cardContainer:hover{
     cursor: pointer;
+}
+.cardContainer p{
+    text-align: center;
+    font-weight: 600;
+}
+.cardContainer img{
+    width: 80px;
+}
+.cardContainer ul{
+    padding: 0.4rem;
+}
+.cardContainer li{
+    font-size: 0.9rem;
+    word-break:normal;
+    list-style-position: inside;
 }

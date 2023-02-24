@@ -2,7 +2,7 @@ import { useState } from "react"
 import "./Card.css"
 
 const Card = ({name,img,options}) => {
-    const [flip, setFlip] = useState(false)
+    const [flip, setFlip] = useState(true)
 
   return (
     <div 
