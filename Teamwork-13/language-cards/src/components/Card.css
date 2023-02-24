@@ -1,0 +1,9 @@
+img{
+    width: 100px;
+}
+.cardsContainer{
+    
+}
+.cardContainer:hover{
+    cursor: pointer;
+}
