@@ -31,7 +31,7 @@ const EditTutorial = ({getTutorials, info}) => {
           <div className="modal-body">
             <form action="#">
               <label className="form-label" htmlFor="title">Title</label>
-              <input className="form-control mb-3" type="text" name="title" id="title" defaultValue={tutor.title} 
+              <input className="form-control mb-3" type="text" name="title" id="title" defaultValue={info.title} 
               onChange={handleTitleChange}/>
               <label className="form-label"  htmlFor="desc">Description</label>
               <input className="form-control" type="text" name="desc" id="desc" defaultValue={info.description}
