@@ -1,38 +1,81 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pathway+Gothic+One&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+	background: linear-gradient(-45deg, #003547, #C2BB00,#E1523D, #ED8B16, #005E54);
+	background-size: 400% 400%;
+	animation: gradient 20s ease infinite;
+	height: 100vh;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+.header{
+    text-align: center;
+    margin:1rem;
+    font-family: 'Amatic SC', cursive;
+    font-size: 3rem;
+    color: azure;
+}
+.app{
+    display: grid;
+    place-content: center;
+    margin: 1rem auto 1rem;
+    max-width: 55%;
+}
+.main{
+    padding: 1rem;
+    max-width: 100%;
+}
+.card{ 
+    background-color: rgba(252, 251, 251, 0);
+    border-radius: 10px;
+    padding: 2rem;
+    margin: 1rem;
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75) ;
+    color: aliceblue;
+    max-width: 65f0px;
+}
+h5{
+    font-size: 1.5rem;
+    font-family: 'Cinzel', serif;
+    color: darkred;
+    font-weight: 900;
+}
+.ques{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.ques-answer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+button{
+    border-radius: 50%;
+    background: rgba(252, 251, 251, 0.5);
+    height: 2rem;
+    width: 2rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 2rem;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+p{  
+    margin-top: 3px;
+    text-align: justify;
+    font-size: 1.5rem;
+    font-weight: 400;
+    font-family: 'Pathway Gothic One', sans-serif;
+    text-indent: 1.25rem;
 }
