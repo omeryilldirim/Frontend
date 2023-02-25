@@ -23,7 +23,7 @@ const AddTutorial = ({ getTutorials }) => {
     getTutorials()
   }
 
-  console.log(title, description)
+  // console.log(title, description)
   return (
     <div className="container text-center mt-4">
       <h1 className="display-6 text-danger">Add Your Tutorial</h1>

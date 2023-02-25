@@ -2,8 +2,9 @@ import { useEffect, useState } from "react";
 
 
 const EditTutorial = ({getTutorials, info}) => {
-
+  
   const [tutor, setTutor] = useState(info)
+  const [value, setValue] = useState(tutor)
 
   // tutor !== info && setTutor(info)
 
@@ -18,10 +19,10 @@ const EditTutorial = ({getTutorials, info}) => {
     console.log(tutor);
   }
   const handleTitleChange = (e)=>{
-    setTutor({...tutor, ["title"] : e.target.value})
+    setValue({...tutor, ["title"] : e.target.value})
   }
   const handleDescriptionChange = (e)=>{
-    setTutor({...tutor, ["description"] : e.target.value})
+    setValue({...tutor, ["description"] : e.target.value})
   }
 console.log(tutor);
   return (

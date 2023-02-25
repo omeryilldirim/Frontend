@@ -16,7 +16,7 @@ const Home = () => {
       console.log(error)
     }
   }
-  console.log(tutorials)
+  // console.log(tutorials)
   //? componentDidMount
   useEffect(() => {
     getTutorials()
