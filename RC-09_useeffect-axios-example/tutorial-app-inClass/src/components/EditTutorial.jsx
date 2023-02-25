@@ -2,9 +2,9 @@ import { useEffect, useState } from "react";
 
 
 const EditTutorial = ({getTutorials, info}) => {
-  
+  const [title, setTitle] = useState("")
+  const [desc, setDesc] = useState("")
   const [tutor, setTutor] = useState(info)
-  const [value, setValue] = useState(tutor)
 
   // tutor !== info && setTutor(info)
 
@@ -15,16 +15,22 @@ const EditTutorial = ({getTutorials, info}) => {
 
   }}, [info])
 
-  const handleSaveChanges = ()=>{
-    console.log(tutor);
+  const handleSaveChanges = (e)=>{
+    ;
   }
   const handleTitleChange = (e)=>{
-    setValue({...tutor, ["title"] : e.target.value})
+    setTitle(e.target.value)
+    console.log(title);
   }
   const handleDescriptionChange = (e)=>{
-    setValue({...tutor, ["description"] : e.target.value})
+    setDesc(e.target.value)
+    console.log(desc);
   }
-console.log(tutor);
+  const handleClose = () => {
+    setTitle("")
+    setDesc("")
+  }
+
   return (
     <div className="modal" tabIndex="-1" id="edit-tutor">
       <div className="modal-dialog">
@@ -41,11 +47,13 @@ console.log(tutor);
           <div className="modal-body">
             <form action="#">
               <label className="form-label" htmlFor="title">Title</label>
-              <input className="form-control mb-3" type="text" name="title" id="title" defaultValue={info.title} 
-              onChange={handleTitleChange}/>
+              <input className="form-control mb-3" type="text" name="title" id="title" value={info.title || ""} 
+              onChange={handleTitleChange}
+              />
               <label className="form-label"  htmlFor="desc">Description</label>
-              <input className="form-control" type="text" name="desc" id="desc" defaultValue={info.description}
-              onChange={handleDescriptionChange} />
+              <input className="form-control" type="text" name="desc" id="desc" defaultValue={info.description || ""}
+              onChange={handleDescriptionChange}
+               />
             </form>
           </div>
           <div className="modal-footer">
@@ -53,12 +61,13 @@ console.log(tutor);
               type="button"
               className="btn btn-secondary"
               data-bs-dismiss="modal"
-              
+              onClick={handleClose}
             >
               Close
             </button>
             <button type="button" className="btn btn-primary"
-            onClick={handleSaveChanges}>
+            onClick={handleSaveChanges}
+            >
               Save changes
             </button>
           </div>
