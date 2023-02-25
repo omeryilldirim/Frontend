@@ -5,6 +5,14 @@ const EditTutorial = ({getTutorials, info}) => {
 
   const [tutor, setTutor] = useState(info)
 
+  // tutor !== info && setTutor(info)
+
+  useEffect(() => {
+    setTutor(info)
+  
+    return () => {
+
+  }}, [info])
 
   const handleSaveChanges = ()=>{
     console.log(tutor);
@@ -15,6 +23,7 @@ const EditTutorial = ({getTutorials, info}) => {
   const handleDescriptionChange = (e)=>{
     setTutor({...tutor, ["description"] : e.target.value})
   }
+console.log(tutor);
   return (
     <div className="modal" tabIndex="-1" id="edit-tutor">
       <div className="modal-dialog">
