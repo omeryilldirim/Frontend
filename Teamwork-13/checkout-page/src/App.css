@@ -1,0 +1,172 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(230, 229, 227);
+}
+.main-container{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1rem;
+}
+/* Header */
+.header-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0.5rem;
+}
+.page-title{
+    color:crimson;
+    font-size: 2.5rem;
+}
+/* Show button */
+.btn-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+}
+.show-btn{
+    background-color:gold;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    
+}
+/* Add product */
+.addProduct-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.addProduct-container form{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    
+}
+
+form input{
+    border: 1px solid silver;
+    border-radius: 5px;
+    padding: 0.5rem;
+    margin-bottom: 0.7rem;
+}
+form label{
+    margin: 0.5rem 0;
+    font-size: 1rem;
+}
+form button{
+    width: 140px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    font-size: 1rem;
+    background-color:forestgreen;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin: auto;
+}
+.imgLink-container{
+    border: 1px solid silver;
+    border-radius: 5px;
+    background-color: rgb(215, 214, 212);
+    margin-bottom: 1rem;
+}
+.imgLink-container input{
+    margin: 0;
+    border: none;
+    border-radius: 0px 5px 5px 0px;
+}
+.imgLink-container span{
+    padding:0.5rem;
+}
+/* Card Total */
+.products-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+.payment-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0.5rem;
+    gap: 0.5rem;
+}
+.subtotal, .tax, .shipping, .total{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid silver;
+    padding: 0.5rem;
+}
+.payment-title{
+    font-weight: 600;
+}
+/* Card */
+.card-container{
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid silver;
+    border-radius: 10px;
+    padding: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+.img-container img{
+    width: 150px;
+}
+.info-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 0.5rem;
+}
+.discounted-price{
+    color: goldenrod;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+.price-tag{
+    text-decoration: line-through;
+}
+.qty-counter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    width: 100%;
+    border: 1px dashed silver;
+    padding: 0.5rem 0;
+    border-radius: 5px;
+}
+.amount{
+    font-size: 1.2rem;
+}
+.remove-btn{
+    width: 100%;
+    padding: 0.5rem;
+    color: white;
+    margin-top: 0.5rem;
+    background-color: crimson;
+    border: none;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}

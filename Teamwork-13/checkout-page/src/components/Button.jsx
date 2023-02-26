@@ -3,9 +3,11 @@
 const Button = ({setToggle, show}) => {
 
     return (
-    <button onClick={setToggle}>
-        { show ? "Hide Product Bar" : "Show Product Bar"}
-    </button>
+      <div className="btn-container">
+          <button className="show-btn" onClick={setToggle}>
+            { show ? "Hide Product Bar" : "Show Product Bar"}
+          </button>
+      </div>
   )
 }
 

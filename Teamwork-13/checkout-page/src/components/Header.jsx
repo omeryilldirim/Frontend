@@ -2,8 +2,8 @@
 
 const Header = () => {
   return (
-    <div>
-        <h1>Checkout Page</h1>
+    <div className="header-container">
+        <h1 className="page-title">Checkout Page</h1>
     </div>
   )
 }
