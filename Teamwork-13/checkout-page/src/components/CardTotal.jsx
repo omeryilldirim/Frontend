@@ -4,7 +4,7 @@ const CardTotal = ( {data} ) => {
     data = [...data]
   return (
     <div className="cards-container">
-        <div className="products-container">
+        <div className="products-container" onClick={(e)=>console.log(e.target.id)}>
         {data.map((item)=> <ProductCard card={item} key={item.id}/>)}
         </div>
         <div className="payment-container">
