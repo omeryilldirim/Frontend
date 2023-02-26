@@ -1,30 +1,26 @@
 import { useEffect, useState } from "react";
 
 
-const EditTutorial = ({getTutorials, info}) => {
+const EditTutorial = ({getTutorials, info, editTutorial}) => {
   const [title, setTitle] = useState(info.title)
-  const [desc, setDesc] = useState(info.description)
-  // const [tutor, setTutor] = useState(info)
-
-  // tutor !== info && setTutor(info)
+  const [description, setDescription] = useState(info.description)
+  const [id, setId] = useState(info.id)
 
   useEffect(() => {
-
     setTitle(info.title)
-    setDesc(info.description)
-    
+    setDescription(info.description)
+    setId(info.id)    
   }, [info])
 
-  const handleSaveChanges = (e)=>{
-    ;
+  const handleSaveChanges = ()=>{
+    editTutorial({id,title,description});
   }
   const handleTitleChange = (e)=>{
     setTitle(e.target.value)
   }
   const handleDescriptionChange = (e)=>{
-    setDesc(e.target.value)
+    setDescription(e.target.value)
   }
-
 
   return (
     <div className="modal" tabIndex="-1" id="edit-tutor">
@@ -46,7 +42,7 @@ const EditTutorial = ({getTutorials, info}) => {
               onChange={handleTitleChange}
               />
               <label className="form-label"  htmlFor="desc">Description</label>
-              <input className="form-control" type="text" name="desc" id="desc" value={desc || ""}
+              <input className="form-control" type="text" name="desc" id="desc" value={description || ""}
               onChange={handleDescriptionChange}
                />
             </form>
@@ -56,11 +52,10 @@ const EditTutorial = ({getTutorials, info}) => {
               type="button"
               className="btn btn-secondary"
               data-bs-dismiss="modal"
-
             >
               Close
             </button>
-            <button type="button" className="btn btn-primary"
+            <button type="button" className="btn btn-primary" data-bs-dismiss="modal"
             onClick={handleSaveChanges}
             >
               Save changes

@@ -30,10 +30,11 @@ const TutorialList = ({ tutorials, getTutorials }) => {
     getTutorials()
   }
 
-  const editTutorial = async ({ id, title, description }) => {
+  const editTutorial = async ( {["id"]:id, ["title"]:title, ["description"]:description} ) => {
     const BASE_URL = "https://tutorial-api.fullstack.clarusway.com/tutorials"
     try {
       await axios.put(`${BASE_URL}/${id}/`, { title, description })
+      console.log("worked");
     } catch (error) {
       console.log(error)
     }
@@ -42,6 +43,10 @@ const TutorialList = ({ tutorials, getTutorials }) => {
 
   return (
     <div className="container mt-4">
+      <button onClick={()=>{
+        
+        editTutorial(editTutorialInfo)
+      } }>push</button>
       <table className="table table-striped">
         <thead>
           <tr>
@@ -85,7 +90,7 @@ const TutorialList = ({ tutorials, getTutorials }) => {
         </tbody>
       </table>
 
-      <EditTutorial info={editTutorialInfo} getTutorials={getTutorials} />
+      <EditTutorial editTutorial={editTutorial} info={editTutorialInfo} getTutorials={getTutorials} />
     </div>
   )
 }
