@@ -26,15 +26,15 @@ function App() {
     }
   }
 
-  const updateProductsData = async (num)=>{
+  const updateProductsData = async (id,num)=>{
     const BASE_URL = "https://63fa046b473885d837d6e9d1.mockapi.io/products"
     try {
-      const response = await axios.put(BASE_URL, {data:{amount:num}})
+      await axios.put(`${BASE_URL}/${id}`, {amount:num})
     } catch (error) {
-      console.log(error);
+      alert(error);
     }
   }
-
+  
   return (
     <div className="App">
       <Header />
@@ -43,7 +43,7 @@ function App() {
       
       <main className='main-container'>
         {show && <AddProduct  setToggle={setToggle} show={show} />}
-        <CardTotal data={data}/>
+        <CardTotal updateProductsData={updateProductsData} data={data}/>
       </main>
 
       {/* {

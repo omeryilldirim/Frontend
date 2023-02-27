@@ -1,7 +1,10 @@
 import Button from "./Button"
 import { BsFillCartPlusFill } from "react-icons/bs";
+import { useForm } from "react";
 
 const AddProduct = ({show, setToggle}) => {
+    const {register, getValues} = useForm()
+  
     return (
     <div className="addProduct-container">
         <Button setToggle={setToggle} show={show} />
