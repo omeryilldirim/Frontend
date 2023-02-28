@@ -6,7 +6,6 @@ import { appointmentData } from "../helper/data"
 
 const Home = () => {
   const [doctors, setDoctors] = useState(doctorData)
-  const [appointments, setAppointments] = useState(appointmentData)
 
   //! Mock Data yerine API'Den veri cekilseydi
   // const getAppointments = async () => {
@@ -22,20 +21,13 @@ const Home = () => {
   //   getAppointments()
   // }, [])
 
-  console.log(appointments)
+  // console.log(appointments)
   console.log(doctors)
   return (
     <main className="text-center mt-2">
       <h1 className="display-5 text-danger">CLARUS HOSPITAL</h1>
-      <Doctors
-        doctors={doctors}
-        appointments={appointments}
-        setAppointments={setAppointments}
-      />
-      <AppointmentList
-        appointments={appointments}
-        setAppointments={setAppointments}
-      />
+      <Doctors/>
+      <AppointmentList/>
     </main>
   )
 }
