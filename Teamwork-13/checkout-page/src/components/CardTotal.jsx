@@ -19,8 +19,8 @@ const CardTotal = ( {data, updateProductsData, deleteProduct} ) => {
         <div className="payment-container">
           <div className="subtotal"><strong>Subtotal</strong><span>$ {subtotal.toFixed(2)}</span></div>
           <div className="tax"><strong>Tax(%18)</strong><span>$ {tax.toFixed(2)}</span></div>
-          <div className="shipping"><strong>Shipping</strong><span>$ {shippingPrice.toFixed(2)}</span></div>
-          <div className="total"><strong>Total</strong><span>$ {total.toFixed(2)}</span></div>
+          <div className="shipping"><strong>Shipping</strong><span>$ {subtotal>0 ? (shippingPrice.toFixed(2)) : 0}</span></div>
+          <div className="total"><strong>Total</strong><span>$ {subtotal > 0 ? (total.toFixed(2)): 0}</span></div>
         </div>
     </div>
   );
