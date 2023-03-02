@@ -12,6 +12,9 @@ body{
     align-items: flex-start;
     gap: 1rem;
 }
+button:hover{
+    cursor: pointer;
+}
 /* Header */
 .header-container{
     display: flex;
@@ -167,6 +170,9 @@ form button{
     font-size: 1.3rem;
     border-radius: 3px;
     padding: 0rem 0.4rem 0.1rem 0.4rem;
+}
+#plus:hover, #minus:hover{
+    cursor: pointer;
 }
 .amount{
     font-size: 1.2rem;

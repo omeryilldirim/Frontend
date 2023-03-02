@@ -32,19 +32,25 @@ const ProductCard = ({total, setTotal,tax,setTax,subtotal, setSubtotal, updatePr
                   if (qty>0){
                     updateProductsData(id, qty-1)
                     setQty(qty-1)
-                    setSubtotal(subtotal-unitTotal)}}
+                    setUnitTotal(price*dampingRate*(qty-1))
+                    setSubtotal(subtotal-price*dampingRate)}}
                   }> - </div>
                 <span className='amount'>{qty}</span>
                 <div id='plus' onClick={()=>{
                     updateProductsData(id, qty+1)
                     setQty(qty+1)
-                    setSubtotal(subtotal+unitTotal)
+                    setUnitTotal(price*dampingRate*(qty+1))
+                    setSubtotal(subtotal+price*dampingRate)
                     }} > + </div>
                 {/* <AiFillMinusCircle id="minus" size="25px" color="gray" /> 
                 <span className='amount'>{amount}</span> 
                 <AiFillPlusCircle size="25px" color="gray" /> */}
             </div>
-            <button type="button" className='remove-btn' onClick={()=>deleteProduct(id)}><FaTrashAlt /> Remove</button>
+            <button type="button" className='remove-btn' onClick={()=>{
+              deleteProduct(id)
+              setSubtotal(subtotal-unitTotal)
+              }}><FaTrashAlt /> Remove</button>
+              
             <p>Product Total : ${unitTotal.toFixed(2)}</p>
         </div>
 

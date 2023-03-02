@@ -10,13 +10,14 @@ const AddProduct = ({ show, setToggle, addProduct }) => {
     <div className="addProduct-container">
       <Button setToggle={setToggle} show={show} />
 
-      <form
+      <form id="add-form"
         onSubmit={(e) => {
           // AddProduct()
           e.preventDefault();
           setNewProduct(newProduct)
           console.log(newProduct);
           addProduct(newProduct);
+          document.getElementById("add-form").reset()
         }}
       >
         <label htmlFor="name">Product Name</label>
