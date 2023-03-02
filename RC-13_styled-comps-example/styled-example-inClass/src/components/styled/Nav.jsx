@@ -5,6 +5,7 @@ const Nav = styled.nav`
   justify-content: space-between;
   align-items: center;
   padding: 1.5rem;
+  background-color: ${( {theme} )=> theme.colors.primary};
 
   @media (max-width:700px) {
     flex-direction:column;

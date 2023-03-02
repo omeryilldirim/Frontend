@@ -10,9 +10,12 @@ const Flex = styled.div`
     flex: 2;
   }
   
-  @media (max-width:700px) {
+  @media (max-width:${ ({theme})=> theme.breakpoints.md }) {
     flex-direction:column;
   }
+  /* @media (max-width:700px) {
+    flex-direction:column;
+  } */
 `;
 
 export default Flex;
