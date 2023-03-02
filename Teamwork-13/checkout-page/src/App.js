@@ -9,12 +9,9 @@ import CardTotal from './components/CardTotal';
 
 function App() {
   const [show, setShow] = useState(false)
-  const setToggle = () => setShow(!show)
   const [data, setData] = useState("")
 
-  useEffect(() => {
-    getProductsData()
-  }, [])
+  const setToggle = () => setShow(!show)
   
   const getProductsData = async ()=>{
     const BASE_URL = "https://63fa046b473885d837d6e9d1.mockapi.io/products"
@@ -25,13 +22,37 @@ function App() {
       alert(error)
     }
   }
-
+  
+    useEffect(() => {
+      getProductsData()
+    }, [])
+  
   const updateProductsData = async (id,num)=>{
     const BASE_URL = "https://63fa046b473885d837d6e9d1.mockapi.io/products"
     try {
       await axios.put(`${BASE_URL}/${id}`, {amount:num})
     } catch (error) {
       alert(error);
+    }
+  }
+
+  const addProduct = async (newProduct)=>{
+    const BASE_URL = "https://63fa046b473885d837d6e9d1.mockapi.io/products"
+    try {
+      await axios.post(`${BASE_URL}`, newProduct)
+      await getProductsData()
+    } catch (error) {
+      alert(error)
+    }
+  }
+
+  const deleteProduct = async (id) =>{
+    const BASE_URL = "https://63fa046b473885d837d6e9d1.mockapi.io/products"
+    try {
+      await axios.delete(`${BASE_URL}/${id}`)
+      await getProductsData()
+    } catch (error) {
+      alert(error)
     }
   }
   
@@ -42,8 +63,8 @@ function App() {
       {show || <Button setToggle={setToggle} show={show}/>}
       
       <main className='main-container'>
-        {show && <AddProduct  setToggle={setToggle} show={show} />}
-        <CardTotal updateProductsData={updateProductsData} data={data}/>
+        {show && <AddProduct  setToggle={setToggle} show={show} addProduct={addProduct} />}
+        <CardTotal updateProductsData={updateProductsData} data={data} deleteProduct={deleteProduct}/>
       </main>
 
       {/* {

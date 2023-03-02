@@ -2,24 +2,21 @@ import { FaTrashAlt, } from 'react-icons/fa';
 import { AiFillMinusCircle, AiFillPlusCircle } from "react-icons/ai";
 import { useEffect, useState } from 'react';
 
-const ProductCard = ({setTotal,tax,setTax,subtotal, setSubtotal, updateProductsData,card:{id,name,image,price,dampingRate,amount}}) => {
+const ProductCard = ({total, setTotal,tax,setTax,subtotal, setSubtotal, updateProductsData,card:{id,name,image,price,dampingRate,amount},data,deleteProduct}) => {
   const [qty, setQty] = useState(amount)
   const [unitTotal, setUnitTotal] = useState(price*dampingRate*qty)
-
-
-//   useEffect(() => {
-//     setSubtotal((subtotal+unitTotal))
-//     console.log("worked")
-//   }, [unitTotal])
+  
+  useEffect(() => {
+    setSubtotal(data.reduce((acc,item)=>acc + item.amount * item.price * item.dampingRate, 0))
+  }, [])
 
   useEffect(() => {
-    setTax(subtotal*0.18)
+    setTax(subtotal*0.18)  
   }, [subtotal])
-  
+
   useEffect(() => {
     setTotal(subtotal+tax+25)
   }, [tax])
-  
   
     return (
     <div className='card-container'>
@@ -32,19 +29,22 @@ const ProductCard = ({setTotal,tax,setTax,subtotal, setSubtotal, updateProductsD
                 <span className='price-tag'>{price.toFixed(2)}</span></p>
             <div className='qty-counter'>
                 <div id='minus' onClick={()=>{
+                  if (qty>0){
                     updateProductsData(id, qty-1)
                     setQty(qty-1)
-                    setSubtotal(subtotal-unitTotal)}} > - </div>
+                    setSubtotal(subtotal-unitTotal)}}
+                  }> - </div>
                 <span className='amount'>{qty}</span>
                 <div id='plus' onClick={()=>{
                     updateProductsData(id, qty+1)
                     setQty(qty+1)
-                    setSubtotal(subtotal+unitTotal)}} > + </div>
+                    setSubtotal(subtotal+unitTotal)
+                    }} > + </div>
                 {/* <AiFillMinusCircle id="minus" size="25px" color="gray" /> 
                 <span className='amount'>{amount}</span> 
                 <AiFillPlusCircle size="25px" color="gray" /> */}
             </div>
-            <button className='remove-btn'><FaTrashAlt /> Remove</button>
+            <button type="button" className='remove-btn' onClick={()=>deleteProduct(id)}><FaTrashAlt /> Remove</button>
             <p>Product Total : ${unitTotal.toFixed(2)}</p>
         </div>
 
