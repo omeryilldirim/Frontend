@@ -6,6 +6,7 @@ const Flex = styled.div`
   justify-content: center;
   gap: 1rem;
   padding: 1rem;
+  
   & div {
     flex: 2;
   }

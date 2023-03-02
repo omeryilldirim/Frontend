@@ -6,7 +6,7 @@ import { ThemeProvider } from "styled-components"
 
 const styles = {
   colors: {
-    primary: "#ee9",
+    primary: "#eee",
     secondary: "#666",
   },
   margins: {},
