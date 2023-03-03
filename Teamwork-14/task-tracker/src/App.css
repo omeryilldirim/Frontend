@@ -1,0 +1,115 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background-color: bisque;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.App{
+  background-color: cadetblue;
+  border-radius: 10px;
+  padding: 1rem;
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  min-width: 350px;
+}
+.title{
+  color: white;
+}
+.show-btn{
+  padding: 0.5rem 1rem;
+  border: none;
+  font-size: 1rem;
+  border-radius: 7px;
+  background-color:indianred;
+  color: white;
+  margin-bottom: 0.5rem;
+}
+.show-btn:hover{
+  opacity: 0.8;
+  cursor: pointer;
+}
+.add-task form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.6rem;
+}
+.add-task input{
+  padding: 0.2rem 0.5rem;
+  border: none;
+  border-radius: 5px;
+}
+.save-task-btn{
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  background-color:rgb(128, 0, 0);
+  color: white;
+  width: 60%;
+  margin: auto;
+}
+.save-task-btn:hover{
+  opacity: 0.8;
+  cursor: pointer;
+}
+.tasks{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 0.5rem;
+  border-radius: 10px;
+}
+.task-todo{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
+  width: 100%;
+  padding: 1rem;
+  border-radius: 10px;
+  background-color:rgba(214, 104, 25, 0.593);
+}
+.task-done{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
+  width: 100%;
+  padding: 1rem;
+  border-radius: 10px;
+  text-decoration: line-through;
+  background-color: darkolivegreen;
+}
+
+.task-info:hover{
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.task-name{
+  color: antiquewhite;
+  margin-bottom: 0.2rem;
+}
+.btn-remove:hover{
+  cursor: pointer;
+  background-color:rgba(255, 255, 255, 0.542);
+  border-radius: 5px;
+}
+
+
+
+
+
+
