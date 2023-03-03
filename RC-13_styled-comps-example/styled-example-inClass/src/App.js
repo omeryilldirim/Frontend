@@ -12,7 +12,7 @@ const styles = {
   margins: {},
 
   paddings: {},
-  breakpoints: { xs: "300px", sm: "500px", md: "700px" },
+  breakpoints: { xs: "360px", sm: "500px", md: "700px" },
 }
 
 const App = () => {

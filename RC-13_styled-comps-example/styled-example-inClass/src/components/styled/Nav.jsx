@@ -7,10 +7,10 @@ const Nav = styled.nav`
   padding: 1.5rem;
   background-color: ${( {theme} )=> theme.colors.primary};
 
-  @media (max-width:700px) {
+  @media (max-width: ${ ({theme}) => theme.breakpoint.md}  ) {
     flex-direction:column;
   }
-  @media (max-width:360px) {
+  @media (max-width:${ ({theme}) => theme.breakpoint.sm}) {
     text-align:center;
   }
 `;
