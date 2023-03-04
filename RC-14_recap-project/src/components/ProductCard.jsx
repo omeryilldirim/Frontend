@@ -23,7 +23,7 @@ const ProductCard = ({item}) => {
               <p className="text-warning h2">
                 $<span className="damping-price">{(price*dampingRate).toFixed(2)}</span>
                 <span className="h5 text-dark text-decoration-line-through">
-                  {price}
+                  {price.toFixed(2)}
                 </span>
               </p>
             </div>
