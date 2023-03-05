@@ -1,24 +1,27 @@
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import home from "../../assets/home.svg";
-import mail from "../../assets/mail.svg";
-import meal from "../../assets/meal.svg";
 import meal2 from "../../assets/meal2.svg";
 import { LoginForm, LoginDiv, LoginPage } from "./Style";
+import users from "../../utils/users"
 
 const Login = ({ setIsLoggedIn }) => {
+  const [username, setUsername] = useState("")
+  const [password, setPassword] = useState("")
   const navigate = useNavigate();
 
   const handleLogin = () => {
-    setIsLoggedIn(true);
-    navigate("/");
+    if(username === users[0].username && password === users[0].password){
+      setIsLoggedIn(true);
+      navigate("/");
+    } else{
+      alert("Invalid username or password!")
+    }
+
   };
 
   return (
     <LoginPage>
       <LoginDiv>
-        {/* <img width="100px" src={home} alt="" />
-        <img width="100px" src={mail} alt="" />
-        <img width="100px" src={meal} alt="" /> */}
         <img width="100px" src={meal2} alt="" />
         <h1>{"<mryldrm />"} RECIPE </h1>
         <LoginForm onSubmit={handleLogin}>
@@ -27,12 +30,14 @@ const Login = ({ setIsLoggedIn }) => {
             name="username"
             id="username"
             placeholder="USERNAME"
+            onChange={(e)=> setUsername(e.target.value)}
           />
           <input
             type="password"
             name="password"
             id="password"
             placeholder="PASSWORD"
+            onChange={(e)=> setPassword(e.target.value)}
           />
           <button type="submit">LOGIN</button>
         </LoginForm>

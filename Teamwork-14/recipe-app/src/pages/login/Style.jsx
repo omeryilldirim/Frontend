@@ -1,4 +1,3 @@
-import home from "../../assets/home.svg"
 import styled from 'styled-components';
 
 export const LoginForm = styled.form`

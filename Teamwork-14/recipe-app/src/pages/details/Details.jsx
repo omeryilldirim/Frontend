@@ -1,5 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
-import diet from "../../assets/diet.svg";
+import meal from "../../assets/meal.svg";
+import DetailPage, { InfoSection, TitleSection } from "./Style";
 
 const Details = () => {
   const {
@@ -7,15 +8,15 @@ const Details = () => {
   } = useLocation();
   console.log(recipe);
   return (
-    <div>
-      <section>
+    <DetailPage>
+      <TitleSection>
         <h1>{recipe.label}</h1>
-        <img src={diet} alt="detail" width="200px" />
-      </section>
-      <section>
-        <div>
+        <img src={meal} alt="detail" />
+      </TitleSection>
+      <InfoSection>
+        <div className="nutrients">
+          <h3>Nutrients</h3>
           <ul>
-            <p>Nutrients</p>
             <li>
               Calories: {Math.round(recipe.totalNutrients.ENERC_KCAL.quantity)}{" "}
               kcal
@@ -30,15 +31,14 @@ const Details = () => {
             <li>
               Cholesterol : {Math.round(recipe.totalNutrients.CHOLE.quantity)} g
             </li>
-
           </ul>
         </div>
-        <div>
+        <div className="recipe-img">
           <img src={recipe.image} alt="recipe" />
         </div>
-        <div>
+        <div className="ingredients">
+          <h3>Ingredients</h3>
           <ul>
-            <p>Ingredients</p>
             {recipe.ingredientLines.map((item, i) => (
               <li key={i + 1}>{item}</li>
             ))}
@@ -47,8 +47,8 @@ const Details = () => {
             Details
           </Link>
         </div>
-      </section>
-    </div>
+      </InfoSection>
+    </DetailPage>
   );
 };
 
