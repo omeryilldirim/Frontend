@@ -1,20 +1,19 @@
-import React, { useState } from 'react'
 
-const Header = ({getResults}) => {
-  const [query, setQuery] = useState("")
-  const [mealType, setMealType] = useState("breakfast")
+
+const Header = ({getResults,query,setQuery,mealType,setMealType }) => {
+  // const [query, setQuery] = useState("")
+  // const [mealType, setMealType] = useState("breakfast")
   
   const handleSubmit = (e) =>{
     e.preventDefault()
-    console.log(query, mealType);
     getResults(query,mealType)
+    document.getElementById("form").reset()
   }
   return (
     <div>
         <h1>FOOD APP</h1>
-        <form onSubmit={handleSubmit}>
-            <input type="text" name="query" id="query" placeholder='Search' onChange={(e)=> setQuery(e.target.value)}/>
-            <button type="submit">Search</button>
+        <form id="form" onSubmit={handleSubmit}>
+            <input type="text" name="query" id="query" placeholder='Search recipe...' onChange={(e)=> setQuery(e.target.value)}/>
             <select name="meal-type" id="meal-type" onChange={(e)=> setMealType(e.target.value)}>
                 <option value="Breakfast" defaultselected="true">Breakfast</option>
                 <option value="Lunch">Lunch</option>
@@ -22,6 +21,7 @@ const Header = ({getResults}) => {
                 <option value="Teatime">Teatime</option>
                 <option value="Dinner">Dinner</option>
             </select>
+            <button type="submit">Search</button>
         </form>
     </div>
   )

@@ -8,7 +8,7 @@ const RecipeCard = ({item}) => {
     <div>
         <h5>{item.recipe.label}</h5>
         <img src={item.recipe.images.SMALL.url} alt="recipe" />
-        <button onClick={()=> navigate("/details", {state:item})} >Details</button>
+        <button onClick={()=> navigate("/details", {state:item})} >More...</button>
     </div>
   )
 }
