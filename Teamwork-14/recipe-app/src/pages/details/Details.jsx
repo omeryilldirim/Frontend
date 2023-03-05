@@ -3,12 +3,14 @@ import meal from "../../assets/meal.svg";
 import DetailPage, { InfoSection, TitleSection } from "./Style";
 
 const Details = () => {
+
   const {
     state: { recipe },
   } = useLocation();
   console.log(recipe);
   return (
     <DetailPage>
+
       <TitleSection>
         <h1>{recipe.label}</h1>
         <img src={meal} alt="detail" />

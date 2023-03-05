@@ -9,11 +9,12 @@ const Home = () => {
   const [query, setQuery] = useState("")
   const [mealType, setMealType] = useState("breakfast")
   const [error, setError] = useState(false)
-  const apiId = process.env.REACT_APP_API_ID
-  const apiKey = process.env.REACT_APP_API_KEY
-  const url = "https://api.edamam.com/api/recipes/v2?type=public"
+
 
   const getResults = async(query,mealType)=>{
+    const apiId = process.env.REACT_APP_API_ID
+    const apiKey = process.env.REACT_APP_API_KEY
+    const url = "https://api.edamam.com/api/recipes/v2?type=public"
     setError(false)
     try {
       const {data:{hits:data}} = await axios(`${url}&q=${query}&mealType=${mealType}&app_id=${apiId}&app_key=${apiKey}`)

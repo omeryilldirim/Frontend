@@ -1,17 +1,19 @@
-import { Link } from "react-router-dom"
-import Nav from "./Style"
+import {Navigate, useNavigate } from "react-router-dom"
+import Nav, { Button } from "./Style"
 
 const Navbar = ({setIsLoggedIn}) => {
+  const navigate = useNavigate()
 
   return (
     <Nav>
-        <Link to="">{"<mryldrm />"} RECIPE </Link>
+        <Button onClick={()=>navigate("/")}>{"<mryldrm />"}  <span>RECIPE</span>  </Button>
         <div className="right-nav">
-            <Link to="/about"> ABOUT </Link>
-            <Link to="https://github.com/omeryilldirim" target="_blank"> GITHUB </Link>
-            <Link to="/login" onClick={()=>setIsLoggedIn(false)}> LOGOUT </Link>
+            <Button onClick={()=>navigate("/about")}> ABOUT </Button>
+            <Button onClick={()=>window.open("https://github.com/omeryilldirim", '_blank')} > GITHUB </Button>
+            <Button  onClick={()=>{
+              setIsLoggedIn(false);
+              navigate("/login")}}> LOGOUT </Button>
         </div>
-
     </Nav>
   )
 }

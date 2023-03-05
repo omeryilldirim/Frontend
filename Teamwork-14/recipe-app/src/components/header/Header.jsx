@@ -12,9 +12,9 @@ const Header = ({getResults,query,setQuery,mealType,setMealType }) => {
   }
   return (
     <HeaderDiv>
-        <h1>FOOD APP</h1>
+        <h1>RECIPE APP</h1>
         <HeaderForm id="form" onSubmit={handleSubmit}>
-            <input type="text" name="query" id="query" placeholder='Search recipe...' onChange={(e)=> setQuery(e.target.value)}/>
+            <input type="text" name="query" id="query" placeholder='Search recipe...' value={query} onChange={(e)=> setQuery(e.target.value)}/>
             <select name="meal-type" id="meal-type" onChange={(e)=> setMealType(e.target.value)}>
                 <option value="Breakfast" defaultselected="true">Breakfast</option>
                 <option value="Lunch">Lunch</option>

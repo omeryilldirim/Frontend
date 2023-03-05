@@ -11,6 +11,7 @@ export const RecipesContainer = styled.div`
 
 export const HomeContainer = styled.div`
   background-color: ${({theme})=>theme.colors.primary};
+  min-height: 100vh;
 `;
 
 
