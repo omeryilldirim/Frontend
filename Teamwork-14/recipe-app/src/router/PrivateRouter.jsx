@@ -1,9 +1,8 @@
-import { useState } from "react"
 import { Navigate, Outlet } from "react-router-dom"
 
 
-const PrivateRouter = () => {
-    const [isLoggedIn, setIsLoggedIn] = useState(true)
+const PrivateRouter = ({isLoggedIn}) => {
+    
 
   return (
     <div>
