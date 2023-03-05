@@ -3,7 +3,7 @@ import home from "../../assets/home.svg";
 import mail from "../../assets/mail.svg";
 import meal from "../../assets/meal.svg";
 import meal2 from "../../assets/meal2.svg";
-import { Form, LoginDiv, LoginPage } from "./Style";
+import { LoginForm, LoginDiv, LoginPage } from "./Style";
 
 const Login = ({ setIsLoggedIn }) => {
   const navigate = useNavigate();
@@ -21,7 +21,7 @@ const Login = ({ setIsLoggedIn }) => {
         <img width="100px" src={meal} alt="" /> */}
         <img width="100px" src={meal2} alt="" />
         <h1>{"<mryldrm />"} RECIPE </h1>
-        <Form onSubmit={handleLogin}>
+        <LoginForm onSubmit={handleLogin}>
           <input
             type="text"
             name="username"
@@ -35,7 +35,7 @@ const Login = ({ setIsLoggedIn }) => {
             placeholder="PASSWORD"
           />
           <button type="submit">LOGIN</button>
-        </Form>
+        </LoginForm>
       </LoginDiv>
     </LoginPage>
   );

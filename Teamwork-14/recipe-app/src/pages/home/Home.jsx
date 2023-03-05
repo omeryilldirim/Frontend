@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Header from '../../components/header/Header'
 import axios from "axios"
 import RecipeCard from './RecipeCard'
+import {HomeContainer, RecipesContainer} from './Style'
 
 const Home = () => {
   const [data, setData] = useState([])
@@ -29,14 +30,14 @@ const Home = () => {
   
 
   return (
-    <div>
+    <HomeContainer>
         <Header getResults={getResults} query={query} setQuery={setQuery} mealType={mealType} setMealType={setMealType}/>
-        <div className='recipes-container'>
+        <RecipesContainer className='recipes-container'>
           {error ? <p>No results found...Please try again...</p> : (
             data.map((item,i)=> <RecipeCard item={item} key={i+1}/>)
           )}
-        </div>
-    </div>
+        </RecipesContainer>
+    </HomeContainer>
   )
 }
 

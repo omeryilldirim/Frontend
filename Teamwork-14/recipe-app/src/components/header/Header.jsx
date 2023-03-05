@@ -1,3 +1,4 @@
+import { HeaderDiv, HeaderForm } from "./Style"
 
 
 const Header = ({getResults,query,setQuery,mealType,setMealType }) => {
@@ -10,9 +11,9 @@ const Header = ({getResults,query,setQuery,mealType,setMealType }) => {
     document.getElementById("form").reset()
   }
   return (
-    <div>
+    <HeaderDiv>
         <h1>FOOD APP</h1>
-        <form id="form" onSubmit={handleSubmit}>
+        <HeaderForm id="form" onSubmit={handleSubmit}>
             <input type="text" name="query" id="query" placeholder='Search recipe...' onChange={(e)=> setQuery(e.target.value)}/>
             <select name="meal-type" id="meal-type" onChange={(e)=> setMealType(e.target.value)}>
                 <option value="Breakfast" defaultselected="true">Breakfast</option>
@@ -22,8 +23,8 @@ const Header = ({getResults,query,setQuery,mealType,setMealType }) => {
                 <option value="Dinner">Dinner</option>
             </select>
             <button type="submit">Search</button>
-        </form>
-    </div>
+        </HeaderForm>
+    </HeaderDiv>
   )
 }
 

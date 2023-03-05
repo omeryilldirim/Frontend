@@ -1,7 +1,7 @@
 import home from "../../assets/home.svg"
 import styled from 'styled-components';
 
-export const Form = styled.form`
+export const LoginForm = styled.form`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -15,6 +15,8 @@ export const Form = styled.form`
     font-size: 1rem;
     background-color: ${({theme})=>theme.colors.tertiary};
     color: white;
+    border: none;
+    border-radius: 5px;
   }
   & button{
     height: 2rem;
@@ -22,6 +24,12 @@ export const Form = styled.form`
     padding: 0.5rem 1rem;
     background-color: ${({theme})=>theme.colors.tertiary};
     color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  & button:hover{
+    cursor: pointer;
   }
 `;
 
@@ -36,6 +44,10 @@ export const LoginDiv = styled.div`
   padding: 3.5rem;
   border-radius: 50%;
   opacity: 0.7;
+  border: 1px solid white;
+  & h1{
+    color: antiquewhite;
+  }
 `;
 
 export const LoginPage = styled.div`
