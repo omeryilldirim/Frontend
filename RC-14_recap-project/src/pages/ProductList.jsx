@@ -11,12 +11,11 @@ const ProductList = () => {
   const [loading, setLoading] = useState(true)
   const [errorState, setErrorState] = useState(false)
 
-  const getProducts = async () => {
-    
+  const getProducts = async () => {  
     try {
-      const {data} = await axios(`${url}`)
-      setProducts(data)
+      const {data} = await axios(url)
       setLoading(false)
+      setProducts(data)
       setErrorState(false) //error verip daha sonra başarılı olursa error state i ilk haline çevirecek.
     } catch (error) {
       alert(error);
@@ -36,16 +35,18 @@ const ProductList = () => {
          products.length ? (       
           <>
             <article id="product-panel" className="col-md-5">
-              {products.map((item)=> <ProductCard key={item.id} item={item}/>) }
+              {products.map((item)=> <ProductCard key={item.id} 
+              item={{...item, price:+item.price, amount:+item.amount}} getProducts={getProducts}/>) }
             </article>
             <article className="col-md-5 m-3">
-              <CardTotal />
+              <CardTotal products={products}/>
             </article>
-          </>) : (<p className="text-center text-danger w-100">No products data...</p>) }
+          </>) : (!errorState && (
+            <p className="text-center text-danger w-100">No products data...</p>
+          ))
+        }
 
-          {/* {!errorState && <p className="text-center text-danger w-100">No products data...</p> } */}
-
-          {/* {errorState && <p className="text-center text-danger w-100">Error...</p>} */}
+          {errorState && <p className="text-center text-danger w-100">Error...</p>}
       </div>
     </div>
   );

@@ -1,7 +1,45 @@
-import React from "react";
+import axios from "axios";
+import {useNavigate} from "react-router-dom"
 
-const ProductCard = ({item}) => {
+const ProductCard = ({item,getProducts}) => {
+  const url = process.env.REACT_APP_API_URL
   const{id,name,image,price,dampingRate,amount} = item
+  const navigate = useNavigate()
+
+  const handleMinus = async () => {
+    if (amount-1){
+      try {
+        await axios.put(`${url}/${id}`,{...item, amount: amount-1 })
+      } catch (error) {
+        alert(error)
+      }
+      getProducts()
+    } else{
+      handleRemove()
+    }
+  }
+
+  const handlePlus = async () => {
+    try {
+      await axios.put(`${url}/${id}`,{...item, amount: amount+1 })
+    } catch (error) {
+      alert(error)
+    }
+    getProducts()
+  }
+  
+  const handleRemove = async() => {
+    try {
+      await axios.delete(`${url}/${id}`)
+    } catch (error) {
+      alert(error)
+    }
+    getProducts()
+  }
+
+  const editProduct = ()=> {
+    navigate("/update-product", {state:item})
+  }
   
   return (
     <div className="card shadow-lg mb-3">
@@ -16,7 +54,7 @@ const ProductCard = ({item}) => {
         </div>
         <div className="col-md-7">
           <div className="card-body">
-            <h5 className="card-title" role="button">
+            <h5 className="card-title" role="button" onClick={editProduct}>
               {name}
             </h5>
             <div className="product-price">
@@ -29,19 +67,19 @@ const ProductCard = ({item}) => {
             </div>
             <div className="border border-1 border-dark shadow-lg d-flex justify-content-center p-2">
               <div className="quantity-controller">
-                <button className="btn btn-secondary btn-sm">
+                <button className="btn btn-secondary btn-sm" onClick={handleMinus}>
                   <i className="fas fa-minus"></i>
                 </button>
                 <p className="d-inline mx-4" id="product-quantity">
                   {amount}
                 </p>
-                <button className="btn btn-secondary btn-sm">
+                <button className="btn btn-secondary btn-sm" onClick={handlePlus}>
                   <i className="fas fa-plus"></i>
                 </button>
               </div>
             </div>
             <div className="product-removal mt-4">
-              <button className="btn btn-danger btn-sm w-100 remove-product">
+              <button className="btn btn-danger btn-sm w-100 remove-product" onClick={handleRemove}>
                 <i className="fa-solid fa-trash-can me-2"></i>Remove
               </button>
             </div>
