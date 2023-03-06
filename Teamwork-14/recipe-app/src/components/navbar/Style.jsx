@@ -5,8 +5,12 @@ const Nav = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: ${({theme})=>theme.colors.secondary};
-  padding: 0 2rem;
+  flex-wrap: wrap;
+  background: transparent;
+    padding: 0 2rem;
+  /* background-image: url("https://res.cloudinary.com/tkwy-prod-eu/image/upload/c_thumb,w_1376/f_auto/q_auto/v1644403688/static-takeaway-com/images/generic/categories/pokebowl/pokebowl_pokebowl"); */
+  background-image: linear-gradient( 108.9deg,  #e6dbcd 11.2%, #c1e1e5 88.9% );
+
 
   & .right-nav{
     display: flex;
@@ -32,7 +36,7 @@ export const Button = styled.button`
 
   &:hover{
     cursor: pointer;
-    color: ${({theme})=> theme.colors.primary };
+    color: ${({theme})=> theme.colors.secondary };
     transform: scale(1.05);
     
   }

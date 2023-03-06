@@ -8,6 +8,7 @@ import Details from "./pages/details/Details";
 import Navbar from "./components/navbar/Navbar";
 import { GlobalStyles } from "./components//GlobalStyles";
 import { ThemeProvider } from "styled-components";
+import NotFound from "./pages/notFound/NotFound";
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -35,6 +36,7 @@ function App() {
             <Route path="about" element={<About />} />
             <Route path="details" element={<Details />} />
           </Route>
+          <Route path="*" element={<NotFound/>}/>
         </Routes>
       </ThemeProvider>
     </div>

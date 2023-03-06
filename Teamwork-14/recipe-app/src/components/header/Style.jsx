@@ -9,11 +9,9 @@ export const HeaderDiv = styled.div`
     padding: 1.5rem;
     
     & h1{
-      color:${({theme})=> theme.colors.secondary };;
+      color:${({theme})=> theme.colors.tertiary };;
     }
 `;
-
-
 
 export const HeaderForm = styled.form`
   display: flex;
@@ -25,7 +23,17 @@ export const HeaderForm = styled.form`
   outline: 1px solid antiquewhite;
   outline-offset: 0.1rem;
   & *{
-    padding: 0.2rem;
+    padding: 0.4rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
   }
+  & input {
+    opacity: 0.6;
+  }
+  & button:hover{
+    transform: scale(1.02);
+    opacity: 0.9;
+  } 
 `;
 

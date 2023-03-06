@@ -2,13 +2,11 @@ import { HeaderDiv, HeaderForm } from "./Style"
 
 
 const Header = ({getResults,query,setQuery,mealType,setMealType }) => {
-  // const [query, setQuery] = useState("")
-  // const [mealType, setMealType] = useState("breakfast")
   
   const handleSubmit = (e) =>{
     e.preventDefault()
     getResults(query,mealType)
-    document.getElementById("form").reset()
+    // document.getElementById("form").reset()
   }
   return (
     <HeaderDiv>

@@ -4,10 +4,8 @@ import DetailPage, { InfoSection, TitleSection } from "./Style";
 
 const Details = () => {
 
-  const {
-    state: { recipe },
-  } = useLocation();
-  console.log(recipe);
+  const {state: { recipe }} = useLocation();
+
   return (
     <DetailPage>
 
@@ -45,7 +43,7 @@ const Details = () => {
               <li key={i + 1}>{item}</li>
             ))}
           </ul>
-          <Link to={recipe.url} target="_blank">
+          <Link className="details-btn" to={recipe.url} target="_blank">
             Details
           </Link>
         </div>
