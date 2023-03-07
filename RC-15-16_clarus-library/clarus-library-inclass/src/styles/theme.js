@@ -8,7 +8,7 @@ export const theme = {
         linkHoverColor:"rgb(5,5,5)",
         headerFormColor:"rgba(15,63,42,0.36)"
     },
-    screen:{
+    screens:{
         lg:"992px",
     },
 
