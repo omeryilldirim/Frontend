@@ -25,3 +25,13 @@
         color: whitesmoke;
     }
 }
+
+@media screen and (width < 1000px) {
+    .icons{
+        flex-direction: column;
+    }
+    .copyright{
+        flex-direction: column;
+        writing-mode: vertical-lr;
+    }
+}

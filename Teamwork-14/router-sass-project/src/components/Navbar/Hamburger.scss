@@ -1,0 +1,28 @@
+.hamburger{
+    width:2rem;
+    height:2rem;
+    justify-content:space-around;
+    flex-flow:column nowrap;
+    z-index:10;
+    display: none;
+    &:hover{
+        cursor: pointer;
+        opacity: 0.8;
+    }
+    .burger{
+        width: 2rem;
+        height: 0.25rem;
+        border-radius: 10px;
+        background-color: darkcyan;
+        transform-origin: 1px;
+        transition: all 0.3s linear;   
+    }
+}
+
+@media screen and (max-width:600px) {
+    .hamburger{
+        display: flex;
+        position: fixed;
+        margin: 0.5rem 1rem;
+    }
+}

@@ -1,14 +1,52 @@
+import { useEffect, useState } from 'react'
 import {Link} from 'react-router-dom'
+import Hamburger from './Hamburger'
 import "./Navbar.scss"
 
 const Navbar = () => {
+  const [hamburgerOpen, setHamburgerOpen] = useState(false)
+
+  const toggleHamburger =() =>{
+    setHamburgerOpen(!hamburgerOpen)
+  }
+  useEffect(() => {
+    setTimeout(()=>{
+      setHamburgerOpen(false)
+    }, 3000)
+  }, [hamburgerOpen])
+  
   return (
-    <div className='navbar'>
-        <Link className='link' to="/" >HOME</Link>
-        <Link className='link' to="/about">ABOUT</Link>
-        <Link className='link' to="/projects">PROJECTS</Link>
-        <Link className='link' to="/contact">CONTACT</Link>
-    </div>
+    <>
+        <div onClick={()=>{
+          toggleHamburger()
+          }}>
+          <Hamburger /> 
+        </div>
+        <div className='navbar'>
+          <Link className='link' to="/" >HOME</Link>
+          <Link className='link' to="/about">ABOUT</Link>
+          <Link className='link' to="/projects">PROJECTS</Link>
+          <Link className='link' to="/contact">CONTACT</Link>
+        </div>
+        <div className='navbar-hamburger'>
+          <Link className='link' to="/" >HOME</Link>
+          <Link className='link' to="/about">ABOUT</Link>
+          <Link className='link' to="/projects">PROJECTS</Link>
+          <Link className='link' to="/contact">CONTACT</Link>
+        </div>
+        <style jsx="true">
+          {`.navbar-hamburger{
+            display:${hamburgerOpen? 'flex' : 'none'}
+          }
+          @media screen and (min-width:601px) {
+            .navbar-hamburger{
+                display: none;
+            }
+        }
+        `}
+        </style>
+    </>
+
   )
 }
 

@@ -8,7 +8,7 @@
     gap: 2rem;
     .link{
         text-decoration: none;
-        padding: 0.5rem;
+        padding: 0.75rem;
         color: whitesmoke;
         font-size: 1.5rem;
         font-weight: 500;
@@ -21,5 +21,36 @@
             color: darkcyan;
         }
     }
-
+}
+.navbar-hamburger{
+    position: absolute;
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 0.5rem;
+    padding:3rem 1rem;
+    transition: all 0.2s ease;
+    .link{
+        text-decoration: none;
+        padding: 0.2rem;
+        color: whitesmoke;
+        font-size: 1rem;
+        font-weight: 300;
+        border-radius: 3px;
+        transition: all 0.2s ease-in;
+        &:hover{
+            opacity: 0.8;
+            background-color:rgba(0, 0, 0, 0.12);
+            transform: scale(1.05);
+            color: darkcyan;
+        }
+    }
+}
+@media screen and (max-width:600px) {
+    .navbar{
+        display: none;
+    }
 }
