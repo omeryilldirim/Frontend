@@ -1,0 +1,25 @@
+.navbar {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    .link{
+        text-decoration: none;
+        padding: 0.5rem;
+        color: whitesmoke;
+        font-size: 1.5rem;
+        font-weight: 500;
+        border-radius: 5px;
+        transition: all 0.2s ease-in;
+        &:hover{
+            opacity: 0.8;
+            background-color:rgba(0, 0, 0, 0.12);
+            transform: scale(1.05);
+            color: darkcyan;
+        }
+    }
+
+}

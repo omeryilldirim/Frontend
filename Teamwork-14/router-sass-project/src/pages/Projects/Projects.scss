@@ -1,0 +1,56 @@
+.projects-container{
+    background-color: gray;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background: linear-gradient(to right, rgba(gray, 0.3), rgba(gray, 0.1)), url("../../assets/img/model-1.png");
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    
+     .title-container{
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        padding-bottom: 1rem;
+        min-height: 30vh;
+        width: 100%;
+        .title{
+            color: darkcyan;
+        }
+
+     }
+     .projects-items{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+        width: 80%;
+        max-width: 1000px;
+        .projects-item{
+            position: relative;
+            cursor: pointer;
+            .project-image{
+                width: 320px;
+                height: 220px;
+                border-bottom: 3px solid orangered;
+                
+            }
+            &::after{
+                content: '';
+                width: 100%;
+                height: 100%;
+                background-color: orangered;
+                position: absolute;
+                left: 0;
+                opacity: 0;
+            }
+            &:hover::after{
+                opacity: 0.2;
+                
+            }
+        }
+     }
+}

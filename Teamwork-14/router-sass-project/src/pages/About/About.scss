@@ -1,0 +1,66 @@
+
+.about-container{
+    background-color: gray;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background: linear-gradient(to right, rgba(gray, 0.3), rgba(gray, 0.1)), url("../../assets/img/model-1.png");
+    background-size: cover;
+    background-position: center;
+
+    .about-bio{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 50vh;
+        gap: 2rem;
+        width: 100%;
+        padding: 4rem 2rem;
+        h2{
+            color: darkcyan;
+        }
+        
+        p{
+            max-width: 800px;
+            text-align: justify;
+            color: white;
+        }
+    }
+    .about-experience{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 1rem;
+        width: 100%;
+
+        .about-job{
+            width: 80%;
+            max-width: 800px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 0.2rem;
+            padding: 1rem;
+            border-bottom: 2px solid orangered;
+            background-color:rgba(0, 0, 0, 0.277);
+            .job-title{
+                color: darkcyan;
+            }
+            .job-company{
+                color:antiquewhite;
+            }
+            .job-year{
+                color: orangered;
+            }
+            p{
+                color: white;
+            }
+        }
+    }
+    
+}

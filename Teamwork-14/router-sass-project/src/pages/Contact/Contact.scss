@@ -1,0 +1,42 @@
+.contact-container {
+  background: linear-gradient(to right, rgba(gray, 0.3), rgba(gray, 0.1)),
+    url("../../assets/img/model-1.png");
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2rem;
+  h2{
+    color: darkcyan;
+  }
+  .contact-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2rem;
+    .contact-item {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.3rem;
+
+      p{
+        color: darkcyan;
+        display: flex;
+        gap: 0.3rem;
+        justify-content: center;
+        align-items: center;
+      }
+      .contact-text{
+        color: antiquewhite;
+      }
+    }
+  }
+}

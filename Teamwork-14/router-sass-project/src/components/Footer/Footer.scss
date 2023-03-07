@@ -1,0 +1,27 @@
+.footer{
+    width: 100%;
+    padding: 1rem;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .icons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5rem;
+        .icon{
+            text-decoration: none;
+            color: whitesmoke;
+            &:hover{
+                opacity: 0.8;
+                color:darkcyan;
+            }
+        }
+    }
+    .copyright{
+        color: whitesmoke;
+    }
+}
