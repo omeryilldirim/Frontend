@@ -1,10 +1,11 @@
+@import "../../sass/variables.scss";
+
 .projects-container{
-    background-color: gray;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    background: linear-gradient(to right, rgba(gray, 0.3), rgba(gray, 0.1)), url("../../assets/img/model-1.png");
+    background: linear-gradient(to right, rgba(gray, 0.2), rgba(gray, 0.1)), url("../../assets/img/model-1.png");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -18,7 +19,8 @@
         min-height: 30vh;
         width: 100%;
         .title{
-            color: darkcyan;
+            color: $primary-color;
+            font-family: $tertiary-font;
         }
 
      }
@@ -36,20 +38,20 @@
             .project-image{
                 width: 300px;
                 height: 200px;
-                border-bottom: 3px solid orangered;
+                border-bottom: 3px solid $tertiary-color;
                 
             }
             &::after{
                 content: '';
                 width: 100%;
                 height: 100%;
-                background-color: orangered;
+                background-color: $tertiary-color;
                 position: absolute;
                 left: 0;
                 opacity: 0;
             }
             &:hover::after{
-                opacity: 0.2;
+                opacity: 0.1;
                 
             }
         }

@@ -1,7 +1,9 @@
+@import "../../sass/variables.scss";
+
 .footer{
     width: 100%;
     padding: 1rem;
-    position: absolute;
+    position: fixed;
     bottom: 0;
     display: flex;
     justify-content: space-between;
@@ -12,17 +14,34 @@
         justify-content: center;
         align-items: center;
         gap: 0.5rem;
-        .icon{
+        .github-icon{
             text-decoration: none;
-            color: whitesmoke;
+            color: $text-color;
             &:hover{
                 opacity: 0.8;
-                color:darkcyan;
+                color:$tertiary-color;
+            }
+        }
+        .linkedin-icon{
+            text-decoration: none;
+            color: $text-color;
+            &:hover{
+                opacity: 0.8;
+                color:royalblue;
+            }
+        }
+        .mail-icon{
+            text-decoration: none;
+            color: $text-color;
+            &:hover{
+                opacity: 0.8;
+                color:$secondary-color;
             }
         }
     }
     .copyright{
-        color: whitesmoke;
+        color: $text-color;
+        font-family: $secondary-font;
     }
 }
 

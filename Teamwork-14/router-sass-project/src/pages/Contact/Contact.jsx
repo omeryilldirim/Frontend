@@ -3,7 +3,7 @@ import {IoLocation,IoPhonePortrait,IoMail} from 'react-icons/io5'
 const Contact = () => {
   return (
     <div className="contact-container">
-      <h2>Contact Me ...</h2>
+      <h2>Contact Me...</h2>
       <div className="contact-list">
         <div className="contact-item">
           <p><IoPhonePortrait/> Email</p>

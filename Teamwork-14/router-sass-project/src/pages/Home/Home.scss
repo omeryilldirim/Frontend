@@ -1,5 +1,7 @@
+@import "../../sass/variables.scss";
+
 .home-container{
-    background: linear-gradient(to right, rgba(gray, 0.3), rgba(gray, 0.1)),
+    background: linear-gradient(to right, rgba(gray, 0.1), rgba(gray, 0.1)),
     url("../../assets/img/model-1.png");
     background-attachment: fixed;
     background-position: center;
@@ -11,14 +13,31 @@
     justify-content: center;
     align-items: center;
     gap: 1rem;
+
     .greet{
-        color: antiquewhite;
+        color: $text-color;
     }
     .name{
-        color:rgb(22, 102, 105);
-        border-bottom: 1px solid gray;
+        color:$tertiary-color;
+        border-bottom: 1px solid $secondary-color;
+        font-family:$tertiary-font;
+        letter-spacing:0.3rem;
+        animation: rotate 10s linear 3s infinite;
     }
     .title{
-        color: antiquewhite;
+        color: $text-color;
+        font-family: $primary-font;
+        font-size: 1.5rem;
     }
 }
+
+@keyframes rotate {
+    0%   {}
+    17%  {transform: translate(-25vw,-35vh)}
+    34%  {transform: translate(-25vw, 35vh) rotate(360deg)}
+    51%  {}
+    68%  {transform: translate(25vw, -35vh) rotate(360deg)}
+    85%  {transform: translate(25vw, 35vh);
+    }
+    100% {}
+  }

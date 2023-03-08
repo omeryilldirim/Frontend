@@ -6,9 +6,9 @@ const Footer = () => {
   return (
     <div className='footer'>
         <div className='icons'>
-          <Link to="https://github.com/omeryilldirim" target="_blank"><FaGithub className='icon' size="40px"/></Link>
-          <Link to="https://www.linkedin.com/in/omer-yilldirim/" target="_blank"><FaLinkedin className='icon' size="40px"/></Link>
-          <Link to="mailto:omeryilldirim@outlook.com" target="_blank"><FaMailBulk className='icon' size="40px"/></Link>
+          <Link to="https://github.com/omeryilldirim" target="_blank"><FaGithub className='github-icon' size="40px"/></Link>
+          <Link to="https://www.linkedin.com/in/omer-yilldirim/" target="_blank"><FaLinkedin className='linkedin-icon' size="40px"/></Link>
+          <Link to="mailto:omeryilldirim@outlook.com" target="_blank"><FaMailBulk className='mail-icon' size="40px"/></Link>
         </div>
         <div className='copyright'>
             <p> &copy; Copyright {new Date().getFullYear()} </p>
