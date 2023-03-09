@@ -1,0 +1,52 @@
+@import "../../sass/variables.scss";
+
+.notFound-container{
+    background-color: gray;
+    height: 100vh;
+    padding-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(to right, rgba(gray, 0.1), rgba(gray, 0.1)),
+    url("../../assets/img/model-1.png");
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    gap: 1rem;
+    button{
+        padding: 0.5rem 1rem;
+        border: none;
+        border-radius: 5px;
+        color: $text-color;
+        background-color: $secondary-color;
+        transition: all 0.1s ease;
+        &:hover{
+            background-color: $tertiary-color;
+            cursor: pointer;
+            opacity: 0.8;
+        }
+    }
+    h1{
+        font-size: 7rem;
+        color: $secondary-color;
+        font-family: $primary-font;
+
+    }
+    p{
+        font-size:1.5rem;
+        color: $text-color;
+        font-family: $primary-font;
+    
+    }
+    .object_astronaut{
+        animation: rotate-astronaut 100s infinite linear both alternate;
+        z-index: 1;
+    }
+    @keyframes rotate-astronaut{
+        50% {transform:rotate(-360deg) translate(-160px, 200px); }
+        100% {transform:rotate(-720deg) translate(50px, 10px); }
+    }
+}
