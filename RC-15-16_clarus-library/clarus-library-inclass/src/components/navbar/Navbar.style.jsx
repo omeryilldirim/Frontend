@@ -34,7 +34,7 @@ export const MenuLink = styled(NavLink)`
   color: ${({ theme }) => theme.colors.linkColor};
   transition: all 0.3s ease-in;
   &.active{
-    color: red;
+    color:blue;
   }
   :hover {
     color: ${({ theme }) => theme.colors.linkHoverColor};
