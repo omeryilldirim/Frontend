@@ -33,6 +33,9 @@ export const MenuLink = styled(NavLink)`
   text-decoration: none;
   color: ${({ theme }) => theme.colors.linkColor};
   transition: all 0.3s ease-in;
+  &.active{
+    color: red;
+  }
   :hover {
     color: ${({ theme }) => theme.colors.linkHoverColor};
   }
