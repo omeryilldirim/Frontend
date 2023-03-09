@@ -2,6 +2,8 @@ import React from "react";
 import "./NotFound.scss";
 
 const NotFound = () => {
+  
+  
   return (
     <div className="notFound-container">
       <img
@@ -12,7 +14,7 @@ const NotFound = () => {
       />
       <h1>404</h1>
       <p>Looks like you are lost in the space!</p>
-      <button>Go Back</button>
+      {/* <button>Go Back</button> */}
     </div>
   );
 };
