@@ -7,15 +7,15 @@ const UseStateExample = () => {
 
   const getCatImage = async () => {
     const url = "https://api.thecatapi.com/v1/images/search";
-    setLoading(true);
+    setLoading(true); //? 1-START
     try {
       const res = await fetch(url);
       const data = await res.json();
-      setCatImage(data[0].url);
+      setCatImage(data[0].url); //? 2-SUCCESS
       setError("");
     } catch (error) {
       setError("DATA CAN NOT BE FETCHED");
-      setCatImage("");
+      setCatImage(""); //? 3-FAIL
       console.log(error);
     } finally {
       setLoading(false);
