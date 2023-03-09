@@ -1,35 +1,38 @@
-import { useContext} from "react";
-import Container from "react-bootstrap/Container";
-import Button from "react-bootstrap/Button";
-import Form from "react-bootstrap/Form";
-import { LoginContext } from "../context/LoginContext";
-import { useNavigate } from "react-router-dom";
+import { useContext, useState } from "react"
+import Container from "react-bootstrap/Container"
+import Button from "react-bootstrap/Button"
+import Form from "react-bootstrap/Form"
+import { LoginContext } from "../context/LoginContext"
+import { useNavigate } from "react-router-dom"
 
 const Login = () => {
-  //* Local State
-  // const [user, setUser] = useState({ email: "", password: "" });
+  //? Local State
+  // const [user, setUser] = useState({ email: "", password: "" })
 
-  //! Consuming
-  const {user,setUser} = useContext(LoginContext)
+  //! 3-) Consuming of Login COntext
+  const { user, setUser } = useContext(LoginContext)
+
   const navigate = useNavigate()
 
   const handleSubmit = (e) => {
-    e.preventDefault();
+    e.preventDefault()
     navigate(-1)
-  };
+  }
+
+  console.log(user)
 
   return (
     <Container>
       <h1 className="text-center mt-4">LOGIN PAGE</h1>
-      <Form onSubmit={handleSubmit}>
+      <Form onSubmit={(e) => handleSubmit(e)}>
         <Form.Group className="mb-3" controlId="username">
           <Form.Label>Email</Form.Label>
           <Form.Control
             type="email"
             placeholder="Enter your email"
             name="email"
-            value={user?.email} required
-            onChange={(e) => setUser({ ...user, email: e.target.value })} 
+            value={user?.email}
+            onChange={(e) => setUser({ ...user, email: e.target.value })}
           />
         </Form.Group>
 
@@ -39,7 +42,7 @@ const Login = () => {
             type="password"
             placeholder="Enter your password"
             name="password"
-            value={user?.password} required
+            value={user?.password}
             onChange={(e) => setUser({ ...user, password: e.target.value })}
           />
         </Form.Group>
@@ -50,7 +53,7 @@ const Login = () => {
         </Container>
       </Form>
     </Container>
-  );
-};
+  )
+}
 
-export default Login;
+export default Login
