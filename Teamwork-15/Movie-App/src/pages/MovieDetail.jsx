@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 
 const MovieDetail = () => {
@@ -42,20 +42,24 @@ const MovieDetail = () => {
     try {
       const { data } = await axios(url);
       setVideoList(data.results);
-      console.log(data.results);
     } catch (error) {
       alert(error);
     }
   };
-  getMovieVideo(id);
-  getMovieDetails(id);
+
+  useEffect(() => {
+    getMovieVideo(id);
+    getMovieDetails(id);
+  }, [id])
+  
+
 
   return (
     <div>
       <h1>{title}</h1>
       <iframe
-        width="500"
-        height="400"
+        width="800"
+        height="500"
         src={`https://www.youtube.com/embed/${
           videoList[videoList.length - 1]?.key
         }`}
