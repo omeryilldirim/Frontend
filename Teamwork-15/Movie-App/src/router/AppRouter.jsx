@@ -13,11 +13,11 @@ const AppRouter = () => {
         <Navbar />
         <Routes>
             <Route path='/' element={<Main />}/>
-            <Route path='/' element={<Register />}/>
-            <Route path='/' element={<Login />}/>
+            <Route path='/register' element={<Register />}/>
+            <Route path='/login' element={<Login />}/>
 
-            <Route path='' element={<PrivateRouter />}>
-                <Route path="/detail" element={<MovieDetail />} />
+            <Route element={<PrivateRouter />}>
+                <Route path='/detail/:id' element={<MovieDetail />} />
             </Route>
 
             
