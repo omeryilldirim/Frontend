@@ -1,10 +1,19 @@
 import React, { useState } from 'react'
+import { useAuthContext } from '../context/AuthContext'
 
 const Header = ({getResults}) => {
   const [query, setQuery] = useState("")
+  const {user} = useAuthContext()
+
   const handleSubmit = (e)=>{
-    e.preventDefault()
-    getResults(query)
+    if(user){
+      e.preventDefault()
+      getResults(query)
+    } else {
+      e.preventDefault()
+      alert("Please login to search a movie!")
+    }
+  
   }
   return (
     <div>
