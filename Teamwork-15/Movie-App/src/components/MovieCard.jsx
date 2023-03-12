@@ -12,7 +12,7 @@ const MovieCard = ({item}) => {
       <p>{title}</p>
       <p>{vote_average}</p>
       <p>{overview}</p>
-      <button onClick={()=>navigate(`/detail/${id}`, {state:{item}})} style={{backgroundColor:"black", color:"white",padding:"1rem"}}>detail</button>
+      <button onClick={()=>navigate(`/detail/${id}`, {state:id})} style={{backgroundColor:"black", color:"white",padding:"1rem"}}>detail</button>
     </div>
   )
 }
