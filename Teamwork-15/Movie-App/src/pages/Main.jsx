@@ -37,8 +37,10 @@ const Main = () => {
   return (
     <div>
       <Header getResults={getResults}/>
-      {movieList.map((item)=> <MovieCard item={item} key={item.id}/>
-      )}
+      <div className='w-full flex items-center justify-center flex-wrap gap-y-10 gap-x-5 py-2'>
+        {movieList.map((item)=> <MovieCard item={item} key={item.id}/>
+        )}
+      </div>
     </div>
   )
 }

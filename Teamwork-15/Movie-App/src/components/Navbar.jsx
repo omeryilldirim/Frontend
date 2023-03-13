@@ -12,18 +12,18 @@ const Navbar = () => {
     setUser();
   }
   return (
-    <div>
-      <Link to="/">Movie App</Link>
+    <div className="flex items-center justify-between p-6 bg-color1">
+      <Link className="text-2xl text-red-800 hover:text-color2 font-bold" to="/">Movie App</Link>
       {user ? (
-        <>
-          <p>User : {user?.email}</p>
-          <Link to="/" onClick={handleLogout}>Logout</Link>
-        </>
+        <div className="flex gap-8 text-xl text-color2 ">
+          <p>{user?.email}</p>
+          <Link className="hover:text-red-800" to="/" onClick={handleLogout}>Logout</Link>
+        </div>
       ) : (
-        <>
-          <Link to="/login">Login</Link>
-          <Link to="/register">Register</Link>
-        </>
+        <div className="flex gap-8 text-xl text-color2 ">
+          <Link className="hover:text-red-800" to="/login">Login</Link>
+          <Link className="hover:text-red-800" to="/register">Register</Link>
+        </div>
       )}
     </div>
   );

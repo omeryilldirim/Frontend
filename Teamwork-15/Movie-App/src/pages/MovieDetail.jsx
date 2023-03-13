@@ -50,16 +50,14 @@ const MovieDetail = () => {
   useEffect(() => {
     getMovieVideo(id);
     getMovieDetails(id);
-  }, [id])
-  
-
+  }, [id]);
 
   return (
-    <div>
-      <h1>{title}</h1>
+    <div className="flex flex-col items-center justify-center gap-5 mt-2">
+      <h1 className="text-4xl">{title}</h1>
       <iframe
-        width="800"
-        height="500"
+        width="950"
+        height="535"
         src={`https://www.youtube.com/embed/${
           videoList[videoList.length - 1]?.key
         }`}
@@ -67,32 +65,41 @@ const MovieDetail = () => {
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"
         allowFullScreen
       ></iframe>
-      <div>
-        <img src={`${imgURL}${poster_path}` || ""} alt="poster" width="200px" />
-        <p>Overview : {overview || ""}</p>
-        <p>Original Language : {original_language?.toUpperCase()}</p>
-        <p>
-          Genres :{" "}
-          <ul>
-            {genres?.map((item) => (
-              <li>${item.name}</li>
-            ))}
-          </ul>
-        </p>
-        <p>
-          Production Companies :{" "}
-          <ul>
-            {production_companies?.map((item) => (
-              <li>${item.name}</li>
-            ))}
-          </ul>
-        </p>
-        <p>Release Date : {release_date || ""}</p>
-        <p>Rating : {vote_average?.toFixed(1) || ""}</p>
-        <p>Votes Counted : {vote_count || ""}</p>
-        <p>Budget : {budget || ""}</p>
-        <p>Revenue : {revenue || ""}</p>
-        <button onClick={() => navigate(-1)}>Go Back</button>
+      <div className="flex justify-center items-start gap-2 m-5 ">
+        <div>
+          <img className="w-[800px]"
+            src={`${imgURL}${poster_path}` || ""}
+            alt="poster"
+          />
+        </div>
+        <div className="text-lg flex items-start justify-start flex-col p-3 bg-color4 rounded">
+          <h2 className="text-2xl">Overview</h2>
+          <p className="min-h-[200px] " >{overview || ""}</p>
+
+          <p>Original Language : {original_language?.toUpperCase()}</p>
+          <p>Release Date : {release_date || ""}</p>
+          <p>Rating : {vote_average?.toFixed(1) || ""}</p>
+          <p>Votes Counted : {vote_count || ""}</p>
+          <p>Budget : {budget || ""}</p>
+          <p>Revenue : {revenue || ""}</p>
+          <p className="flex gap-3">
+            Production Companies :{" "}
+            <ul >
+              {production_companies?.map((item) => (
+                <li>{item.name}</li>
+                ))}
+            </ul>
+          </p>
+          <p className="flex gap-3">
+            Genres :
+            <ul>
+              {genres?.map((item) => (
+                <li>{item.name}</li>
+                ))}
+            </ul>
+          </p>
+          <button className="px-3 py-1 bg-color1 rounded text-color2" onClick={() => navigate(-1)}>Go Back</button>
+        </div>
       </div>
     </div>
   );

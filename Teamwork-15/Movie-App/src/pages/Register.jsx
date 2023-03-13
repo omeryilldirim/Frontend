@@ -26,26 +26,27 @@ const Register = () => {
   }
 
   return (
-    <div>
-      <h1>REGISTER</h1>
-      <form onSubmit={handleRegister}>
-        <label htmlFor="email">Email : </label>
-        <input
+    <div className='flex items-center justify-center flex-col min-h-[90vh] gap-8 bg-color4'>
+      <h1 className='text-3xl'>REGISTER</h1>
+      <form className='flex items-start justify-start flex-col gap-4 w-[250px]' onSubmit={handleRegister}>
+        <label className='text-xl' htmlFor="email">Email </label>
+        <input className='text-xl px-3 py-1 w-full rounded'
           type="text"
           id="email"
           placeholder="username"
           required
           onChange={(e) => setEmail(e.target.value)}
         />
-        <label htmlFor="password">Password : </label>
+        <label className='text-xl' htmlFor="password">Password </label>
         <input
+          className='text-xl px-3 py-1 w-full rounded'
           type="password"
           id="password"
           placeholder="password"
           required
           onChange={(e) => setPassword(e.target.value)}
         />
-        <button type="submit">Sign In</button>
+        <button className='w-full bg-color1 text-color2 text-xl p-1 rounded' type="submit">Sign In</button>
       </form>
     </div>
   );
