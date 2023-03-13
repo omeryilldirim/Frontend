@@ -41,7 +41,7 @@ const Register = () => {
               required
               onChange={(e) => setFirstName(e.target.value)}
             />
-            <label htmlFor="floating_email">Email address</label>
+            <label htmlFor="floating_email">First Name</label>
           </div>
           <div className="relative z-0 w-full mb-6 group">
             <input
