@@ -1,7 +1,7 @@
 import { DECREASE, INCREASE, RESET } from "../types/counterTypes"
 
 const initialState = {
-  counter: 0, //? Global state
+  counter: 0, // Global state
 }
 
 //? Pure js function
