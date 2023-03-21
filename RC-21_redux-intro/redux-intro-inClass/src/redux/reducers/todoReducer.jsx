@@ -20,15 +20,13 @@ const todoReducer = (state = initialState, { type, payload }) => {
       };
     case DELETE_TODO:
       return {
-        todoList: [
-          ...state.todoList.filter((todo)=> todo.id !== payload)
-        ]
+        todoList: 
+          state.todoList.filter((todo)=> todo.id !== payload)
       };
     case TOGGLE_TODO:
       return {
-        todoList : [
-          ...state.todoList.map( todo => todo.id === payload ? {...todo, completed:!todo.completed} : {...todo} )
-        ]
+        todoList : 
+          state.todoList.map( todo => todo.id === payload ? {...todo, completed:!todo.completed} : {...todo} )
       }
     default:
       return state;
