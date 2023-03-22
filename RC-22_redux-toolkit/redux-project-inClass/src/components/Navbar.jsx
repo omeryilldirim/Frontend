@@ -1,19 +1,22 @@
-import * as React from "react";
-import AppBar from "@mui/material/AppBar";
-import Box from "@mui/material/Box";
-import Toolbar from "@mui/material/Toolbar";
-import Typography from "@mui/material/Typography";
-import Button from "@mui/material/Button";
-import { useNavigate } from "react-router-dom";
-import { useSelector, useDispatch } from "react-redux";
-import { clearUser } from "../features/authSlice";
+import * as React from "react"
+import AppBar from "@mui/material/AppBar"
+import Box from "@mui/material/Box"
+import Toolbar from "@mui/material/Toolbar"
+import Typography from "@mui/material/Typography"
+import Button from "@mui/material/Button"
+import { useNavigate } from "react-router-dom"
+import { useSelector, useDispatch } from "react-redux"
+import { clearUser } from "../features/authSlice"
 
 export default function Navbar() {
-  const navigate = useNavigate();
+  const navigate = useNavigate()
   const dispatch = useDispatch()
-  const user = useSelector(state => state.auth.user)
+  //TODO user bilgisini global state'den oku
+  const { user } = useSelector((state) => state.auth)
+  console.log(user)
 
-  const handleLogout = ()=> {
+  const handleLogout = () => {
+    //TODO user global state'ini sil
     dispatch(clearUser())
     navigate("/login")
   }
@@ -29,12 +32,19 @@ export default function Navbar() {
           >
             Clarusway News
           </Typography>
-          {user?.email && <p>{user.email}</p>}
-          {user?.email && <Button color="inherit" onClick={handleLogout}>Logout</Button> }
-          {!user?.email && <Button color="inherit" onClick={()=>navigate("/login")}>Login</Button>}
-          
+
+          {user?.email && user.password && (
+            <Button color="inherit" onClick={handleLogout}>
+              Logout
+            </Button>
+          )}
+          {!user?.email && (
+            <Button color="inherit" onClick={() => navigate("/login")}>
+              Login
+            </Button>
+          )}
         </Toolbar>
       </AppBar>
     </Box>
-  );
+  )
 }
