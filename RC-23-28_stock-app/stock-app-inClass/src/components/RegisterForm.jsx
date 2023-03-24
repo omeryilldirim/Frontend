@@ -5,9 +5,9 @@ import { Form } from "formik";
 import { object, string,ref } from "yup";
 
 export const registerScheme = object({
-  username: string().required().max(150),
-  first_name: string().max(150).nullable(),
-  last_name: string().max(150).nullable(),
+  username: string().required().max(20),
+  first_name: string().max(50).required(),
+  last_name: string().max(50).required(),
   email: string().email().required(),
   password: string()
   .required()
