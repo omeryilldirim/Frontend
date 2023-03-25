@@ -1,5 +1,4 @@
 import React from "react";
-import PropTypes from "prop-types";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
@@ -128,24 +127,3 @@ function Dashboard(props) {
 }
 
 export default Dashboard;
-
-// function Dashboard() {
-//   const { currentUser } = useSelector((state) => state.auth);
-//   const {logout} = useAuthCall()
-
-//   return (
-//     <Box sx={{ display: "flex" }}>
-//       <CssBaseline />
-//       <AppBar position="fixed">
-//         <Toolbar>
-//           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-//             STOCK APP
-//           </Typography>
-//           {currentUser && <Button color="inherit" onClick={logout}>Logout</Button>}
-//         </Toolbar>
-//       </AppBar>
-//     </Box>
-//   );
-// }
-
-// export default Dashboard;
