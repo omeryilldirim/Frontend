@@ -1,3 +1,4 @@
+import * as React from "react";
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
@@ -8,7 +9,7 @@ import EditIcon from "@mui/icons-material/Edit";
 import { btnStyle, flex } from "../styles/globalStyle";
 import useStockCall from "../hooks/useStockCall";
 
-export default function FirmCard({ firm, setOpen,info, setInfo }) {
+export default function BrandCard({ brand }) {
   const { deleteStockData } = useStockCall();
 
   return (
@@ -24,28 +25,21 @@ export default function FirmCard({ firm, setOpen,info, setInfo }) {
     >
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
-          {firm?.name}
-        </Typography>
-        <Typography variant="body2" color="text.secondary">
-          {firm?.address}
+          {brand?.name}
         </Typography>
       </CardContent>
       <CardMedia
         component="img"
         sx={{ p: 1, objectFit: "contain", height: "130px" }}
         alt="firm-image"
-        image={firm?.image}
+        image={brand?.image}
       />
-      <Typography variant="body2" color="text.secondary">
-        Phone : {firm?.phone}
-      </Typography>
+
       <CardActions sx={flex}>
-        <EditIcon sx={btnStyle} onClick={()=>{
-          setOpen(true)
-          setInfo(firm)}}/>
+        <EditIcon sx={btnStyle} />
         <DeleteOutlineIcon
           sx={btnStyle}
-          onClick={() => deleteStockData("firms", firm.id)}
+          onClick={() => deleteStockData("brands", brand.id)}
         />
       </CardActions>
     </Card>
