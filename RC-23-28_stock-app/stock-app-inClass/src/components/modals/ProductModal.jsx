@@ -11,8 +11,8 @@ import Select from "@mui/material/Select";
 import { useSelector } from "react-redux";
 
 export default function ProductModal({ open, handleClose, info, setInfo }) {
-  const { postStockData} = useStockCall();
-  const{categories,brands} = useSelector((state) => state.stock);
+  const { postStockData } = useStockCall();
+  const { categories, brands } = useSelector((state) => state.stock);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -20,9 +20,10 @@ export default function ProductModal({ open, handleClose, info, setInfo }) {
   };
   const handleSubmit = (e) => {
     e.preventDefault();
+    console.log(info);
     postStockData("products", info);
     handleClose();
-    setInfo({ name: "", phone: "", address: "", image: "" });
+    setInfo({ category_id: "", brand_id: "", name: "" });
   };
 
   return (
@@ -31,7 +32,7 @@ export default function ProductModal({ open, handleClose, info, setInfo }) {
         open={open}
         onClose={() => {
           handleClose();
-          setInfo({ name: "", phone: "", address: "", image: "" });
+          setInfo({ category_id: "", brand_id: "", name: "" });
         }}
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
@@ -46,12 +47,18 @@ export default function ProductModal({ open, handleClose, info, setInfo }) {
               <InputLabel id="category-label">Categories</InputLabel>
               <Select
                 labelId="category"
+                name="category_id"
                 id="category"
+                value={info.category_id}
                 label="Category"
+                onChange={handleChange}
                 required
               >
-                {categories.map((item) => (<MenuItem value={item.name}>{item.name}</MenuItem>))}
-
+                {categories?.map((item) => (
+                  <MenuItem key={item.id} value={item.id}>
+                    {item.name}
+                  </MenuItem>
+                ))}
               </Select>
             </FormControl>
             <FormControl fullWidth>
@@ -59,11 +66,17 @@ export default function ProductModal({ open, handleClose, info, setInfo }) {
               <Select
                 labelId="brand"
                 id="brand"
+                name="brand_id"
+                value={info.brand_id}
                 label="Brand"
+                onChange={handleChange}
                 required
               >
-                {brands.map((item) => (<MenuItem value={item.name}>{item.name}</MenuItem>))}
-
+                {brands.map((item) => (
+                  <MenuItem key={item.id} value={item.id}>
+                    {item.name}
+                  </MenuItem>
+                ))}
               </Select>
             </FormControl>
             <TextField
@@ -72,9 +85,10 @@ export default function ProductModal({ open, handleClose, info, setInfo }) {
               id="name"
               type="text"
               variant="outlined"
+              onChange={handleChange}
               required
             />
-            <Button variant="contained" type="submit">
+            <Button variant="contained" type="submit" >
               Submit Form
             </Button>
           </Box>

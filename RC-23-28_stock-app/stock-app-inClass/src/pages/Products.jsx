@@ -1,7 +1,7 @@
 import { Button } from "@mui/material";
 import Typography from "@mui/material/Typography";
 import { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import useStockCall from "../hooks/useStockCall";
 import ProductModal from "../components/modals/ProductModal";
 import Box from "@mui/material/Box";
@@ -10,15 +10,13 @@ import DeleteForeverIcon from "@mui/icons-material/DeleteForever";
 import { btnStyle } from "../styles/globalStyle";
 
 const Products = () => {
-  const { getStockData, deleteStockData } = useStockCall();
-  const dispatch = useDispatch();
+  const {deleteStockData, getProCatBrand } = useStockCall();
   const { products } = useSelector((state) => state.stock);
   const [open, setOpen] = useState(false);
   const [info, setInfo] = useState({
+    category_id: "",
+    brand_id: "",
     name: "",
-    phone: "",
-    address: "",
-    image: "",
   });
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
@@ -83,9 +81,12 @@ const Products = () => {
   ];
 
   useEffect(() => {
-    getStockData("products");
-    getStockData("categories");
-    getStockData("brands");
+    // getStockData("products");
+    // getStockData("categories");
+    // getStockData("brands");
+    getProCatBrand();
+
+
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
