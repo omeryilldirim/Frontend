@@ -17,7 +17,7 @@ const useStockCall = () => {
       const {data} = await axiosWithToken(`stock/${url}/`)
       dispatch(getSuccess({ data, url }));
     } catch (error) {
-      console.log(error);
+      toastErrorNotify(`Data can not be fetched!`)
       dispatch(fetchFail());
     }
   };

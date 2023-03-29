@@ -1,14 +1,17 @@
-import { Button, Grid } from "@mui/material";
+import { Button } from "@mui/material";
 import Typography from "@mui/material/Typography";
-import { useEffect,useState } from "react";
-import { useSelector } from "react-redux";
-import FirmCard from "../components/FirmCard";
+import { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import useStockCall from "../hooks/useStockCall";
-import { flex } from "../styles/globalStyle";
-import FirmModal from "../components/modals/FirmModal";
+import ProductModal from "../components/modals/ProductModal";
+import Box from "@mui/material/Box";
+import { DataGrid, GridActionsCellItem, GridToolbar } from "@mui/x-data-grid";
+import DeleteForeverIcon from "@mui/icons-material/DeleteForever";
+import { btnStyle } from "../styles/globalStyle";
 
 const Products = () => {
-  const { getStockData } = useStockCall();
+  const { getStockData, deleteStockData } = useStockCall();
+  const dispatch = useDispatch();
   const { products } = useSelector((state) => state.stock);
   const [open, setOpen] = useState(false);
   const [info, setInfo] = useState({
@@ -20,8 +23,69 @@ const Products = () => {
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
+  const columns = [
+    {
+      field: "id",
+      headerName: "#",
+      minWidth: 60,
+      flex: 0.5,
+      headerAlign: "center",
+      align: "center",
+    },
+    {
+      field: "category",
+      headerName: "Category",
+      headerAlign: "center",
+      align: "center",
+      minWidth: 150,
+      flex: 2,
+    },
+    {
+      field: "brand",
+      headerName: "Brand",
+      minWidth: 150,
+      headerAlign: "center",
+      align: "center",
+      flex: 2,
+    },
+    {
+      field: "name",
+      headerName: "Name",
+      minWidth: 150,
+      headerAlign: "center",
+      align: "center",
+      flex: 2,
+    },
+    {
+      field: "stock",
+      headerName: "Stock",
+      minWidth: 100,
+      headerAlign: "center",
+      align: "center",
+      flex: 1,
+    },
+    {
+      field: "",
+      headerName: "Actions",
+      headerAlign: "center",
+      align: "center",
+      minWidth: 70,
+      flex: 1,
+      renderCell: ({ id }) => (
+        <GridActionsCellItem
+          icon={<DeleteForeverIcon />}
+          label="Delete"
+          sx={btnStyle}
+          onClick={() => deleteStockData("products", id)}
+        />
+      ),
+    },
+  ];
+
   useEffect(() => {
     getStockData("products");
+    getStockData("categories");
+    getStockData("brands");
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -31,17 +95,34 @@ const Products = () => {
         Products
       </Typography>
 
-      <Button variant="contained" onClick={handleOpen}>New Product</Button>
+      <Button variant="contained" onClick={handleOpen}>
+        New Product
+      </Button>
 
-      <ProductModal open={open} handleClose={handleClose} info={info} setInfo={setInfo}/>
+      <ProductModal
+        open={open}
+        handleClose={handleClose}
+        info={info}
+        setInfo={setInfo}
+      />
 
-      <Grid container sx={flex}>
-        {products?.map((product) => (
-          <Grid item key={product.id} >
-            <ProductCard product={product} setOpen={setOpen} info={info} setInfo={setInfo}/>
-          </Grid>
-        ))}
-      </Grid>
+      <Box sx={{ width: "100%", marginTop: "1rem" }}>
+        <DataGrid
+          autoHeight
+          rows={products}
+          columns={columns}
+          initialState={{
+            pagination: {
+              paginationModel: {
+                pageSize: 5,
+              },
+            },
+          }}
+          pageSizeOptions={[5]}
+          disableRowSelectionOnClick
+          slots={{ toolbar: GridToolbar }}
+        />
+      </Box>
     </div>
   );
 };
