@@ -20,7 +20,6 @@ export default function ProductModal({ open, handleClose, info, setInfo }) {
   };
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(info);
     postStockData("products", info);
     handleClose();
     setInfo({ category_id: "", brand_id: "", name: "" });
@@ -49,7 +48,7 @@ export default function ProductModal({ open, handleClose, info, setInfo }) {
                 labelId="category"
                 name="category_id"
                 id="category"
-                value={info.category_id}
+                value={info?.category_id}
                 label="Category"
                 onChange={handleChange}
                 required
@@ -67,7 +66,7 @@ export default function ProductModal({ open, handleClose, info, setInfo }) {
                 labelId="brand"
                 id="brand"
                 name="brand_id"
-                value={info.brand_id}
+                value={info?.brand_id}
                 label="Brand"
                 onChange={handleChange}
                 required
@@ -80,11 +79,13 @@ export default function ProductModal({ open, handleClose, info, setInfo }) {
               </Select>
             </FormControl>
             <TextField
+            margin="dense"
               label="Product Name"
               name="name"
               id="name"
               type="text"
               variant="outlined"
+              value={info?.name}
               onChange={handleChange}
               required
             />
