@@ -25,7 +25,7 @@ const KPIcards = () => {
     {
       id: 2,
       title: "PROFIT",
-      value: `$${totalPurchases}`,
+      value: `$${totalProfit}`,
       icon: <ShoppingCartIcon sx={{ fontSize: "2.3rem" }}/>,
       color: pink[600],
       bgColor: pink[100],
@@ -33,7 +33,7 @@ const KPIcards = () => {
     {
       id: 3,
       title: "PURCHASES",
-      value: `$${totalProfit}`,
+      value: `$${totalPurchases}`,
       icon: <PaymentsIcon sx={{ fontSize: "2.3rem" }}/>,
       color: amber[600],
       bgColor: amber[100],

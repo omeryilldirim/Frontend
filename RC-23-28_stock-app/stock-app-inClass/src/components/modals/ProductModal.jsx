@@ -45,7 +45,7 @@ export default function ProductModal({ open, handleClose, info, setInfo }) {
             <FormControl fullWidth>
               <InputLabel id="category-label">Categories</InputLabel>
               <Select
-                labelId="category"
+                labelId="category-label"
                 name="category_id"
                 id="category"
                 value={info?.category_id}
@@ -63,7 +63,7 @@ export default function ProductModal({ open, handleClose, info, setInfo }) {
             <FormControl fullWidth>
               <InputLabel id="brand-label">Brands</InputLabel>
               <Select
-                labelId="brand"
+                labelId="brand-label"
                 id="brand"
                 name="brand_id"
                 value={info?.brand_id}
