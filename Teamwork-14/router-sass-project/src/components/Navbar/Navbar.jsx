@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import useState from 'react'
 import {Link} from 'react-router-dom'
 import Hamburger from './Hamburger'
 import "./Navbar.scss"
@@ -10,12 +10,7 @@ const Navbar = () => {
   const toggleHamburger =() =>{
     setHamburgerOpen(!hamburgerOpen)
   }
-  useEffect(() => {
-    setTimeout(()=>{
-      setHamburgerOpen(false)
-    }, 3000)
-  }, [hamburgerOpen])
-  
+
   return (
     <>
         <div onClick={()=>{
@@ -29,7 +24,7 @@ const Navbar = () => {
           <Link className='link' to="/projects">PORTFOLIO</Link>
           <Link className='link' to="/contact">CONTACT</Link>
         </div>
-        <div className='navbar-hamburger'>
+        <div className='navbar-hamburger' onMouseLeave={()=>setHamburgerOpen(false)}>
           <Link className='link' to="/" >HOME</Link>
           <Link className='link' to="/about">ABOUT</Link>
           <Link className='link' to="/projects">PORTFOLIO</Link>
