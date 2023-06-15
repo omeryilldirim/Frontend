@@ -16,17 +16,16 @@ h1, p{
     color: red;
 }
 form{
-    background-color: rgba(0, 0, 0, 0.617);
+    background-color: rgba(0, 0, 0, 0.7);
     margin: 30px auto;
     padding: 20px;
     width: 500px;
-    height: 897px;
     left: 470px;
     top: 168px;
 }
 .box>label{
     display: block;
-    width: 400px;
+    width: 100%;
     padding:10px 0px;
 }
 .box>.no-padding{
@@ -34,7 +33,7 @@ form{
     margin-top: 20px;
 }
 .box>input{
-    width: 450px;
+    width: 100%;
     padding: 15px 5px;
 }
 #submit{
@@ -53,9 +52,10 @@ form{
 }
 textarea{
     padding: 10px;
+    width: 100%;
 }
 #content-type{
-    width: 400px;
+    width: 100%;
     padding: 10px;
 }
 #title{

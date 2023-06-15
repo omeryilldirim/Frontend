@@ -12,7 +12,7 @@
         <h1 id="title">NET<span id="flix">FLIX</span></h1>
         <p id="description">Thank you for signing up at Netflix.Tell us more about yourself.</p>
         
-        <form action="">
+        <form action="result.html" method="get">
             <div class="box">
                 <label for="name">Name</label>
                 <input type="text" name="name" id="name" placeholder="Enter your name">
@@ -37,36 +37,36 @@
             <div class="box">
                 <label class="no-padding" for="movie-type">Movie Type</label>
                 <div>
-                    <input type="checkbox" name="movie-type" id="comedy">
+                    <input type="checkbox" name="movie-type" id="comedy" value="comedy">
                     <label for="comedy">Comedy</label>
                 </div>
                 <div>
-                    <input type="checkbox" name="movie-type" id="action">
+                    <input type="checkbox" name="movie-type" id="action" value="action">
                     <label for="action">Action</label>
                 </div>
                 <div>
-                    <input type="checkbox" name="movie-type" id="romance">
+                    <input type="checkbox" name="movie-type" id="romance" value="romance">
                     <label for="romance">Romance</label>
                 </div>
             </div>
             <div class="box">
                 <label class="no-padding" for="gender">Gender</label>
 
-                <div><input type="radio" name="gender" id="male">
+                <div><input type="radio" name="gender" id="male" value="male">
                 <label for="male">Male</label></div>
 
-                <div><input type="radio" name="gender" id="female">
+                <div><input type="radio" name="gender" id="female" value="female">
                 <label for="female">Female</label></div>
                 
-                <div><input type="radio" name="gender" id="other">
+                <div><input type="radio" name="gender" id="other" value="other">
                 <label for="other">Other</label></div>
             </div>
             <div class="box">
                 <label for="feedback">Feedback</label>
-                <textarea name="feedback" id="feedback" cols="50" rows="10" placeholder="Any comment"></textarea>
+                <textarea name="feedback" id="feedback" cols="50" rows="5" placeholder="Any comment"></textarea>
             </div>
             <div class="submit">
-                <input id="submit" type="submit" value="Submit">
+                <button id="submit" type="submit" >Submit</button>
             </div>
         </form>
     </div>
