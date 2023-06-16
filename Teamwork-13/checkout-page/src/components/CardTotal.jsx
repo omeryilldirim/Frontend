@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import ProductCard from "./ProductCard";
 
 const CardTotal = ( {data, updateProductsData, deleteProduct} ) => { 
@@ -17,6 +17,8 @@ const CardTotal = ( {data, updateProductsData, deleteProduct} ) => {
         })}
         </div>
         <div className="payment-container">
+          {console.log(subtotal, tax)
+          }
           <div className="subtotal"><strong>Subtotal</strong><span>$ {subtotal.toFixed(2)}</span></div>
           <div className="tax"><strong>Tax(%18)</strong><span>$ {tax.toFixed(2)}</span></div>
           <div className="shipping"><strong>Shipping</strong><span>$ {subtotal>0 ? (shippingPrice.toFixed(2)) : 0}</span></div>

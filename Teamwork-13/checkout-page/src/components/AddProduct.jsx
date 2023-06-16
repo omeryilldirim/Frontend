@@ -1,6 +1,5 @@
 import Button from "./Button";
 import { BsFillCartPlusFill } from "react-icons/bs";
-import { useForm } from "react";
 import { useState } from "react";
 
 const AddProduct = ({ show, setToggle, addProduct }) => {
@@ -15,7 +14,6 @@ const AddProduct = ({ show, setToggle, addProduct }) => {
           // AddProduct()
           e.preventDefault();
           setNewProduct(newProduct)
-          console.log(newProduct);
           addProduct(newProduct);
           document.getElementById("add-form").reset()
         }}

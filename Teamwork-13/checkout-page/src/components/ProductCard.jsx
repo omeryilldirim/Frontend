@@ -1,5 +1,4 @@
 import { FaTrashAlt, } from 'react-icons/fa';
-import { AiFillMinusCircle, AiFillPlusCircle } from "react-icons/ai";
 import { useEffect, useState } from 'react';
 
 const ProductCard = ({total, setTotal,tax,setTax,subtotal, setSubtotal, updateProductsData,card:{id,name,image,price,dampingRate,amount},data,deleteProduct}) => {
@@ -8,15 +7,15 @@ const ProductCard = ({total, setTotal,tax,setTax,subtotal, setSubtotal, updatePr
   
   useEffect(() => {
     setSubtotal(data.reduce((acc,item)=>acc + item.amount * item.price * item.dampingRate, 0))
-  }, [])
+  }, []) // eslint-disable-line react-hooks/exhaustive-deps
 
   useEffect(() => {
     setTax(subtotal*0.18)  
-  }, [subtotal])
+  }, [subtotal]) // eslint-disable-line react-hooks/exhaustive-deps
 
   useEffect(() => {
     setTotal(subtotal+tax+25)
-  }, [tax])
+  }, [tax]) // eslint-disable-line react-hooks/exhaustive-deps
   
     return (
     <div className='card-container'>
@@ -42,9 +41,6 @@ const ProductCard = ({total, setTotal,tax,setTax,subtotal, setSubtotal, updatePr
                     setUnitTotal(price*dampingRate*(qty+1))
                     setSubtotal(subtotal+price*dampingRate)
                     }} > + </div>
-                {/* <AiFillMinusCircle id="minus" size="25px" color="gray" /> 
-                <span className='amount'>{amount}</span> 
-                <AiFillPlusCircle size="25px" color="gray" /> */}
             </div>
             <button type="button" className='remove-btn' onClick={()=>{
               deleteProduct(id)

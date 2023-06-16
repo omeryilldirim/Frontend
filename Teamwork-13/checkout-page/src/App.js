@@ -67,11 +67,6 @@ function App() {
         <CardTotal updateProductsData={updateProductsData} data={data} deleteProduct={deleteProduct}/>
       </main>
 
-      {/* {
-        show ? 
-        (<AddProduct  setToggle={setToggle} show={show} />) : 
-        (<Button setToggle={setToggle} show={show}/>)
-      } */}
     </div>
   );
 }
