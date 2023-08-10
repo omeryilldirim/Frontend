@@ -12,11 +12,15 @@ describe("navbar test", () => {
     cy.wait(1000);
     cy.get("[data-test='registerButton']").should("be.visible").click();
     cy.wait(1000);
+    cy.url().should('include', '/register')
     cy.go('back')
     cy.wait(1000);
     cy.get("[data-test='userAvatar']").should("be.visible").click();
     cy.get("[data-test='loginButton']").should("be.visible").click();
     cy.wait(1000);
+    cy.url().should('include', '/login')
+    cy.go('back')
+    cy.url().should('include', '/')
     cy.get("[data-test='userAvatar']").should("be.visible").click();
     cy.get("[data-test='logoutButton']").should("be.visible").click();
 
